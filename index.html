@@ -180,7 +180,7 @@
         display: block;
         position: relative;
         margin: 0px auto;
-        width: 50%;
+        width: 5%;
         height: 40px;
         padding: 10px;
         border: none;
@@ -193,16 +193,16 @@
 </style>
 <div id='map'></div>
 <br/>
-<button onclick='fly();' id='fly'>Fly</button>
+<button onclick='fly();' id='fly'>Pause Map</button>
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoiZHlsYW5jIiwiYSI6Im53UGgtaVEifQ.RJiPqXwEtCLTLl-Vmd1GWQ';
-var start = [-113.75, 34];
+var start = [-111.75, 32.5];
 var end = [-77.50, 38];
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/dylanc/cikb2yvtr00589fm13z417kdu',
     center: start,
-    zoom: 7
+    zoom: 9
 });
 
 var isAtStart = true;
@@ -219,14 +219,14 @@ function fly() {
         // These options control the ending camera position: centered at
         // the target, at zoom level 9, and north up.
         center: target,
-        zoom: 9,
+        zoom: 10,
         bearing: 0,
 
         // These options control the flight curve, making it move
         // slowly and zoom out almost completely before starting
         // to pan.
-        speed: 0.005, // make the flying slow
-        curve: .1, // change the speed at which it zooms out
+        speed: 0.012, // make the flying slow
+        curve: 0.01, // change the speed at which it zooms out
 
         // This can be any easing function: it takes a number between
         // 0 and 1 and returns another number between 0 and 1.
@@ -235,6 +235,12 @@ function fly() {
         }
     });
 }
+
+
+$( document ).ready(function() {
+  fly();
+});
+
 </script>
 
 
