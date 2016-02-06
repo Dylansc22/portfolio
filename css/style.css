@@ -367,16 +367,45 @@ I want to have parallax but I'll pick up with it layer
   margin-bottom: 25px;
 }
 
+
 .projects {
+  padding:30px 0px 30px 0px;
   margin: 10px 0 10px 0;
-  padding: 40px;
   background-color: white;
+  border: 0px;
+  overflow: hidden;
+  position: relative;
 }
 
-.buttonstyle {
-  background-color:red;
+/*this is the same as the .projects class, and SHOULD be in the .projects css, but for some reason the padding command does
+\ not override the bootstrap css padding command, the only way to override the command is to specifically call out the 
+element style, and override the bootstrap padding css*/
+#bootstrapoverrides > div.container.projectsgroup > div > button {
+  padding-left:0px;
 }
+
+.buttonbackground {
+  padding: 30px 0 30px 0;
+  position: absolute;
+  bottom: -80px;
+  width:100%;
+;  transition: all 0.2s ease;
+}
+
+.projects:hover .buttonbackground {
+  background-color: #ACACAC;
+  bottom: 0;
+}
+
+
+
+
 
 #map{
   z-index: -1;
+}
+
+/*This line of code removes the focus on all buttons after a click, whether they are in the body or modal or anywhere*/
+*:focus {
+    outline: none;
 }
