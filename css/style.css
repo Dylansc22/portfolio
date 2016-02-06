@@ -382,6 +382,7 @@ I want to have parallax but I'll pick up with it layer
 element style, and override the bootstrap padding css*/
 #bootstrapoverrides > div.container.projectsgroup > div > button {
   padding-left:0px;
+  padding-right:0px;
 }
 
 .buttonbackground {
