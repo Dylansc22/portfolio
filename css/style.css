@@ -26,17 +26,19 @@ body {
 
 .text-vertical-center h1 {
     margin-top:250px;
-    padding: 0 0 0px 0;
+    padding: 0 0 5px 0;
     font-size: 4.5em;
     color:#505050;
 }
 
 .text-vertical-center h2 {
-    margin: 0;
-    padding: 0 0 400 0;
-    font-size: 3em;
-    color:black;
+    margin-top:250px;
+    padding: 0 0 5px 0;
+    font-size: 3.5em;
+    color:#505050;
 }
+
+
 
 .text-vertical-center h3 {
     margin: 0px 320px 10px 0px;
@@ -104,22 +106,22 @@ padding:10px;
 
 
 }
-.social-fb {
+.social-fb:hover {
 color: #3B5998;
 }
-.social-tw {
+.social-tw:hover {
 color: #4099FF;
 
 }
-.social-gp {
+.social-gp:hover {
 color: #1D9833;
 
 }
-.social-em {
+.social-em:hover {
 color: #f39c12;
 
 }
-.social-rm {
+.social-rm:hover {
 color: #d34836;
 }
 
@@ -133,6 +135,7 @@ hr.small {
 
 hr.medium {
     max-width: 300px;
+    margin-bottom: 10px;
 }
 
 .text-vertical-center > hr {
@@ -361,13 +364,16 @@ I want to have parallax but I'll pick up with it layer
   }
 
   -------END OF PARALLAX CSS */
-
-#writings {
-  margin: 100px 0 0 0;
-  background-color: pink;
-  padding: 50px;
+.projectsgroup {
+  margin-top: 100px;
 }
 
-.mouseenterportfolio {
-  padding: 100px;
+.projects {
+  margin: 10px 0 10px 0;
+  padding: 60px;
+  background-color: white;
+}
+
+.buttonstyle {
+  background-color:red;
 }
