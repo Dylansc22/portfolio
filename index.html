@@ -63,10 +63,10 @@
     #fly {
         display: block;
         position: relative;
-        margin: 0px auto;
-        width: 5%;
+        /* width:20%;   bootstrap div classes in the html currently handle the positioning, no longer using this default code*/
+        /*margin: 0px auto;bootstrap div classes in the html currently handle the positioning, no longer using this default code*/
         height: 40px;
-        padding: 10px;
+        /*padding: 10px;bootstrap div classes in the html currently handle the positioning, no longer using this default code*/
         border: none;
         border-radius: 3px;
         font-size: 12px;
@@ -242,19 +242,19 @@ $( document ).ready(function() {
 <div class="container projectsgroup">
 	<div class="row">
 
-<button type="button" class="projects col-lg-offset-3 col-lg-6" data-toggle="modal" data-target="#AboutMeModal">
+<button type="button" class="projects col-xs-offset-3 col-xs-6" data-toggle="modal" data-target="#AboutMeModal">
     About Me
     <div class="buttonbackground">Subinfo</div>
 </button>
-<button type="button" class="projects col-lg-offset-3 col-lg-6" data-toggle="modal" data-target="#WritingSampleModal">
+<button type="button" class="projects col-xs-offset-3 col-xs-6" data-toggle="modal" data-target="#WritingSampleModal">
     Writing Samples
     <div class="buttonbackground">Subinfo</div>
 </button>
-<a href="https://dylansc22.github.com/worksample"><button type="button" class="projects col-lg-offset-3 col-lg-6">
+<a href="https://dylansc22.github.com/worksample"><button type="button" class="projects col-xs-offset-3 col-xs-6">
 GIS Maps
-<div class="buttonbackground">Global Erosion Risk Map - Forests that Mitigate Water Risk</div>
+<div class="buttonbackground">Global Erosion Risk</div>
 </a></button>
-<button type="button" class="projects col-lg-offset-3 col-lg-6" data-toggle="modal" data-target="#OtherProjectsModal">
+<button type="button" class="projects col-xs-offset-3 col-xs-6" data-toggle="modal" data-target="#OtherProjectsModal">
     Other Projects
     <div class="buttonbackground">Subinfo</div>
 </button>
@@ -265,8 +265,11 @@ GIS Maps
 </div>
 
 <br/>
-<button onclick='fly();' id='fly'>Pause Map</button>
-
+<div class="container" style="margin-bottom: 50px">
+<div class="row">
+<button class="text-vertical-center col-xs-4 col-xs-offset-4" onclick='fly();' id='fly'>Pause Map</button>
+</div>
+</div>
 </body>
 
 
