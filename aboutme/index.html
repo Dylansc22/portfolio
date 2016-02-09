@@ -13,7 +13,7 @@
 
 
     <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
     
 
 
@@ -75,7 +75,7 @@
         background: #ee8a65;
     }
 </style>
-<div id='mapid'></div>
+<div id='mapidheader'></div>
 
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoiZHlsYW5jIiwiYSI6Im53UGgtaVEifQ.RJiPqXwEtCLTLl-Vmd1GWQ';
@@ -83,17 +83,13 @@ var start = [-111.75, 32.5];
 var end = [-77.50, 38];
 var mapvar = new mapboxgl.Map({
 	//attributionControl: false,
-    container: 'mapid',
+    container: 'mapidheader',
     style: 'mapbox://styles/dylanc/cikb2yvtr00589fm13z417kdu',
     center: start,
     zoom: 9,
     attribution: "testing",
-
 });
-mapvar.doubleClickZoom.disable();
-mapvar.scrollZoom.disable();
-mapvar.dragPan.disable();
-mapvar.touchZoomRotate.disable();
+
 
 var isAtStart = true;
 
@@ -251,20 +247,15 @@ $( document ).ready(function() {
 <div class="container projectsgroup">
 	<div class="row">
 
-<button type="button" class="projects col-xs-offset-3 col-xs-6"><a href="aboutme/index.html">
-    <h4>About Me</h4>
-    <div class="buttonbackground">Subinfo</div>
-</a></button>
-<!--Modal About Me
 <button type="button" class="projects col-xs-offset-3 col-xs-6" data-toggle="modal" data-target="#AboutMeModal">
     <h4>About Me</h4>
     <div class="buttonbackground">Subinfo</div>
-</button>-->
+</button>
 <button type="button" class="projects col-xs-offset-3 col-xs-6" data-toggle="modal" data-target="#WritingSampleModal">
     <h4>Writing Samples</h4>
     <div class="buttonbackground">Subinfo</div>
 </button>
-<button type="button" class="projects col-xs-offset-3 col-xs-6"><a href="https://dylansc22.github.com/worksample">
+<a href="https://dylansc22.github.com/worksample"><button type="button" class="projects col-xs-offset-3 col-xs-6">
 <h4>GIS Maps</h4>
 <div class="buttonbackground">Global Erosion Risk</div>
 </a></button>
@@ -293,5 +284,5 @@ $( document ).ready(function() {
 
 
       <!-- Custom Javascript -->
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
 </html>

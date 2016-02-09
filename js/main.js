@@ -1,8 +1,23 @@
 $(document).ready(function() {
+	/*$('body').css('display', 'none');
+	$('body').fadeIn(2000);
+
+
+
+	$('.link').click(function() {
+	event.preventDefault();
+	newLocation = this.href;
+	$('body').fadeOut(2000, newpage);
+	});
+	function newpage() {
+	window.location = newLocation;
+	}*/
+
 
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
+
 
 /*
 //Removes any focus on a button after it was clicked
