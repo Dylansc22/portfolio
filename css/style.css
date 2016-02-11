@@ -437,3 +437,13 @@ element style, and override the bootstrap padding css*/
 *:focus {
     outline: none;
 }
+
+
+#aboutme{
+  margin-top:600px;
+  margin-bottom:100px;
+}
+
+/*.container {
+  background-color: rgba(255,255,255,.5);
+}*/
