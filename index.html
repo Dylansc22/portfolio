@@ -157,207 +157,106 @@ $(function() {
 
 
 <body id="bootstrapoverrides">
+
     <!-- Navigation -->
-    <!--<a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars fa-2x"></i></a>
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
             <li class="sidebar-brand">
-                <a href="#top">Start Bootstrap</a>
+                <a href="#top"  onclick = $("#menu-close").click(); >Start Bootstrap</a>
             </li>
             <li>
-                <a href="#top">Home</a>
+                <a href="#top" onclick = $("#menu-close").click(); >Home</a>
             </li>
             <li>
-                <a href="#about">About</a>
+                <a href="#aboutme" onclick = $("#menu-close").click(); >About</a>
             </li>
             <li>
-                <a href="#services">Services</a>
+                <a href="#services" onclick = $("#menu-close").click(); >Services</a>
             </li>
             <li>
-                <a href="#portfolio">Portfolio</a>
+                <a href="#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
             </li>
             <li>
-                <a href="#contact">Contact</a>
+                <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
             </li>
         </ul>
-    </nav>-->
+    </nav>
 
+	<div class="container">
+		<div class="row">
+			<div id="contactinfo" class="text-vertical-center col-xs-12">
+				<h1>DYLAN SCOTT COBEAN</h1>
+				<h4>Environmentalist / Urbanist / Cartographer / Data Analyst</h4>
+				<hr class="medium">
+				<!--<h3>A Personal Webpage</h3>-->
+					<div class="text-center center-block site-header">
+						<a href="#" title="Resume" data-toggle="tooltip" data-placement="bottom"><id="enablehovercoverwithoutfocuscolor" class="fa fa-file-text-o fa-3x social-rm grow" data-toggle="modal" data-target="#ResumeModal" style="outline: 0px; text-decoration: initial; "></a><a href="https://www.linkedin.com/in/dylancobean" title="Linkedin" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-linkedin fa-3x social-fb grow"></i></a>
+						<a href="https://github.com/dylansc22" title="Github" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-github fa-3x social-gp grow"></i></a>
+						<a href="mailto:dylan.cobean@gmail.com" title="Email" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-envelope fa-3x social-em grow"></i></a>
+						<a href="https://twitter.com/MrDylanScott" title="Twitter" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-twitter fa-3x social-tw grow"></i></a>
+						<a href="skype:dylanvideochat?userinfo" title="Skype" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-skype fa-3x social-sk grow"></i></a>
+					</div>
 
-<div class="container">
-<div class="row">
+					<div class="projectsgroup">
+						<div class="row">
+							<button type="button" class="projects col-xs-offset-3 col-xs-6"><a href="#aboutme"><h4>About Me</h4>
+					    	<div class="buttonbackground">Subinfo</div>
+							</a></button>
+			    		</div>
+			    	</div>
 
-
-<div id="contactinfo" class="text-vertical-center col-xs-offset-3 col-xs-6">
-	<h1>DYLAN SCOTT COBEAN</h1>
-	<h4>Environmentalist / Urbanist / Cartographer / Data Analyst</h4>
-	<hr class="medium">
-	<!--<h3>A Personal Webpage</h3>-->
-	<div container>
-		<div class="text-center center-block site-header">
-			<a href="#" title="Resume" data-toggle="tooltip" data-placement="bottom"><id="enablehovercoverwithoutfocuscolor" class="fa fa-file-text-o fa-3x social-rm grow" data-toggle="modal" data-target="#ResumeModal" style="outline: 0px; text-decoration: initial; "></a><a href="https://www.linkedin.com/in/dylancobean" title="Linkedin" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-linkedin fa-3x social-fb grow"></i></a>
-			<a href="https://github.com/dylansc22" title="Github" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-github fa-3x social-gp grow"></i></a>
-			<a href="mailto:dylan.cobean@gmail.com" title="Email" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-envelope fa-3x social-em grow"></i></a>
-			<a href="https://twitter.com/MrDylanScott" title="Twitter" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-twitter fa-3x social-tw grow"></i></a>
-			<a href="skype:dylanvideochat?userinfo" title="Skype" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-skype fa-3x social-sk grow"></i></a>
+			    	<div style="margin-bottom: 50px">
+						<div class="row">
+						<button class="text-vertical-center col-xs-2 col-xs-offset-5" onclick='fly();' id='fly'>Pause Map</button>
+						</div>
+					</div>
+			</div>
 		</div>
-    </div>
-</div>
+	</div>
+		
 
 
 
+	<div id="aboutme" class="sectioninfo">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 sectiontitle">
+					<h1>ABOUT ME.<br>______________</h1>
 
-<div class="projectsgroup">
-	<div class="row">
-	<br><br><br><br><br><br><br><br><br>
-		<button type="button" class="projects col-xs-offset-3 col-xs-6"><a href="#aboutme"> 
-    <h4>Click to Enter</h4>
-    <div class="buttonbackground">Subinfo</div>
-</a></button>
+				</div>
+				<div class="col-xs-offset-1 col-xs-11 sectioncontent">
+					<h4>
 
-<!--about me as a seperate page <button type="button" class="projects col-xs-offset-3 col-xs-6"><a href="aboutme/index.html"> 
-    <h4>About Me</h4>
-    <div class="buttonbackground">Subinfo</div>
-</a></button> -->
-<!--Modal About Me
-<button type="button" class="projects col-xs-offset-3 col-xs-6" data-toggle="modal" data-target="#AboutMeModal">
-    <h4>About Me</h4>
-    <div class="buttonbackground">Subinfo</div>
-</button>-->
+					I graduated with distiction from the University of Arizona in the Spring of 2013.
+					
 
-<!--<div class="projects col-lg-offset-2 col-lg-8">
-    Blog
-</div>-->
-</div>
-</div>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
 
-<br/>
-<div style="margin-bottom: 50px">
-<div class="row">
-<button class="text-vertical-center col-xs-2 col-xs-offset-5" onclick='fly();' id='fly'>Pause Map</button>
-</div>
-</div>
+					<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
 
-
-<div class="text-vertical-center">
-    <div class="row">
-    	<div id="aboutme">
-    		<h1>ABOUT DYLAN</h1>
-    		<h4>Graduated with Distinction as a Duel Major in Applied Math & Envnironmental Hydrology</h4>
-    	</div>
-    	    <section class="no-padding" id="portfolio">
-        <div class="container-fluid">
-            <div class="row no-gutter">
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="http://i2.cdn.turner.com/cnnnext/dam/assets/150324154025-14-internet-cats-restricted-super-169.jpeg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="http://i2.cdn.turner.com/cnnnext/dam/assets/150324154025-14-internet-cats-restricted-super-169.jpeg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="http://i2.cdn.turner.com/cnnnext/dam/assets/150324154025-14-internet-cats-restricted-super-169.jpeg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="http://i2.cdn.turner.com/cnnnext/dam/assets/150324154025-14-internet-cats-restricted-super-169.jpeg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="http://i2.cdn.turner.com/cnnnext/dam/assets/150324154025-14-internet-cats-restricted-super-169.jpeg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="http://i2.cdn.turner.com/cnnnext/dam/assets/150324154025-14-internet-cats-restricted-super-169.jpeg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </h1>
-    </section>
-
-    </div>
-
+					<h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
+				</div>
+			</div>
+		</div>
+	</div>
+		
 
 
 
