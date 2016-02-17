@@ -85,6 +85,8 @@
 <div id='mapid'></div>
 
 <script>
+
+
 mapboxgl.accessToken = 'pk.eyJ1IjoiZHlsYW5jIiwiYSI6Im53UGgtaVEifQ.RJiPqXwEtCLTLl-Vmd1GWQ';
 var start = [-111.8, 32.7];
 var end = [-77.50, 38];
@@ -139,6 +141,7 @@ $( document ).ready(function() {
 
 
 
+
 </script>
 
 
@@ -186,15 +189,19 @@ $( document ).ready(function() {
 						<a href="skype:dylanvideochat?userinfo" title="Skype" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-skype fa-3x social-sk grow"></i></a>
 					</div>
 
-					<div class="row">
-						<div id="contactinfofooter" class="text-vertical-center col-xs-12">
+					<div id="contactinfofooter" class="row">
+						<div class="text-vertical-center col-xs-12 center-block">
 
-
-						<button class="col-xs-2 col-xs-offset-5" onclick='fly();' id='fly'>Pause Map</button>
-							<div id="contactinfofootersentense" class="col-xs-offset-2 col-xs-8">
-							<a href="#mainnav" class="btn btn-circle page-scroll text-vertical-center">
-                            <i class="fa fa-3x fa-angle-double-down animated"></i>
+						<div id="enter" class="text-vertical-center">
+							Click to Enter
+							<a href="#mainnav" class="btn btn-circle page-scroll text-vertical-center center-block">
+                            <i class="fa fa-4x fa-angle-double-down animated"></i>
                         	</a>
+                        </div>
+
+						<button class="center-block" onclick='fly();' id='fly'>Pause Map</button>
+							<div id="contactinfofootersentense" class="col-xs-offset-2 col-xs-8">
+
 							<h4><i>Welcome to my self-built website. A showcase of my on-going post-college education. <br>
 
 							Click below to learn more...</i></h4>

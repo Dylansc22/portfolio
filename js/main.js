@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
 
+
 /*Custom Theme JavaScript //
     // Closes the sidebar menu
     $("#menu-close").click(function(e) {
