@@ -28,7 +28,7 @@ $(document).ready(function() {
 	window.location = newLocation;
 	}*/
 
-
+/*This enables the tooltip popup of "Resume", "Linkedin", "Github", etc... when I hover over the respective icon */
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
