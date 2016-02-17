@@ -43,6 +43,23 @@
   margin-top:200px;
 }
 
+#mainnav {
+  position:relative;
+  height:100px;
+  background-color:white;
+}
+
+#mainnav > ul > li {
+  padding-right:0px;
+  padding-left:0px;
+}
+
+#mainnavcontent {
+  padding-top:150px;
+  height:100%;
+  background-color:white;
+}
+
 .text-vertical-center {
     text-align: center;
     vertical-align: middle;
@@ -315,6 +332,11 @@ element style, and override the bootstrap padding css*/
 
 
 /* Custom Button Styles */
+.btn {
+      -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
 
 .btn-dark {
     border-radius: 0;
