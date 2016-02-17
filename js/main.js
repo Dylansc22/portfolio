@@ -13,6 +13,12 @@ $(document).ready(function() {
         $("#sidebar-wrapper").toggleClass("active");
     });
 
+    // Opens the sidebar menu
+    $("#imagetest").mouseenter(function(e) {
+        e.preventDefault();
+        $("#imagetest").toggleClass("active");
+    });
+
 
 	/*$('body').css('display', 'none');
 	$('body').fadeIn(2000);
