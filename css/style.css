@@ -8,8 +8,6 @@
     #fly {
         display: block;
         position: relative;
-        /* width:20%;   bootstrap div classes in the html currently handle the positioning, no longer using this default code*/
-        /*margin: 0px auto;bootstrap div classes in the html currently handle the positioning, no longer using this default code*/
         height: 40px;
         /*padding: 10px;bootstrap div classes in the html currently handle the positioning, no longer using this default code*/
         border: none;
@@ -18,6 +16,7 @@
         text-align: center;
         color: #fff;
         background: #ee8a65;
+        margin-top:100px;
     }
 
 #bootstrapoverrides {
