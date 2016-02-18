@@ -5,7 +5,20 @@
  */
 
 /* Global Styles */
-
+    #fly {
+        display: block;
+        position: relative;
+        /* width:20%;   bootstrap div classes in the html currently handle the positioning, no longer using this default code*/
+        /*margin: 0px auto;bootstrap div classes in the html currently handle the positioning, no longer using this default code*/
+        height: 40px;
+        /*padding: 10px;bootstrap div classes in the html currently handle the positioning, no longer using this default code*/
+        border: none;
+        border-radius: 3px;
+        font-size: 12px;
+        text-align: center;
+        color: #fff;
+        background: #ee8a65;
+    }
 
 #bootstrapoverrides {
   position: absolute;
@@ -43,8 +56,18 @@
   margin-top:0px;
 }
 
-#enter {
+#enter > a {
   margin-bottom:100px;
+  color:#606060;
+    width: 70px;
+    height: 70px;
+    margin-top: 15px;
+    padding: 7px 16px;
+    border: 2px solid #606060;
+    border-radius: 35px;
+    font-size: 40px;
+    color: #606060;
+    background: 0 0;
 }
 
 #mainnav {
@@ -52,7 +75,6 @@
   height:100px;
   background-color:rgba(255,255,255,0.5);
   float:none;
-
 }
 
 #mainnav > ul > li {
@@ -79,12 +101,17 @@ transition: all .1s ease-in-out; }
 transform: scale(1.3);
 }
 
+#mainnav {
+  color:green;
+}
+
 .social-fb, .social-tw, .social-gp, .social-em, .social-rm, .social-sk {
 color: #606060;
 padding:10px;
 z-index: 2;
-
 }
+
+
 .social-fb:hover {
 color: #3B5998;
 }
