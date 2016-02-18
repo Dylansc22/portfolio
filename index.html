@@ -2,25 +2,20 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Dylan's Homepage</title>
-
-
+    <title>I'm Dylan</title>
     <!-- Custom CSS -->
     <link href="css/style.css" rel="stylesheet">
     
-
-
-        <!--Awesome Fonts Library-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-        <!-- Google Fonts (from https://www.google.com/fonts )-->
-        <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+    <!--Awesome Fonts Library-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Google Fonts (from https://www.google.com/fonts )-->
+    <link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
  	<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
@@ -36,10 +31,16 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 	<!-- Mapbox Css and Js Libraries-->
-   	<script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.3/mapbox.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.3/mapbox.css' rel='stylesheet' />
+   	<script src='https://api.mapbox.com/mapbox.js/v2.2.4/mapbox.js'></script>
+	<link href='https://api.mapbox.com/mapbox.js/v2.2.4/mapbox.css' rel='stylesheet' />
 
+	<!--NEW MAPBOX LIBRARIES-->
+	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.13.1/mapbox-gl.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.13.1/mapbox-gl.css' rel='stylesheet' />
 
+	<!--Skype Call Button-->
+	<script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,117 +48,14 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-
-
-<!--OLD MAPBOX LIBRARIES-->
-<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-<script src='https://api.mapbox.com/mapbox.js/v2.2.4/mapbox.js'></script>
-<link href='https://api.mapbox.com/mapbox.js/v2.2.4/mapbox.css' rel='stylesheet' />
-
-<!--NEW MAPBOX LIBRARIES-->
-<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.13.1/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.13.1/mapbox-gl.css' rel='stylesheet' />
-
-
-<!--Skype Call Button-->
-<script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
-
-
+	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 </head>
 
-<div id='mapid'></div>
-
-<script>
-
-
-mapboxgl.accessToken = 'pk.eyJ1IjoiZHlsYW5jIiwiYSI6Im53UGgtaVEifQ.RJiPqXwEtCLTLl-Vmd1GWQ';
-var start = [-111.8, 32.7];
-var end = [-77.50, 38];
-var mapvar = new mapboxgl.Map({
-	//attributionControl: false,
-    container: 'mapid',
-    style: 'mapbox://styles/dylanc/cikb2yvtr00589fm13z417kdu',
-    center: start,
-    zoom: 9,
-
-});
-mapvar.doubleClickZoom.disable();
-mapvar.scrollZoom.disable();
-mapvar.dragPan.disable();
-mapvar.touchZoomRotate.disable();
-
-var isAtStart = true;
-
-function fly() {
-    // depending on whether we're currently at point a or b, aim for
-    // point a or b
-    var target = isAtStart ? end : start;
-
-    // and now we're at the opposite point
-    isAtStart = !isAtStart;
-
-    mapvar.flyTo({
-        // These options control the ending camera position: centered at
-        // the target, at zoom level 9, and north up.
-        center: target,
-        zoom: 10,
-        bearing: 0,
-
-        // These options control the flight curve, making it move
-        // slowly and zoom out almost completely before starting
-        // to pan.
-        speed: 0.012, // make the flying slow
-        curve: 0.01, // change the speed at which it zooms out
-
-        // This can be any easing function: it takes a number between
-        // 0 and 1 and returns another number between 0 and 1.
-        easing: function (t) {
-            return t;
-        }
-    });
-}
-
-
-$( document ).ready(function() {
-  fly();
-});
-
-
-
-
-</script>
 
 
 <body id="bootstrapoverrides">
-
-    <!-- Navigation Bar-->
-    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars fa-2x"></i></a>
-    <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-            <li class="sidebar-brand">
-                <a href="#top"  onclick = $("#menu-close").click(); >Start Bootstrap</a>
-            </li>
-            <li>
-                <a href="#top" onclick = $("#menu-close").click(); >Home</a>
-            </li>
-            <li>
-                <a href="#aboutme" onclick = $("#menu-close").click(); >About</a>
-            </li>
-            <li>
-                <a href="#services" onclick = $("#menu-close").click(); >Services</a>
-            </li>
-            <li>
-                <a href="#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
-            </li>
-            <li>
-                <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
-            </li>
-        </ul>
-    </nav>
-
+<div id='mapid'></div>
+    
     <!--Contact Info Card-->
 	<div class="container">
 		<div class="row">
@@ -166,41 +64,28 @@ $( document ).ready(function() {
 				<h4>Environmentalist / Urbanist / Cartographer / Data Analyst</h4>
 				<hr class="medium">
 				<!--<h3>A Personal Webpage</h3>-->
-					<div class="text-center center-block site-header">
-						<a href="#" title="Resume" data-toggle="tooltip" data-placement="bottom"><id="enablehovercoverwithoutfocuscolor" class="fa fa-file-text-o fa-3x social-rm grow" data-toggle="modal" data-target="#ResumeModal" style="outline: 0px; text-decoration: initial; "></a><a href="https://www.linkedin.com/in/dylancobean" title="Linkedin" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-linkedin fa-3x social-fb grow"></i></a>
-						<a href="https://github.com/dylansc22" title="Github" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-github fa-3x social-gp grow"></i></a>
-						<a href="mailto:dylan.cobean@gmail.com" title="Email" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-envelope fa-3x social-em grow"></i></a>
-						<a href="https://twitter.com/MrDylanScott" title="Twitter" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-twitter fa-3x social-tw grow"></i></a>
-						<a href="skype:dylanvideochat?userinfo" title="Skype" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-skype fa-3x social-sk grow"></i></a>
-					</div>
+				<div class="text-center center-block site-header">
+					<a href="#" title="Resume" data-toggle="tooltip" data-placement="bottom"><id="enablehovercoverwithoutfocuscolor" class="fa fa-file-text-o fa-3x social-rm grow" data-toggle="modal" data-target="#ResumeModal" style="outline: 0px; text-decoration: initial; "></a><a href="https://www.linkedin.com/in/dylancobean" title="Linkedin" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-linkedin fa-3x social-fb grow"></i></a>
+					<a href="https://github.com/dylansc22" title="Github" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-github fa-3x social-gp grow"></i></a>
+					<a href="mailto:dylan.cobean@gmail.com" title="Email" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-envelope fa-3x social-em grow"></i></a>
+					<a href="https://twitter.com/MrDylanScott" title="Twitter" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-twitter fa-3x social-tw grow"></i></a>
+					<a href="skype:dylanvideochat?userinfo" title="Skype" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-skype fa-3x social-sk grow"></i></a>
+				</div>
 
-					<div id="contactinfofooter" class="row">
-						<div class="text-vertical-center col-xs-12 center-block">
+				<div id="contactinfofooter" class="row">
+					<div class="text-vertical-center col-xs-12 center-block">
+					<div id="enter" class="text-vertical-center">
+                    	<a href="#mainnav" class="btn btn-circle page-scroll text-vertical-center center-block grow" title="Click to Learn More" data-toggle="tooltip" data-placement="top">
+                        <i class="fa fa-angle-double-down"></i>
+                    	</a>
+                    </div>
 
-						<div id="enter" class="text-vertical-center">
-                        	<a href="#mainnav" class="btn btn-circle page-scroll text-vertical-center center-block grow" title="Click to Learn More" data-toggle="tooltip" data-placement="top">
-                            <i class="fa fa-angle-double-down"></i>
-                        	</a>
-                        </div>
-
-						<button class="center-block" onclick='fly();' id='fly'>Pause Map</button>
-							<div id="contactinfofootersentense" class="col-xs-offset-2 col-xs-8">
-
-							<h4><i>Welcome to my self-built website. A showcase of my on-going post-college education. <br>
-
-							Click below to learn more...</i></h4>
-							</div>
+					<button class="center-block" onclick='fly();' id='fly'>Pause Map</button>
+						<div id="contactinfofootersentense" class="col-xs-offset-2 col-xs-8">
+							<h4><i>Welcome to my self-built website. A showcase of my on-going post-college education. <br>Click below to learn more...</i></h4>
 						</div>
 					</div>
-
-										<!--
-					<div class="projectsgroup">
-						<div class="row">
-							<button type="button" class="projects col-xs-offset-3 col-xs-6"><a href="#aboutme"><h4>About Me</h4>
-					    	<div class="buttonbackground">Subinfo</div>
-							</a></button>
-			    		</div>
-			    	</div>-->
+				</div>
 			</div>
 		</div>
 	</div><!--end container-->
@@ -219,13 +104,11 @@ $( document ).ready(function() {
 
 	  <!-- Tab panes -->
 	  <div id="mainnavcontent" class="tab-content">
-	    <div role="tabpanel" class="tab-pane fade in active" id="aboutme">
+	  	<!--About Me Section-->
+	    <div role="tabpanel" class="tab-pane active" id="aboutme">
 	    	<div class="col-xs-offset-1 col-xs-10 sectioncontent">
 					<h4>
-
 					I graduated with distiction from the University of Arizona in the Spring of 2013.
-					
-
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -248,7 +131,10 @@ $( document ).ready(function() {
 					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
 				</div>
 	    </div>
-	    <div role="tabpanel" class="tab-pane fade" id="profile">
+
+
+	    <!--Worksample Section-->
+	    <div role="tabpanel" class="tab-pane" id="profile">
 	    	<div class="col-lg-4 col-xs-6">
                     <a href="https://dylansc22.github.io/worksample/" class="portfolio-box">
                         <img src="img/ffw2.png" class="img-responsive" alt="">
@@ -339,102 +225,81 @@ $( document ).ready(function() {
                         </div>
                     </a>
                 </div>
-
 	    </div>
-	    <div role="tabpanel" class="tab-pane fade" id="messages">...</div>
-	    <div role="tabpanel" class="tab-pane fade" id="settings">...</div>
+
+	    <!--Timeline Section-->
+	    <div role="tabpanel" class="tab-pane" id="messages">...</div>
+	    <!--Blog Section-->
+	    <div role="tabpanel" class="tab-pane" id="settings">...</div>
 	  </div>
 
 
+	  <!-- Resume Modal -->
+	<div class="modal fade" id="ResumeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	     <div class="text-vertical-center"> 
+	      <div class="modal-header">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <!-- Don't need the download button for now, because there is a save button in the pdf viewer-->
+	        <a type="button" href="pdf/Resume.pdf" class="btn btn-primary" download="DylanCobean_Resume.pdf">Download</a>
+	      </div>
+	      <div class="modal-body">
+	        <iframe src="https://drive.google.com/file/d/0BxUFaFhM2TB8cmJzNDhPZGRaY0E/preview" width="100%" height="800"></iframe>
+	      </div>
+	    </div>
+	    </div>
+	  </div>
+	</div>
 
+	<!-- About Me Modal -->
+	<div class="modal fade" id="AboutMeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	      
+	      <div class="modal-header">
+	        Modal Header
+	      </div>
+	      <div class="modal-body">
+	        Modal Body - Content Coming Soon!
+	        <h1>My name is Dylan</h1>
+	        <h5>this is some info</h5>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 
-		
+	<!-- Writing Sample Modal -->
+	<div class="modal fade" id="WritingSampleModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	      
+	      <div class="modal-header">
+	        Modal Header
+	      </div>
+	      <div class="modal-body">
+	        Modal Body - Content Coming Soon!
+	      </div>
+	    </div>
+	  </div>
+	</div>
 
-
-
-
-</div>
-
-
-
-
-  <!-- Modal -->
-<div class="modal fade" id="ResumeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-     <div class="text-vertical-center"> 
-      <div class="modal-header">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <!-- Don't need the download button for now, because there is a save button in the pdf viewer-->
-        <a type="button" href="pdf/Resume.pdf" class="btn btn-primary" download="DylanCobean_Resume.pdf">Download</a>
-      </div>
-      <div class="modal-body">
-        <iframe src="https://drive.google.com/file/d/0BxUFaFhM2TB8cmJzNDhPZGRaY0E/preview" width="100%" height="800"></iframe>
-      </div>
-    </div>
-    </div>
-  </div>
-</div>
-
-
-
-<!-- About Me Modal -->
-<div class="modal fade" id="AboutMeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      
-      <div class="modal-header">
-        Modal Header
-      </div>
-      <div class="modal-body">
-        Modal Body - Content Coming Soon!
-        <h1>My name is Dylan</h1>
-        <h5>this is some info</h5>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Writing Sample Modal -->
-<div class="modal fade" id="WritingSampleModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      
-      <div class="modal-header">
-        Modal Header
-      </div>
-      <div class="modal-body">
-        Modal Body - Content Coming Soon!
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Other Projects Modal -->
-<div class="modal fade" id="OtherProjectsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      
-      <div class="modal-header">
-        Modal Header
-      </div>
-      <div class="modal-body">
-        Modal Body - Content Coming Soon!
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
+	<!-- Other Projects Modal -->
+	<div class="modal fade" id="OtherProjectsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	      
+	      <div class="modal-header">
+	        Modal Header
+	      </div>
+	      <div class="modal-body">
+	        Modal Body - Content Coming Soon!
+	      </div>
+	    </div>
+	  </div>
+	</div>
 
 </body>
-
-
-
-
-
 
       <!-- Custom Javascript -->
     <script src="js/main.js"></script>
