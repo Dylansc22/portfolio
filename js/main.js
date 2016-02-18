@@ -5,8 +5,9 @@ $(document).ready(function() {
     })
 
     // Select all tabs
-    $('.nav-tabs a').click(function (e){
-        e.preventDefault()
+    $('.nav-tabs li a').click(function (e){
+        e.preventDefault();
+        e.stopImmediatePropagation();
         $(this).tab('show');
     })
 
