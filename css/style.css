@@ -30,6 +30,32 @@
       background-color:#E8E8E8;
     /*font-family: ""Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif";*/
 }
+
+
+#bootstrapoverrides .container-fluid {
+  padding-right:0px;
+  padding-left:0px;
+}
+#bootstrapoverrides .row-fluid {
+  padding-right:0px;
+  padding-left:0px;
+}
+#bootstrapoverrides .container {
+  padding-right:0px;
+  padding-left:0px;
+}
+#bootstrapoverrides .row {
+  padding-right:0px;
+  padding-left:0px;
+}
+
+
+
+.text-vertical-center {
+    text-align: center;
+    vertical-align: middle;
+}
+
 #bootstrapoverrides h1 {
   color:#606060;
   font-size: 3.5em;
@@ -43,18 +69,18 @@
 
 
 #contactinfo {
-  margin: 200px 0 300px 0;
-  /*background-color:rgba(255,255,255,.5);*/
+  margin-top:200px;
+  margin-bottom:300px;
+  background-color:rgba(255,255,255,.5);
+  padding:30px 10px;
 }
 
 #contactinfofooter {
-  margin-top:100px;
+  margin-top:300px;
+  margin-bottom:300px;
 }
 
-#contactinfofootersentense {
-  margin-top:0px;
-}
-
+/*the unique styling to get the "Click to Learn More" Circle around the double-down arrow*/
 #enter > a {
   margin-bottom:100px;
   color:#606060;
@@ -69,27 +95,6 @@
     background: 0 0;
 }
 
-#mainnav {
-  float:none;
-  padding:0px;
-  font-size:.6vw;
-}
-
-#mainnav ul li {
-  padding-left: 0px;
-  padding-right: 0px;
-}
-
-#mainnavcontent {
-  padding-top:150px;
-  height:100%;
-  background-color:white;
-}
-
-.text-vertical-center {
-    text-align: center;
-    vertical-align: middle;
-}
 
 
 /* Social Media Buttons */
@@ -98,36 +103,23 @@ transition: all .1s ease-in-out; }
 .grow:hover {
 transform: scale(1.3);
 }
-
-#mainnav {
-  color:green;
-}
-
 .social-fb, .social-tw, .social-gp, .social-em, .social-rm, .social-sk {
 color: #606060;
 padding:10px;
-z-index: 2;
-}
-
+z-index: 2;}
 
 .social-fb:hover {
-color: #3B5998;
-}
+color: #3B5998;}
 .social-tw:hover {
-color: #4099FF;
-}
+color: #4099FF;}
 .social-gp:hover {
-color: #1D9833;
-}
+color: #1D9833;}
 .social-em:hover {
-color: #f39c12;
-}
+color: #f39c12;}
 .social-rm:hover {
-color: #d34836;
-}
+color: #d34836;}
 .social-sk:hover {
-color: #d36836;
-}
+color: #d36836;}
 
 
 /* Custom Horizontal Rule */
@@ -143,94 +135,32 @@ hr.medium {
     border-top-color:black;
 }
 
-
-
-/* About */
-
-.about {
-    padding: 50px 0;
-    background-color: white;
+/*CSS necessary for the affix to work*/
+.affix {
+  top:0px;
+  display: inline-block;
 }
 
-/* Services */
-
-.services {
-    padding: 50px 0;
-    background-color: gray;
+#affixeditem > li {
+  width:25%;
+  display:block;
 }
 
-.service-item {
-    margin-bottom: 30px;
+.wrapper {
+  min-height:106px;
 }
 
-/* Callout */
-
-
-
-/* Portfolio */
-
-.portfolio {
-    padding: 50px 0;
+#blankwhitespace {
+width:100%;
+height:75px;
+background-color:white;
 }
 
-.portfolio-item {
-    margin-bottom: 30px;
-}
-
-.img-portfolio {
-    margin: 0 auto;
-}
-
-.img-portfolio:hover {
-    opacity: 0.8;
-}
-
-
-.projectsgroup {
-  margin-top: 150px;
-  margin-bottom: 25px;
-}
-
-.projects {
-  padding:30px 0px 30px 0px;
-  margin: 10px 0 10px 0;
+ #mainnavcontent div {
+  height:100%;
+  padding-top:50px;
   background-color: white;
-  border-width: 1px;
-  border-style: solid;
-  border-color:#505050;
-  overflow: hidden;
-  position: relative;
-}
-
-.projects h4 {
-  padding: 0px;
-  margin:0px;
-}
-
-/*this is the same as the .projects class, and SHOULD be in the .projects css, but for some reason the padding command does
-\ not override the bootstrap css padding command, the only way to override the command is to specifically call out the 
-element style, and override the bootstrap padding css*/
-#bootstrapoverrides > div.container.projectsgroup > div > button {
-  padding-left:0px;
-  padding-right:0px;
-}
-
-.buttonbackground {
-  padding: 30px 0 30px 0;
-  position: absolute;
-  left:0px;/*this centers the subinfo div inside the 'click to enter' div */
-  bottom: -80px;
-  width:100%;
-;  transition: all 0.2s ease;
-}
-
-.projects:hover .buttonbackground {
-  background-color: #ACACAC;
-  bottom: 0;
-}
-
-
-
+ }
 
 
 #mapid{
@@ -255,21 +185,6 @@ element style, and override the bootstrap padding css*/
     outline: none;
 }
 
-
-.sectioninfo{
-  height:100%;
-  margin:0 0 0 0;
-  /*padding:0px 0 300px 0;*/
-  background-color:white;
-}
-
-.sectiontitle {
-  padding: 30px 0 30px 0;
-}
-
-.sectioncontent {
-  padding:15px 0 15px 0;
-}
 
 #worksamples > [class*=col-] {
   padding-right:0px;
@@ -395,7 +310,7 @@ element style, and override the bootstrap padding css*/
     background-color: rgba(255,255,255,0.8);
 }
 
-
+/*CSS For the worksample image section*/
 .portfolio-box {
     display: block;
     position: relative;
