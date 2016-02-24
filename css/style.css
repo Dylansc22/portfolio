@@ -172,6 +172,10 @@ background-color:white;
   background-color: white;
  }
 
+ #mainnavcontent {
+    margin-top:100px;
+ }
+
 
 #mapid{
   position:fixed;
@@ -199,9 +203,6 @@ background-color:white;
     display: block;
 }
 
-#text1 {
-    height:300px;
-}
 
 #image2 {
     height:300px;
@@ -220,7 +221,7 @@ background-color:white;
     font-size: 150%;
 }
 .aboutmefooter {
-    padding-top:200px;
+    margin-top:100px;
     padding-bottom:200px;
 }
 
