@@ -40,10 +40,7 @@
   padding-right:0px;
   padding-left:0px;
 }
-#bootstrapoverrides .container {
-  padding-right:0px;
-  padding-left:0px;
-}
+
 #bootstrapoverrides .row {
   padding-right:0px;
   padding-left:0px;
@@ -76,7 +73,7 @@
 
 #contactinfo {
   margin-top:200px;
-  margin-bottom:300px;
+  margin-bottom:50px;
   background-color:rgba(255,255,255,.5);
   padding:30px 10px;
   border-style: solid;
@@ -85,7 +82,6 @@
 }
 
 #contactinfofooter {
-  margin-top:300px;
   margin-bottom:300px;
 }
 
@@ -404,6 +400,11 @@ background-color:white;
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
         font-size: 22px;
     }
+}
+
+@media(min-width:480px) {
+    #contactinfo {
+        margin-top:50px;
 }
 
 
