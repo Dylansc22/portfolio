@@ -16,7 +16,7 @@ of the dom and positioned by our JS basically. Normally, the nav there would jus
 width of its parent, but it effectively doesn't have one once affixed. 
 You'll need to set a width for the element manually. And this code does just that*/
 /*Pulled from https://github.com/twbs/bootstrap/issues/6350*/
-function affixWidth() {
+/*function affixWidth() {
     var affix = $('#affixeditem');
     var width = affix.width();
     affix.width(width);
@@ -26,7 +26,7 @@ $(document).ready(function () {
 
     affixWidth();
 
-});
+});*/
 
 $(function() {
   $('a[href*="#"]:not([href="#"])').click(function() {

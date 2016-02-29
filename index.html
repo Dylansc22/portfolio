@@ -59,87 +59,33 @@
 
 
 <body id="bootstrapoverrides">
-<div id='mapid'></div>
+
 <script>
 	/*enables all animation behavior*/
 	new WOW().init();
-
-	/*enables all map behavior*/
-	mapboxgl.accessToken = 'pk.eyJ1IjoiZHlsYW5jIiwiYSI6Im53UGgtaVEifQ.RJiPqXwEtCLTLl-Vmd1GWQ';
-	var start = [-111.8, 32.7];
-	var end = [-77.50, 38];
-	var mapvar = new mapboxgl.Map({
-	//attributionControl: false,
-	container: 'mapid',
-	style: 'mapbox://styles/dylanc/cikb2yvtr00589fm13z417kdu',
-	center: start,
-	zoom: 9,
-
-	});
-	mapvar.doubleClickZoom.disable();
-	mapvar.scrollZoom.disable();
-	mapvar.dragPan.disable();
-	mapvar.touchZoomRotate.disable();
-
-	var isAtStart = true;
-
-	function fly() {
-	// depending on whether we're currently at point a or b, aim for
-	// point a or b
-	var target = isAtStart ? end : start;
-
-	// and now we're at the opposite point
-	isAtStart = !isAtStart;
-
-	mapvar.flyTo({
-	    // These options control the ending camera position: centered at
-	    // the target, at zoom level 9, and north up.
-	    center: target,
-	    zoom: 10,
-	    bearing: 0,
-
-	    // These options control the flight curve, making it move
-	    // slowly and zoom out almost completely before starting
-	    // to pan.
-	    speed: 0.012, // make the flying slow
-	    curve: 0.01, // change the speed at which it zooms out
-
-	    // This can be any easing function: it takes a number between
-	    // 0 and 1 and returns another number between 0 and 1.
-	    easing: function (t) {
-	        return t;
-	    }
-	});
-	} //End fly() Program
-
-
-	$( document ).ready(function() {
-	  fly();
-	});
-
 </script>
-    
+
     <!--Contact Info Card-->
 	<div class="container">
 		<div class="row">
-			<div id="contactinfo" class="wow fadeIn text-vertical-center col-sm-offset-3 col-sm-6 col-xs-12">
+			<div id="contactinfo" class="infobox wow fadeInDown text-vertical-center col-sm-offset-3 col-sm-6 col-xs-12">
 				<div class="wow fadeInLeft" data-wow-delay="0.5s"><h1>DYLAN SCOTT COBEAN</h1></div>
 				<div class="wow fadeInRight" data-wow-delay="1s"><h4>Environmentalist / Urbanist / Cartographer / Data Analyst</h4></div>
 				<div class="wow fadeInUp" data-wow-delay="1.2s"><hr class="medium"></div>
 				<!--<h3>A Personal Webpage</h3>-->
 				<div class="text-center center-block site-header">
 					<!--Resume-->
-					<a href="#" title="Resume" data-toggle="tooltip" data-placement="bottom"><id="enablehovercoverwithoutfocuscolor" class="fa fa-file-text-o fa-3x social-rm grow wow rollIn" data-wow-delay="1.2s" data-toggle="modal" data-target="#ResumeModal" style="outline: 0px; text-decoration: initial; "></a>
+					<a href="#" title="Resume" data-toggle="tooltip" data-placement="bottom"><id="enablehovercoverwithoutfocuscolor" class="fa fa-file-text-o fa-3x social-rm grow wow fadeInLeft" data-wow-delay="1.2s" data-toggle="modal" data-target="#ResumeModal" style="outline: 0px; text-decoration: initial; "></a>
 					<!--Linkedin-->
-					<a href="https://www.linkedin.com/in/dylancobean" title="Linkedin" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-linkedin fa-3x social-fb grow wow rollIn" data-wow-delay="1.4s"></i></a>
+					<a href="https://www.linkedin.com/in/dylancobean" title="Linkedin" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-linkedin fa-3x social-fb grow wow fadeInDown" data-wow-delay="1.4s"></i></a>
 					<!--Github-->
-					<a href="https://github.com/dylansc22" title="Github" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-github fa-3x social-gp grow wow rollIn" data-wow-delay="1.6s"></i></a>
+					<a href="https://github.com/dylansc22" title="Github" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-github fa-3x social-gp grow wow fadeInRight" data-wow-delay="1.6s"></i></a>
 					<!--Gmail-->
-					<a href="mailto:dylan.cobean@gmail.com" title="Email" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-envelope fa-3x social-em grow wow rollIn" data-wow-delay="1.8s"></i></a>
+					<a href="mailto:dylan.cobean@gmail.com" title="Email" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-envelope fa-3x social-em grow wow fadeInUp" data-wow-delay="1.8s"></i></a>
 					<!--Twitter-->
-					<a href="https://twitter.com/MrDylanScott" title="Twitter" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-twitter fa-3x social-tw grow wow rollIn" data-wow-delay="2s"></i></a>
+					<a href="https://twitter.com/MrDylanScott" title="Twitter" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-twitter fa-3x social-tw grow wow fadeInDown" data-wow-delay="2s"></i></a>
 					<!--Skype-->
-					<a href="skype:dylanvideochat?userinfo" title="Skype" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-skype fa-3x social-sk grow wow rollIn" data-wow-delay="2.2s"></i></a>
+					<a href="skype:dylanvideochat?userinfo" title="Skype" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-skype fa-3x social-sk grow wow fadeInRight" data-wow-delay="2.4s"></i></a>
 				</div>
 			</div>
 				<div id="contactinfofooter" class="row">
@@ -148,7 +94,7 @@
 							<h4><i>Welcome to my self-built website. A showcase of my on-going post-college education. <br>Click below to learn more...</i></h4>
 					</div>-->
 					
-					<div id="enter" class="text-vertical-center wow bounceInUp" data-wow-delay="2.3s">
+					<div id="enter" class="text-vertical-center wow bounceInUp" data-wow-delay="3s">
                     	<a href="#affixeditem" class="btn btn-circle page-scroll text-vertical-center center-block grow" title="Click to Learn More" data-toggle="tooltip" data-placement="top">
                         <i class="fa fa-angle-double-down"></i>
                     	</a>
@@ -163,24 +109,24 @@
   <!-- Nav tabs -->
 <div class="container">
 <div class="row wrapper no-gutter">
-  <ul id="affixeditem" class="col-xs-12 nav nav-tabs text-center" role="tablist" data-spy="affix" data-offset-top="1240">
+  <ul id="affixeditem" class="col-xs-12 nav nav-tabs text-center" role="tablist">
     <div class="active col-xs-3"><li role="presentation"><a href="#aboutme" aria-controls="aboutme" role="tab" data-toggle="tab"><h3>ABOUT ME</h3></a></li></div>
-     <div class="col-xs-3"><li role="presentation" class="col-xs-3"><a href="#worksamples" aria-controls="worksamples" role="tab" data-toggle="tab" class="col-xs-3"><h3>WORKSAMPLES</h3></a></li></div>
-     <div class="col-xs-3"><li role="presentation" class="col-xs-3" ><a href="#timeline" aria-controls="timeline" role="tab" data-toggle="tab"><h3>TIMELINE</h3></a></li></div>
-     <div class="col-xs-3"><li role="presentation" ><a href="#blog" aria-controls="blog" role="tab" data-toggle="tab"><h3>BLOG</h3></a></li></div>
+     <div class="col-xs-3"><li role="presentation"><a href="#worksamples" aria-controls="worksamples" role="tab" data-toggle="tab" class="col-xs-3"><h3>WORKSAMPLES</h3></a></li></div>
+     <div class="col-xs-3"><li role="presentation"><a href="#timeline" aria-controls="timeline" role="tab" data-toggle="tab"><h3>TIMELINE</h3></a></li></div>
+     <div class="col-xs-3"><li role="presentation"><a href="#blog" aria-controls="blog" role="tab" data-toggle="tab"><h3>BLOG</h3></a></li></div>
   </ul>
 
 
 
 
 	  <!-- Tab panes -->
-	  <div id="mainnavcontent" class="tab-content">
+	  <div id="mainnavcontent" class="tab-content infobox">
 		  	<!--About Me Section-->
 		    <div role="tabpanel" class="tab-pane fade in active" id="aboutme">
 		    	<div class="container">
 		    		<div class="row">
-		    			<div id="image1" class="col-sm-3 col-sm-offset-1"></div>
-		    			<div id="text1" class="col-sm-offset-1 col-sm-6">
+		    			
+		    			<div id="text1" class="col-sm-10 col-sm-offset-1">
 		    			<h4><p><span class="biggerfont">
 		    			I graduated with distiction </span> in Applied Mathematics & Environmental Hydrology from the University of Arizona in the Spring of 2013. 
 						<br><br>
@@ -197,9 +143,9 @@
 						
 						</h4></div>
 				
-		    			<div class="aboutmefooter col-xs-10 col-sm-offset-1"><i>More than halfway through my degree program in Physics, I realized I was happier learning about the natural environment around me. I switched my major to Applied Mathematics & Environmental Hydrology and never looked back. I've had the great opportunity to work for both large environmental research institutions, along with small community-based environmental organizations. This diversity have given me a unique prespective on environmental sustainability and new urbanism. I've simultaniously created a strong foundation of skills in critical thinking, data visualization, and geospatial analysis. 
+		    			<!--<div class="aboutmefooter col-xs-10 col-sm-offset-1"><i>More than halfway through my degree program in Physics, I realized I was happier learning about the natural environment around me. I switched my major to Applied Mathematics & Environmental Hydrology and never looked back. I've had the great opportunity to work for both large environmental research institutions, along with small community-based environmental organizations. This diversity have given me a unique prespective on environmental sustainability and new urbanism. I've simultaniously created a strong foundation of skills in critical thinking, data visualization, and geospatial analysis. 
 <br><br>
-I've always been facinated by Stability Theory in Applied Mathematics Coursework - the concept of stable or instable equilibrium points where functions converge or diverge respectively. I apperciate the simplicity of that concept in our societies' built urban systems, slowly harmonizing or creating disonance with our ecosystem's natural processes.</i></div>
+I've always been facinated by Stability Theory in Applied Mathematics Coursework - the concept of stable or instable equilibrium points where functions converge or diverge respectively. I apperciate the simplicity of that concept in our societies' built urban systems, slowly harmonizing or creating disonance with our ecosystem's natural processes.</i></div>-->
 
 		    			
 
@@ -318,6 +264,63 @@ I've always been facinated by Stability Theory in Applied Mathematics Coursework
 	    </div>
 	  </div>
 	</div>
+	<div id='mapid' class="wow fadeIn" data-wow-delay="4s"></div>
+<script>
+$(document).ready(function() {
+	/*enables all map behavior*/
+	mapboxgl.accessToken = 'pk.eyJ1IjoiZHlsYW5jIiwiYSI6Im53UGgtaVEifQ.RJiPqXwEtCLTLl-Vmd1GWQ';
+	var start = [-111.8, 32.7];
+	var end = [-77.50, 38];
+	var mapvar = new mapboxgl.Map({
+	//attributionControl: false,
+	container: 'mapid',
+	style: 'mapbox://styles/dylanc/cikb2yvtr00589fm13z417kdu',
+	center: start,
+	zoom: 9,
+
+	});
+	mapvar.doubleClickZoom.disable();
+	mapvar.scrollZoom.disable();
+	mapvar.dragPan.disable();
+	mapvar.touchZoomRotate.disable();
+
+	var isAtStart = true;
+
+	function fly() {
+	// depending on whether we're currently at point a or b, aim for
+	// point a or b
+	var target = isAtStart ? end : start;
+
+	// and now we're at the opposite point
+	isAtStart = !isAtStart;
+
+	mapvar.flyTo({
+	    // These options control the ending camera position: centered at
+	    // the target, at zoom level 9, and north up.
+	    center: target,
+	    zoom: 10,
+	    bearing: 0,
+
+	    // These options control the flight curve, making it move
+	    // slowly and zoom out almost completely before starting
+	    // to pan.
+	    speed: 0.012, // make the flying slow
+	    curve: 0.01, // change the speed at which it zooms out
+
+	    // This can be any easing function: it takes a number between
+	    // 0 and 1 and returns another number between 0 and 1.
+	    easing: function (t) {
+	        return t;
+	    }
+	});
+	} //End fly() Program
+
+
+	  fly();
+});
+
+</script>
+    
 </body>
 
       <!-- Custom Javascript -->
