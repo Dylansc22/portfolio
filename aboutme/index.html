@@ -59,224 +59,193 @@
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.13.1/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.13.1/mapbox-gl.css' rel='stylesheet' />
 </head>
-<style>
-    #fly {
-        display: block;
-        position: relative;
-        /* width:20%;   bootstrap div classes in the html currently handle the positioning, no longer using this default code*/
-        /*margin: 0px auto;bootstrap div classes in the html currently handle the positioning, no longer using this default code*/
-        height: 40px;
-        /*padding: 10px;bootstrap div classes in the html currently handle the positioning, no longer using this default code*/
-        border: none;
-        border-radius: 3px;
-        font-size: 12px;
-        text-align: center;
-        color: #fff;
-        background: #ee8a65;
-    }
-</style>
-<div id='mapidheader'></div>
 
-<script>
-mapboxgl.accessToken = 'pk.eyJ1IjoiZHlsYW5jIiwiYSI6Im53UGgtaVEifQ.RJiPqXwEtCLTLl-Vmd1GWQ';
-//var start = [-111.75, 32.5];
-//var end = [-77.50, 38];
-//var start = [-110.6, 32.275];
-var start = [-110.6, 32.32];
-var mapvar = new mapboxgl.Map({
-	//attributionControl: false,
-    container: 'mapidheader',
-    style: 'mapbox://styles/dylanc/cikb2yvtr00589fm13z417kdu',
-    center: start,
-    zoom: 10,
-});
-
-
-/*var isAtStart = true;
-
-function fly() {
-    // depending on whether we're currently at point a or b, aim for
-    // point a or b
-    var target = isAtStart ? end : start;
-
-    // and now we're at the opposite point
-    isAtStart = !isAtStart;
-
-    mapvar.flyTo({
-        // These options control the ending camera position: centered at
-        // the target, at zoom level 9, and north up.
-        center: target,
-        zoom: 10,
-        bearing: 0,
-
-        // These options control the flight curve, making it move
-        // slowly and zoom out almost completely before starting
-        // to pan.
-        speed: 0.012, // make the flying slow
-        curve: 0.01, // change the speed at which it zooms out
-
-        // This can be any easing function: it takes a number between
-        // 0 and 1 and returns another number between 0 and 1.
-        easing: function (t) {
-            return t;
-        }
-    });
-}
-
-
-$( document ).ready(function() {
-  fly();
-});
-*/
-</script>
 
 <body id="bootstrapoverrides">
-    <!-- Navigation -->
-    <!--<a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-    <nav id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-            <li class="sidebar-brand">
-                <a href="#top">Start Bootstrap</a>
-            </li>
-            <li>
-                <a href="#top">Home</a>
-            </li>
-            <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
-                <a href="#services">Services</a>
-            </li>
-            <li>
-                <a href="#portfolio">Portfolio</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
-    </nav>-->
-
-
-
-
-<div class="text-vertical-center">
-	<h1>ABOUT ME</h1>
-	<h4>Graduated with Distinction as a Duel Major in Applied Math & Envnironmental Hydrology<br>I have years of GIS and experience for large research institutions and small non-profits</h4>
-    <hr class="medium">
-	<!--<h3>A Personal Webpage</h3>-->
-	<div container>
-		<div class="text-center center-block site-header">
-			<a href="#" title="Resume" data-toggle="tooltip" data-placement="bottom"><id="enablehovercoverwithoutfocuscolor" class="fa fa-file-text-o fa-3x social-rm grow" data-toggle="modal" data-target="#ResumeModal" style="outline: 0px; text-decoration: initial; "></a><a href="https://www.linkedin.com/in/dylancobean" title="Linkedin" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-linkedin fa-3x social-fb grow"></i></a>
-			<a href="https://github.com/dylansc22" title="Github" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-github fa-3x social-gp grow"></i></a>
-			<a href="mailto:dylan.cobean@gmail.com" title="Email" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-envelope fa-3x social-em grow"></i></a>
-			<a href="https://twitter.com/MrDylanScott" title="Twitter" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-twitter fa-3x social-tw grow"></i></a>
-            <a href="skype:dylanvideochat?userinfo" title="Skype" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-skype fa-3x social-sk grow"></i></a>
-		</div>
+    <div id='mapidheader'>
+                <div id="navigation">
+                    <!-- Nav tabs -->
+                      <ul class="nav nav-tabs nav-justified nowrap" role="tablist">
+                        <li class="active" role="presentation"><a href="#aboutme" aria-controls="aboutme" role="tab" data-toggle="tab"><h1>ABOUT ME</h1></a></li>
+                        <li role="presentation"><a href="#worksamples" aria-controls="worksamples" role="tab" data-toggle="tab"><h1>WORKSAMPLES</h1></a></li>
+                        <li role="presentation"><a href="#currentprojects" aria-controls="currentprojects" role="tab" data-toggle="tab"><h1>CURRENT PROJECTS</h1></a></li>
+                        <li role="presentation"><a href="#blog" aria-controls="blog" role="tab" data-toggle="tab"><h1>BLOG</h1></a></li>
+                      </ul>
+        </div>
     </div>
-</div>
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active fade in" id="aboutme">
+            <div class="container">
+                    <div class="row">
+                        
+                        <div id="text1" class="col-sm-10 col-sm-offset-1">
+                        <h4><span class="biggerfont">
+                        I graduated with distiction </span> in Applied Mathematics & Environmental Hydrology from the University of Arizona in the Spring of 2013. 
+                        <br><br>
+                        <span class="biggerfont">I'm a published technical writer </span> with the United States Geological Survery, and I have an upcoming authorship for my work in Forest Infrastructure with the World Resources Institute in Washington DC. 
+                        <br><br>
+                        <span class="biggerfont">I'm self-taught</span> in a wide array of technical applications - ArcGIS, Spatial Analysis Tools, QGIS, ArcScene, HTML5, CSS, Javascript, jQuery, ModelBuilder, Mapbox.js, Leaflet.js, Database Management BMPs, Python, along with several other 3rd party GIS programs peppered in.
+                        <br><br>
+                        <span class="biggerfont">I'm most passionate about</span> current issues in urban planning, smart-city design, public transit infrastructure, city design, urban water management, and urban environmental sustainability. 
+                        <br><br>
+                        <span class="biggerfont">What I can provide to you </span> are years of expertise gained via the accomplishments listed above. I've worked both on independant projects or as part of a team, and I can support a variety of research projects in geospatial analysis services. I'm well equiped to assist at any phase of of GIS project timelines - from initial project proposals, throughout development, or during final product release for end-users. 
 
 
-  <!-- Modal -->
-<div class="modal fade" id="ResumeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      
-      <div class="modal-header">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <!-- Don't need the download button for now, because there is a save button in the pdf viewer-->
-        <a type="button" href="pdf/Resume.pdf" class="btn btn-primary" download="DylanCobean_Resume.pdf">Download</a>
-      </div>
-      <div class="modal-body">
-        <iframe src="https://drive.google.com/file/d/0BxUFaFhM2TB8cmJzNDhPZGRaY0E/preview" width="100%" height="800"></iframe>
-      </div>
+
+                        
+                        </h4></div>
+                
+                        <!--<div class="aboutmefooter col-xs-10 col-sm-offset-1"><i>More than halfway through my degree program in Physics, I realized I was happier learning about the natural environment around me. I switched my major to Applied Mathematics & Environmental Hydrology and never looked back. I've had the great opportunity to work for both large environmental research institutions, along with small community-based environmental organizations. This diversity have given me a unique prespective on environmental sustainability and new urbanism. I've simultaniously created a strong foundation of skills in critical thinking, data visualization, and geospatial analysis. 
+            <br><br>
+            I've always been facinated by Stability Theory in Applied Mathematics Coursework - the concept of stable or instable equilibrium points where functions converge or diverge respectively. I apperciate the simplicity of that concept in our societies' built urban systems, slowly harmonizing or creating disonance with our ecosystem's natural processes.</i></div>-->
+
+                        
+
+                </div>
+                </div><!--container-->
+
+
+
+        </div>
+        <!--Worksample Section-->
+        <div role="tabpanel" class="tab-pane fade" id="worksamples">
+                    <div class="container">
+                <div class="row">
+            <div class="col-lg-4 col-xs-6">
+                    <a href="https://dylansc22.github.io/worksample/" class="portfolio-box">
+                        <img src="../img/ffw2.png" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    GIS ANALYSIS
+                                </div>
+                                <div class="project-name">
+                                    Global Erosion Risk Map<br><br>(WRI Internship)
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            <div class="col-lg-4 col-xs-6">
+                <a href="http://pubs.usgs.gov/sir/2011/5166/" class="portfolio-box">
+                    <img src="../img/USGSReport.png" class="img-responsive" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                TECHNICAL WRITING
+                            </div>
+                            <div class="project-name">
+                                Inventory & Evaluation of USGS Agricultural Water-Use Estimation Practices<br><br>
+                                (USGS Internship) 
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-xs-6">
+                <a href="#" class="portfolio-box">
+                    <img src="../img/Tucson3.png" class="img-responsive" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                GIS ANALYSIS
+                            </div>
+                            <div class="project-name">
+                                Evaluation of Tucson's Public Transit vs Bicycle Infrastructure<br><br>(Personal Porject) 
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-xs-6">
+            <a href="#" class="portfolio-box" data-toggle="modal" data-target="#PosterModal">
+                <img src="../img/USGSposter.png" class="img-responsive" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                GIS ANALYSIS
+                            </div>
+                            <div class="project-name">
+                                Comparison of Various GIS Methodologies in Estimating Industrial Agricultural Water-Use<br><br>(University of Arizona Senior Capstone)
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="currentprojects">
+            <div class="container">
+                <div class="row">
+                    <h1>Details on my current research efforts coming soon</h1>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="blog">
+            <div class="container">
+                <div class="row">
+                    <h1>Blog Coming Soon</h1>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-
-<!-- About Me Modal -->
-<div class="modal fade" id="AboutMeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      
-      <div class="modal-header">
-        Modal Header
-      </div>
-      <div class="modal-body">
-        Modal Body - Content Coming Soon!
-        <h1>My name is Dylan</h1>
-        <h5>this is some info</h5>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Writing Sample Modal -->
-<div class="modal fade" id="WritingSampleModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      
-      <div class="modal-header">
-        Modal Header
-      </div>
-      <div class="modal-body">
-        Modal Body - Content Coming Soon!
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Other Projects Modal -->
-<div class="modal fade" id="OtherProjectsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      
-      <div class="modal-header">
-        Modal Header
-      </div>
-      <div class="modal-body">
-        Modal Body - Content Coming Soon!
-      </div>
-    </div>
-  </div>
-</div>
+    <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZHlsYW5jIiwiYSI6Im53UGgtaVEifQ.RJiPqXwEtCLTLl-Vmd1GWQ';
+    //var start = [-111.75, 32.5];
+    //var end = [-77.50, 38];
+    //var start = [-110.6, 32.275];
+    var start = [-110.6, 32.32];
+    var mapvar = new mapboxgl.Map({
+        attributionControl: false,
+        container: 'mapidheader',
+        style: 'mapbox://styles/dylanc/cikb2yvtr00589fm13z417kdu',
+        center: start,
+        zoom: 10,
+    });
+    mapvar.doubleClickZoom.disable();
+    mapvar.scrollZoom.disable();
+    mapvar.dragPan.disable();
+    mapvar.touchZoomRotate.disable();
+    mapvar.dragPan.disable();
 
 
+    /*var isAtStart = true;
+
+    function fly() {
+        // depending on whether we're currently at point a or b, aim for
+        // point a or b
+        var target = isAtStart ? end : start;
+
+        // and now we're at the opposite point
+        isAtStart = !isAtStart;
+
+        mapvar.flyTo({
+            // These options control the ending camera position: centered at
+            // the target, at zoom level 9, and north up.
+            center: target,
+            zoom: 10,
+            bearing: 0,
+
+            // These options control the flight curve, making it move
+            // slowly and zoom out almost completely before starting
+            // to pan.
+            speed: 0.012, // make the flying slow
+            curve: 0.01, // change the speed at which it zooms out
+
+            // This can be any easing function: it takes a number between
+            // 0 and 1 and returns another number between 0 and 1.
+            easing: function (t) {
+                return t;
+            }
+        });
+    }
 
 
-
-
-<div class="container projectsgroup">
-	<div class="row">
-
-<button type="button" class="projects col-xs-offset-3 col-xs-6" data-toggle="modal" data-target="#AboutMeModal">
-    <h4>About Me</h4>
-    <div class="buttonbackground">Subinfo</div>
-</button>
-<button type="button" class="projects col-xs-offset-3 col-xs-6" data-toggle="modal" data-target="#WritingSampleModal">
-    <h4>Writing Samples</h4>
-    <div class="buttonbackground">Subinfo</div>
-</button>
-<a href="https://dylansc22.github.com/worksample"><button type="button" class="projects col-xs-offset-3 col-xs-6">
-<h4>GIS Maps</h4>
-<div class="buttonbackground">Global Erosion Risk</div>
-</a></button>
-<button type="button" class="projects col-xs-offset-3 col-xs-6" data-toggle="modal" data-target="#OtherProjectsModal">
-    <h4>Other Projects</h4>
-    <div class="buttonbackground">Subinfo</div>
-</button>
-<!--<div class="projects col-lg-offset-2 col-lg-8">
-    Blog
-</div>-->
-</div>
-</div>
-
-<br/>
-<div class="container" style="margin-bottom: 50px">
-<div class="row">
-<button class="text-vertical-center col-xs-4 col-xs-offset-4" onclick='fly();' id='fly'>Pause Map</button>
-</div>
-</div>
+    $( document ).ready(function() {
+      fly();
+    });
+    */
+    </script>
 </body>
 
 

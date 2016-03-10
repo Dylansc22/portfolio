@@ -5,9 +5,11 @@
  */
 
 /* Global Styles */
-    #fly {
-        display: block;
+    .fly {
+           display: block;
         position: relative;
+        /* width:20%;   bootstrap div classes in the html currently handle the positioning, no longer using this default code*/
+        /*margin: 0px auto;bootstrap div classes in the html currently handle the positioning, no longer using this default code*/
         height: 40px;
         /*padding: 10px;bootstrap div classes in the html currently handle the positioning, no longer using this default code*/
         border: none;
@@ -16,7 +18,6 @@
         text-align: center;
         color: #fff;
         background: #ee8a65;
-        margin-top:100px;
     }
 
 #bootstrapoverrides {
@@ -62,20 +63,18 @@
     float: none;
 }
 
-
-#bootstrapoverrides h1 {
-  color:#606060;
-  font-size: 3.5em;
-}
-#bootstrapoverrides h2 {
-  color:#606060;
-  font-size: 3.5em;
-}
-#bootstrapoverrides h3 {
-  color:#606060;
-  font-size: 1.8vw;
+.nowrap {
+    white-space: nowrap;
+    overflow: hidden;
 }
 
+#enter > a > h5 {
+    margin:0px;  /*this vertically-aligns the "Click to Enter" text in the middle of the orange button*/
+}
+
+.tab-content {
+    margin-top:50px;
+}
 
 
 .infobox {
@@ -188,11 +187,24 @@ background-color:white;
 }
 
 #mapidheader{
-  position:fixed;
-  z-index: -1;
+    position:relative;
+    display:block;
+    z-index: 1;
   top:0;
   width:100%;
-  height:300px;
+  height:200px;
+  border-bottom-style: solid;
+  border-color:#606060;
+}
+
+#navigation {
+    position: absolute;
+    bottom:0px;
+    z-index:1;
+}
+
+#navigation > ul > li > a {
+    color:#606060;
 }
 
 #image1 {
