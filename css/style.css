@@ -76,6 +76,9 @@
     margin-top:50px;
 }
 
+#contactinfo > div.wow.fadeInLeft > h1 {
+    font-size:3.5em;
+}
 
 .infobox {
   background-color:rgba(255,255,255,.5);
@@ -203,9 +206,12 @@ background-color:white;
     z-index:1;
 }
 
-#navigation > ul > li > a {
+
+#navigation > ul > li > a > h1 {
     color:#606060;
+    font-size:3vw;
 }
+
 
 #image1 {
     height:320px;
@@ -417,12 +423,16 @@ background-color:white;
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
         font-size: 22px;
     }
-}
-
-@media(max-width:768px) {
     #contactinfo {
         margin-top:50px;
+    }
+    #navigation > ul > li > a > h1 {
+        font-size:3vw;
+        margin:0px;
 }
+
+} /*end media css rules*/
+
 
 
 /* Side Menu */
