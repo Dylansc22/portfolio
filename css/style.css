@@ -76,6 +76,11 @@
   font-size: 1.8vw;
 }
 
+#navigation {
+    background-color:red;
+    position:fixed;
+    z-index: 1;
+}
 
 
 .infobox {
@@ -92,7 +97,15 @@
 }
 
 #mainnavcontent {
-    margin-bottom:400px;
+    padding-top:50px;
+    height:800px;
+    padding-bottom:50px;
+    margin-bottom:50px;
+}
+
+#aboutme {
+    margin-top:100px;
+    margin-bottom:100px;
 }
 
 #contactinfofooter {
@@ -221,10 +234,7 @@ background-color:white;
 .biggerfont {
     font-size: 150%;
 }
-.aboutmefooter {
-    margin-top:100px;
-    padding-bottom:200px;
-}
+
 
 
 
