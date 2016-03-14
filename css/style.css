@@ -416,11 +416,10 @@ background-color:white;
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
         font-size: 22px;
     }
-}
 
-@media(max-width:768px) {
     #contactinfo {
-        margin-top:50px;
+        margin-top:15px;
+        margin-bottom:15px;
 }
 
 
