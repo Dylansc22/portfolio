@@ -72,8 +72,15 @@
     margin:0px;  /*this vertically-aligns the "Click to Enter" text in the middle of the orange button*/
 }
 
+<<<<<<< HEAD
 .tab-content {
     margin-top:50px;
+=======
+#navigation {
+    background-color:red;
+    position:fixed;
+    z-index: 1;
+>>>>>>> tabbed_mainpage
 }
 
 #contactinfo > div.wow.fadeInLeft > h1 {
@@ -94,11 +101,20 @@
 }
 
 #mainnavcontent {
-    margin-bottom:400px;
+    padding-top:50px;
+    height:800px;
+    padding-bottom:50px;
+    margin-bottom:50px;
+    background-color:rgba(255,255,255,.8);
+}
+
+#aboutme {
+    margin-top:50px;
+    margin-bottom:50px;
 }
 
 #contactinfofooter {
-  margin-bottom:300px;
+  margin-bottom:500px;
 }
 
 /*the unique styling to get the "Click to Learn More" Circle around the double-down arrow
@@ -239,10 +255,7 @@ background-color:white;
 .biggerfont {
     font-size: 150%;
 }
-.aboutmefooter {
-    margin-top:100px;
-    padding-bottom:200px;
-}
+
 
 
 
@@ -423,12 +436,19 @@ background-color:white;
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
         font-size: 22px;
     }
+<<<<<<< HEAD
     #contactinfo {
         margin-top:50px;
     }
     #navigation > ul > li > a > h1 {
         font-size:3vw;
         margin:0px;
+=======
+
+    #contactinfo {
+        margin-top:15px;
+        margin-bottom:15px;
+>>>>>>> tabbed_mainpage
 }
 
 } /*end media css rules*/
