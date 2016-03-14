@@ -27,7 +27,7 @@
   margin:0px;
   padding:0;
   font-family: 'Lato', sans-serif;
-  color:gray;
+  color:#606060;
       background-color:#E8E8E8;
     /*font-family: ""Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif";*/
 }
@@ -103,10 +103,7 @@
     background-color:rgba(255,255,255,.8);
 }
 
-#aboutme {
-    margin-top:50px;
-    margin-bottom:50px;
-}
+
 
 #contactinfofooter {
   margin-bottom:500px;
@@ -218,7 +215,7 @@ background-color:white;
 }
 
 
-#navigation > ul > li > a > h1 {
+#navigationtabs > ul > li > a > h1 {
     color:#606060;
     font-size:3vw;
 }
@@ -433,8 +430,16 @@ background-color:white;
     }
 
     #contactinfo {
-        margin-top:15px;
-        margin-bottom:15px;
+        margin-top:20px;
+        margin-bottom:20px;
+      }
+
+    #mainnavcontent {
+    padding-top:10px;
+    height:auto;
+    min-height:300px;
+    padding-bottom:10px;
+    margin-bottom:20px;
 }
 
 } /*end media css rules*/
