@@ -97,9 +97,10 @@
 
 #mainnavcontent {
     padding-top:50px;
-    height:800px;
+    height:auto;
+    min-height:800px;
     padding-bottom:50px;
-    margin-bottom:50px;
+    margin-bottom:25px;
     background-color:rgba(255,255,255,.8);
 }
 
@@ -440,6 +441,10 @@ background-color:white;
     min-height:300px;
     padding-bottom:10px;
     margin-bottom:20px;
+}
+
+.portfolio-box-caption-content {
+    
 }
 
 } /*end media css rules*/
