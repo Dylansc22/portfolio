@@ -423,11 +423,11 @@ background-color:white;
 
 @media(max-width:768px) {
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
-        font-size: 16px;
+        font-size: 2vw;
     }
 
     .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-        font-size: 22px;
+        font-size: 1.7vw;
     }
 
     #contactinfo {
