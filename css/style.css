@@ -221,8 +221,19 @@ background-color:white;
 
 li.active {
   border:solid;
-  border-bottom:none;
+  border-bottom: 0px;
 }
+
+#navigationtabs>ul>li>a
+{margin:0px;}
+
+#navigationtabs>ul>li {
+  padding:0px;
+  text-align: center;
+}
+
+
+
 
 #navigationtabs {
   padding-right:0px;
