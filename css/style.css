@@ -215,10 +215,24 @@ background-color:white;
     z-index:1;
 }
 
+#newcontainer {
+  margin:auto 30px;
+}
+
+li.active {
+  border:solid;
+  border-bottom:none;
+}
+
+#navigationtabs {
+  padding-right:0px;
+  padding-left:0px;
+}
 
 #navigationtabs > ul > li > a > h1 {
     color:#606060;
     font-size:3vw;
+
 }
 
 
