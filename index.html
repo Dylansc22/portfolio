@@ -90,6 +90,61 @@
       new WOW().init();
     </script>
 
+<div id="mapid" class="wow fadeIn" data-wow-delay="4s"></div>
+<script>
+  $(document).ready(function () {
+    /*enables all map behavior*/
+    mapboxgl.accessToken =
+      "pk.eyJ1IjoiZHlsYW5jIiwiYSI6Im53UGgtaVEifQ.RJiPqXwEtCLTLl-Vmd1GWQ";
+    var start = [-111.8, 32.6];
+    var end = [-77.5, 38];
+    var mapvar = new mapboxgl.Map({
+      //attributionControl: false,
+      container: "mapid",
+      style: "mapbox://styles/dylanc/cikb2yvtr00589fm13z417kdu",
+      center: start,
+      zoom: 9,
+    });
+    mapvar.doubleClickZoom.disable();
+    mapvar.scrollZoom.disable();
+    mapvar.dragPan.disable();
+    mapvar.touchZoomRotate.disable();
+
+    var isAtStart = true;
+
+    function fly() {
+      // depending on whether we're currently at point a or b, aim for
+      // point a or b
+      var target = isAtStart ? end : start;
+
+      // and now we're at the opposite point
+      isAtStart = !isAtStart;
+
+      mapvar.flyTo({
+        // These options control the ending camera position: centered at
+        // the target, at zoom level 9, and north up.
+        center: target,
+        zoom: 10,
+        bearing: 0,
+
+        // These options control the flight curve, making it move
+        // slowly and zoom out almost completely before starting
+        // to pan.
+        speed: 0.012, // make the flying slow
+        curve: 0.01, // change the speed at which it zooms out
+
+        // This can be any easing function: it takes a number between
+        // 0 and 1 and returns another number between 0 and 1.
+        easing: function (t) {
+          return t;
+        },
+      });
+    } //End fly() Program
+
+    fly();
+  });
+</script>
+
     <!--Contact Info Card-->
     <div class="container">
       <div class="row">
@@ -210,7 +265,7 @@
         </ul>
       </div>
       <div class="container tab-content active" id="myTabContent">
-        <div class="tab-pane fade show active in" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="tab-pane fade active in" id="home" role="tabpanel" aria-labelledby="home-tab">
           <div class="row">
             <div class="col-sm-12">
               <!--<div id="text1" class="col-sm-10 col-sm-offset-1">-->
@@ -281,65 +336,239 @@
 
 
         </div>
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          <div class="col-lg-4 col-xs-6">
+            <a
+              href="https://dylansc22.github.io/worksample/"
+              class="portfolio-box"
+            >
+              <img src="img/ffw2.png" class="img-responsive" alt="" />
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    GIS ANALYSIS<br /><br />
+                  </div>
+                  <div class="project-name">
+                    Global Erosion Risk Web-Map<br /><br />(WRI Internship)
+                  </div>
+                </div>
+              </div>
+            </a>
+              </div>
+          <div class="col-lg-4 col-xs-6">
+            <a
+              href="http://pubs.usgs.gov/sir/2011/5166/"
+              class="portfolio-box"
+            >
+              <img src="img/USGSReport.png" class="img-responsive" alt="" />
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    TECHNICAL WRITING<br /><br />
+                  </div>
+                  <div class="project-name">
+                    Inventory & Evaluation of USGS Agricultural Water-Use
+                    Estimation Practices<br /><br />
+                    (USGS Internship)
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-xs-6">
+            <a
+              href="https://tucsonauts.github.io/tnr"
+              class="portfolio-box"
+            >
+              <img src="img/Tucson3.png" class="img-responsive" alt="" />
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    GIS ANALYSIS<br /><br />
+                  </div>
+                  <div class="project-name">
+                    Mapping Tucson's Road Network, Optimized for
+                    Bicycle-Safety<br /><br />(Personal Project)
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-xs-6">
+            <a
+              href="#"
+              class="portfolio-box"
+              data-toggle="modal"
+              data-target="#PosterModal"
+            >
+              <img src="img/USGSposter.png" class="img-responsive" alt="" />
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    TECHNICAL WRITING<br /><br />
+                  </div>
+                  <div class="project-name">
+                    Comparison of Various GIS Methodologies in Estimating
+                    Industrial Agricultural Water-Use<br /><br />(University
+                    of Arizona Senior Capstone)
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-4 col-xs-6">
+            <a
+              href="#"
+              class="portfolio-box"
+              data-toggle="modal"
+              data-target="#GISMethodModal"
+            >
+              <img
+                src="img/WRIMethodsSample4.png"
+                class="img-responsive"
+                alt=""
+              />
+              <div class="portfolio-box-caption">
+                <div class="portfolio-box-caption-content">
+                  <div class="project-category text-faded">
+                    TECHNICAL WRITING<br /><br />
+                  </div>
+                  <div class="project-name">
+                    methodology of suitability index - classify regions
+                    at risk of soil-erosion/land instability<br /><br />(WRI
+                    Internship)
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
 
 
-    <div id="mapid" class="wow fadeIn" data-wow-delay="4s"></div>
-    <script>
-      $(document).ready(function () {
-        /*enables all map behavior*/
-        mapboxgl.accessToken =
-          "pk.eyJ1IjoiZHlsYW5jIiwiYSI6Im53UGgtaVEifQ.RJiPqXwEtCLTLl-Vmd1GWQ";
-        var start = [-111.8, 32.6];
-        var end = [-77.5, 38];
-        var mapvar = new mapboxgl.Map({
-          //attributionControl: false,
-          container: "mapid",
-          style: "mapbox://styles/dylanc/cikb2yvtr00589fm13z417kdu",
-          center: start,
-          zoom: 9,
-        });
-        mapvar.doubleClickZoom.disable();
-        mapvar.scrollZoom.disable();
-        mapvar.dragPan.disable();
-        mapvar.touchZoomRotate.disable();
 
-        var isAtStart = true;
 
-        function fly() {
-          // depending on whether we're currently at point a or b, aim for
-          // point a or b
-          var target = isAtStart ? end : start;
+    <!-- Resume Modal -->
+    <div
+      class="modal fade"
+      id="ResumeModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="text-vertical-center">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn btn-default"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <!-- Don't need the download button for now, because there is a save button in the pdf viewer-->
+              <a
+                type="button"
+                href="pdf/Resume - Dylan Scott.pdf"
+                class="btn btn-primary"
+                download="Dylan Scott is a great team member. I vote hire him.pdf"
+                >Download</a
+              >
+            </div>
+            <div class="modal-body">
+              <iframe
+                src="https://drive.google.com/file/d/1ekb51O_4JwwvxVbmKAZ0vjcjOVSgGJCI/preview"
+                width="100%"
+                height="800"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-          // and now we're at the opposite point
-          isAtStart = !isAtStart;
+    <!-- USGS Poster Modal -->
+    <div
+      class="modal fade"
+      id="PosterModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="text-vertical-center">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn btn-default"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <!-- Don't need the download button for now, because there is a save button in the pdf viewer-->
+              <a
+                type="button"
+                href="pdf/SeniorCapstonePoster.pdf"
+                class="btn btn-primary"
+                download="SeniorCapstone_DylanCobean.pdf"
+                >Download</a
+              >
+            </div>
+            <div class="modal-body">
+              <iframe
+                src="https://drive.google.com/file/d/0BxUFaFhM2TB8a2hWdk1MMVB2cnc/preview"
+                width="100%"
+                height="550"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-          mapvar.flyTo({
-            // These options control the ending camera position: centered at
-            // the target, at zoom level 9, and north up.
-            center: target,
-            zoom: 10,
-            bearing: 0,
+    <!-- WRI Methodology Writing Sample Modal -->
+    <div
+      class="modal fade"
+      id="GISMethodModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="text-vertical-center">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn btn-default"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <!-- Don't need the download button for now, because there is a save button in the pdf viewer-->
+              <a
+                type="button"
+                href="pdf/GISMethodSample.pdf"
+                class="btn btn-primary"
+                download="GISMethodSample_DylanCobean.pdf"
+                >Download</a
+              >
+            </div>
+            <div class="modal-body">
+              <iframe
+                src="https://drive.google.com/file/d/0BxUFaFhM2TB8bDNqZlRTMlZDR28/preview"
+                width="100%"
+                height="800"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-            // These options control the flight curve, making it move
-            // slowly and zoom out almost completely before starting
-            // to pan.
-            speed: 0.012, // make the flying slow
-            curve: 0.01, // change the speed at which it zooms out
-
-            // This can be any easing function: it takes a number between
-            // 0 and 1 and returns another number between 0 and 1.
-            easing: function (t) {
-              return t;
-            },
-          });
-        } //End fly() Program
-
-        fly();
-      });
-    </script>
   </body>
 
   <!-- Custom Javascript -->

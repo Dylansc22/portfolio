@@ -54,8 +54,8 @@
     border-top: solid 2px;
     border-bottom: solid 2px;
     background-color: white;
-    height: auto;
-    margin-bottom:10vh;  
+    min-height: 100vh;
+    /* margin-bottom:10vh;   */
 }
 
 #singlepage #myTabContent {
@@ -93,6 +93,10 @@
     /* font-size: larger; */
     border:none;
     border-bottom: solid 1px black;
+}
+
+#profile > .col-lg-4.col-xs-6 {
+    margin-bottom:30px;
 }
 
 .no-gutter > [class*='col-'] {
