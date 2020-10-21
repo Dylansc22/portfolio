@@ -50,10 +50,49 @@
 
 
 #singlepage {
-    padding: 50px 0px;
-    border-top:solid 2px;
-    background-color:white;
-    
+    padding: 5vh 0px;
+    border-top: solid 2px;
+    border-bottom: solid 2px;
+    background-color: white;
+    height: auto;
+    margin-bottom:10vh;  
+}
+
+#singlepage #myTabContent {
+    padding-top:5vh;
+}
+
+#singlepage .nav-tabs>li>a {
+    border:none;
+    color: #a4a6a9;
+}
+
+
+#singlepage #myTab {
+    border-bottom:none;
+    font-size:200%;
+}
+
+#singlepage .nav-tabs>li.active>a, 
+#singlepage .nav-tabs>li.active>a:focus, 
+#singlepage .nav-tabs>li.active>a:hover {
+    border:none;
+    color: #333;
+}
+
+
+
+#singlepage .nav-tabs>li>a:hover {border-color:none;}
+
+#singlepage .nav>li>a:focus, 
+#singlepage .nav>li>a:hover {
+    background: none;
+}
+
+#singlepage li.active {
+    /* font-size: larger; */
+    border:none;
+    border-bottom: solid 1px black;
 }
 
 .no-gutter > [class*='col-'] {
@@ -368,8 +407,9 @@ li.active {
 }
 
 #worksamples > [class*=col-] {
-  padding-right:0px;
-  padding-left:0px;
+  /* padding-right:0px;
+  padding-left:0px; */
+  padding: 10px;
 }
 
 

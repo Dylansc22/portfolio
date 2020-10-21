@@ -185,7 +185,7 @@
           <div class="col-xs-12 text-vertical-center center-block">
             <div class="text-vertical-center wow fadeInUp" data-wow-delay="3s">
               <a
-                href="#navigationtabs"
+                href="#singlepage"
                 class="btn btn-lg btn-warning"
                 role="button"
                 style="padding-top: 0px; padding-bottom: 0px"
@@ -200,73 +200,89 @@
 
     <div id="singlepage">
       <div id="aboutme" class="container">
-        <h1>About me</h1>
-            <div class="row">
-              <div class="col-sm-12">
-                <!--<div id="text1" class="col-sm-10 col-sm-offset-1">-->
-                <h4>
-                  <span class="biggerfont">
-                    I am a self-taught GIS Developer</span
-                  > using my knowledge of web-development,
-                  geospatial-analysis, and design to visualize maps in cool
-                  meaningful ways. Those visuals become narratives, and
-                  those narratives (hopefully in a small way) empower
-                  positive change. <br /><br />
-                  <span class="biggerfont">
-                    I am the founder of TucsonPathways.org</span
-                  >
-                  - a data-driven bicycle advocacy organization, focused on
-                  visualizing cities' infrastructure for safer, quieter,
-                  more enjoyable bicycle commutes. <br /><br />
-                  <span class="biggerfont">
-                    I graduated with distinction</span
-                  >
-                  in Applied Mathematics & Environmental Hydrology from the
-                  University of Arizona in the Spring of 2013, working
-                  odd-jobs and internships throughout to pay my way through
-                  college. <br /><br />
-                  <span class="biggerfont">I am a self-learner </span>in a
-                  wide array of technical softwares - ArcGIS, QGIS, Spatial
-                  Analysis Toolsets, OpenStreetMap, iD, JOSM, HTML5, CSS,
-                  Javascript ES6, git, SQL, Python, Mapbox-GL, Leaflet,
-                  Node, Aerial Drone Mapping, Routing Engine Software, City
-                  Engine, Database Management, Microsoft Office Suite,
-                  along with several others supplementary programs.
-                  <br /><br />
-                  <span class="biggerfont"
-                    >I am a published technical writer </span
-                  >with the United States Geological Survey for my work in
-                  using GIS methods to improve estimates of agricultural
-                  water-use. I have been formally acknowledged in a
-                  publication by the World Resources Institute for my GIS
-                  contributions to the Forest Conservation Natural
-                  Infrastructure Program. <br /><br />
-                  <span class="biggerfont">Through years past </span>I've
-                  worked as a bike mechanic, warehouse laborer, bartender, GIS analyst, 
-                  hydrological technican, waste collector, research analyst, community-farm
-                  laborer, and freelance movie critic. I've bike-toured across the country, competed in
-                  the Ultimate Frisbee College National Championships, and
-                  volunteered as youth rock-climbing instructor.
-                  <br /><br />
-                  <!-- <div><span class="biggerfont">My ongoing subject matter expertise </span>includes urban analytics, bicycle infrastructure, open-source web mapping, forest conservation, remote sensing, UX and UI design, statistics, and bicycle tech.
-                        <br><br> -->
-                  <!-- <div><span class="biggerfont">I've always been facinated by </span> stability theory applied to an urban analysis. Cities across the planet are subject to various laws and policies. All of which are harmonizing or destabilizing - whether economic stratification, environmental decline, racial inequity, political polarization, literacy. Most of the work I do has the backdrop of wanting to better understand those topics and how they all relate.</div>
-                        <br><br> -->
-                  <!-- <div><span class="biggerfont">Questions I like to ask </span>'How can we better understand the patterns in how cities grow and thrive? Why despite all our efforts, does gentrification always result in wealth stratification of communties? How does access to park-space correlate with human health? How do we better activate people who want to bicycle commute but are intimindated by safety? How do we better desegregate socio-economic classes in cities? How can cities better harmonize with natural processes in our surrounding ecosystem? -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item active" role="presentation">
+            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">about me</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">worksamples</a>
+          </li>
+        </ul>
+      </div>
+      <div class="container tab-content active" id="myTabContent">
+        <div class="tab-pane fade show active in" id="home" role="tabpanel" aria-labelledby="home-tab">
+          <div class="row">
+            <div class="col-sm-12">
+              <!--<div id="text1" class="col-sm-10 col-sm-offset-1">-->
+              <h4>
+                <span class="biggerfont">
+                  I am a self-taught GIS Developer</span
+                > using my knowledge of web-development,
+                geospatial-analysis, and design to visualize maps in cool
+                meaningful ways. Those visuals become narratives, and
+                those narratives (hopefully in a small way) empower
+                positive change. <br /><br />
+                <span class="biggerfont">
+                  I am the founder of TucsonPathways.org</span
+                >
+                - a data-driven bicycle advocacy organization, focused on
+                visualizing cities' infrastructure for safer, quieter,
+                more enjoyable bicycle commutes. <br /><br />
+                <span class="biggerfont">
+                  I graduated with distinction</span
+                >
+                in Applied Mathematics & Environmental Hydrology from the
+                University of Arizona in the Spring of 2013, working
+                odd-jobs and internships throughout to pay my way through
+                college. <br /><br />
+                <span class="biggerfont">I am a self-learner </span>in a
+                wide array of technical softwares - ArcGIS, QGIS, Spatial
+                Analysis Toolsets, OpenStreetMap, iD, JOSM, HTML5, CSS,
+                Javascript ES6, git, SQL, Python, Mapbox-GL, Leaflet,
+                Node, Aerial Drone Mapping, Routing Engine Software, City
+                Engine, Database Management, Microsoft Office Suite,
+                along with several others supplementary programs.
+                <br /><br />
+                <span class="biggerfont"
+                  >I am a published technical writer </span
+                >with the United States Geological Survey for my work in
+                using GIS methods to improve estimates of agricultural
+                water-use. I have been formally acknowledged in a
+                publication by the World Resources Institute for my GIS
+                contributions to the Forest Conservation Natural
+                Infrastructure Program. <br /><br />
+                <span class="biggerfont">Through years past </span>I've
+                worked as a bike mechanic, warehouse laborer, bartender, GIS analyst, 
+                hydrological technican, waste collector, research analyst, community-farm
+                laborer, and freelance movie critic. I've bike-toured across the country, competed in
+                the Ultimate Frisbee College National Championships, and
+                volunteered as youth rock-climbing instructor.
+                <br /><br />
+                <!-- <div><span class="biggerfont">My ongoing subject matter expertise </span>includes urban analytics, bicycle infrastructure, open-source web mapping, forest conservation, remote sensing, UX and UI design, statistics, and bicycle tech.
+                      <br><br> -->
+                <!-- <div><span class="biggerfont">I've always been facinated by </span> stability theory applied to an urban analysis. Cities across the planet are subject to various laws and policies. All of which are harmonizing or destabilizing - whether economic stratification, environmental decline, racial inequity, political polarization, literacy. Most of the work I do has the backdrop of wanting to better understand those topics and how they all relate.</div>
+                      <br><br> -->
+                <!-- <div><span class="biggerfont">Questions I like to ask </span>'How can we better understand the patterns in how cities grow and thrive? Why despite all our efforts, does gentrification always result in wealth stratification of communties? How does access to park-space correlate with human health? How do we better activate people who want to bicycle commute but are intimindated by safety? How do we better desegregate socio-economic classes in cities? How can cities better harmonize with natural processes in our surrounding ecosystem? -->
 
-                  <!--<div><span class="biggerfont"> My current research focuses on </span> better understanding 'the city as an organism.' Cities scale themselves with time, human capital, and economic growth. What parameters govern this growth? What systematic relationships govern all city growth as universalities? The better we understand these questions, the better we can create places for citizens to thrive. 
-                        <br><br>-->
-                  <!--<div><span class="biggerfont">What I can provide your team </span>are years of expertise in data-driven analysis - GIS or otherwise. I've worked on a range of research projects, working with small non-profits and large environmental organizations. I am well equipped to assist at any phase of project timelines - from initial proposals, throughout development stages, to final presentation of results. 
-                        <br><br>-->
-                  <!--<div><span class="biggerfont">For the past year </span>I have paid off more than $20,000 in student loans working as a warehouse laborer, bartender, and stock-market daytrader (in the tech/energy sector). The majority of my free time was spent teaching myself web-development to best prepare myself for cutting-edge application to a future career in GIS. 
-                        <br><br>-->
-                </h4>
-              </div>
-
-              <!--<div class="aboutmefooter col-xs-10 col-sm-offset-1"><i>More than halfway through my degree program in Physics, I realized I was happier learning about the natural environment around me. I switched my major to Applied Mathematics & Environmental Hydrology and never looked back. I've had the great opportunity to work for both large environmental research institutions, along with small community-based environmental organizations. This diversity have given me a unique prespective on environmental sustainability and new urbanism. I've simultaniously created a strong foundation of skills in critical thinking, data visualization, and geospatial analysis. -->
-              <br /><br />
+                <!--<div><span class="biggerfont"> My current research focuses on </span> better understanding 'the city as an organism.' Cities scale themselves with time, human capital, and economic growth. What parameters govern this growth? What systematic relationships govern all city growth as universalities? The better we understand these questions, the better we can create places for citizens to thrive. 
+                      <br><br>-->
+                <!--<div><span class="biggerfont">What I can provide your team </span>are years of expertise in data-driven analysis - GIS or otherwise. I've worked on a range of research projects, working with small non-profits and large environmental organizations. I am well equipped to assist at any phase of project timelines - from initial proposals, throughout development stages, to final presentation of results. 
+                      <br><br>-->
+                <!--<div><span class="biggerfont">For the past year </span>I have paid off more than $20,000 in student loans working as a warehouse laborer, bartender, and stock-market daytrader (in the tech/energy sector). The majority of my free time was spent teaching myself web-development to best prepare myself for cutting-edge application to a future career in GIS. 
+                      <br><br>-->
+              </h4>
             </div>
+
+            <!--<div class="aboutmefooter col-xs-10 col-sm-offset-1"><i>More than halfway through my degree program in Physics, I realized I was happier learning about the natural environment around me. I switched my major to Applied Mathematics & Environmental Hydrology and never looked back. I've had the great opportunity to work for both large environmental research institutions, along with small community-based environmental organizations. This diversity have given me a unique prespective on environmental sustainability and new urbanism. I've simultaniously created a strong foundation of skills in critical thinking, data visualization, and geospatial analysis. -->
+            <br /><br />
           </div>
+
+
+
+
+        </div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+      </div>
     </div>
 
 
