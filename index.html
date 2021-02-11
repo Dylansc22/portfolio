@@ -86,114 +86,12 @@
 
     <div id="map" class="wow fadeIn" data-wow-delay="4s"></div>
     <script>
-      var start = [-110.709, 32.008];
-      //   var end = [-77.5, 38];
-
-      mapboxgl.accessToken =
-        "pk.eyJ1IjoiZHlsYW5jIiwiYSI6Im53UGgtaVEifQ.RJiPqXwEtCLTLl-Vmd1GWQ";
-      var map = new mapboxgl.Map({
-        container: "map", // container id
-        style: "mapbox://styles/dylanc/ckl0ltony0nnp17tbxi5boix9", // style URL
-        center: start,
-        zoom: 8.4,
-        pitch: 20,
-        bearing: 9,
-      });
-
-      var zoomCalc = 0;
+        var zoomCalc = 0;
       var bearingCalc = 0;
       var pitchCalc = 0;
       var newCity = false;
 
-      map.on("load", function() {
-        zoomCalc = Math.random() * (12 - 7) + 7; //random * (max - min) + min  || 8 to 11
-        bearingCalc = Math.random() * (40 - (-40)) - 40;
-        pitchCalc = Math.random() * (60 - 0) + 0;
-        newCity = true
-
-        let randomIndex = Math.floor(Math.random() * 999);
-        let randomCoordinates = [
-          cities[randomIndex].longitude,
-          cities[randomIndex].latitude,
-        ];
-
-        map.flyTo({
-          center: randomCoordinates,
-          // essential: true, // this animation is considered essential with respect to prefers-reduced-motion
-          speed: 0.7, //0.012, // make the flying slow
-          curve: 1.1, // default 1.42 change the speed at which it zooms out
-          // This can be any easing function: it takes a number between
-          //       // 0 and 1 and returns another number between 0 and 1.
-          zoom: zoomCalc,
-          bearing: bearingCalc,
-          pitch: pitchCalc,
-          // duration: 7000,
-          // maxDuration: 4000,
-        });
-
-
-      })
-
-      setInterval(function () {
-        zoomCalc = Math.random() * (12 - 7) + 7; //random * (max - min) + min  || 8 to 11
-        bearingCalc = Math.random() * (40 -(-40)) - 40;
-        pitchCalc = Math.random() * (60 - 0) + 0;
-        newCity = true
-
-        let randomIndex = Math.floor(Math.random() * 999);
-        let randomCoordinates = [
-          cities[randomIndex].longitude,
-          cities[randomIndex].latitude,
-        ];
-
-        map.flyTo({
-          center: randomCoordinates,
-          // essential: true, // this animation is considered essential with respect to prefers-reduced-motion
-          speed: 0.7, //0.012, // make the flying slow
-          curve: 1.1, // default 1.42 change the speed at which it zooms out
-          // This can be any easing function: it takes a number between
-          //       // 0 and 1 and returns another number between 0 and 1.
-          zoom: zoomCalc,
-          bearing: bearingCalc,
-          pitch: pitchCalc,
-          // duration: 7000,
-          // maxDuration: 4000,
-        });
-      }, 20000);
-
-      map.on("moveend", () => {
-
-        if (newCity) {
-          let panPitch = pitchCalc + Math.random() * 40 - 20;
-          console.log(panPitch);
-          if (panPitch < 10 || panPitch > 90) {
-            panPitch = 60;
-          }
-          let panBearing = bearingCalc + Math.random() * 90 - 45;
-          console.log(panBearing);
-          if (panBearing < 0 || panBearing > 359) {
-            panBearing = 30;
-          }
-          let panZoom = zoomCalc + Math.random() * 4 - 2;
-          console.log(panZoom);
-          if (panZoom < 5 || panBearing > 14) {
-            panZoom = 10;
-          }
-  
-          map.flyTo({
-            pitch: panPitch,
-            bearing: panBearing,
-            zoom: panZoom,
-            duration: 4000,
-          });
-
-          // newCity = false;
-        }
-      });
-
-
-         //Yea yea... giant array loaded into to index file directly. I know this is ugly but its 2:25am and I'm feeling lazy...
-         var cities = [
+      var cities = [
         {
           latitude: 40.7127837,
           longitude: -74.0059413,
@@ -4195,8 +4093,82 @@
           longitude: -85.6602058,
         },
       ];
-    
+        
+        mapboxgl.accessToken =
+          "pk.eyJ1IjoiZHlsYW5jIiwiYSI6Im53UGgtaVEifQ.RJiPqXwEtCLTLl-Vmd1GWQ";
+        var map = new mapboxgl.Map({
+          container: "map", // container id
+          style: "mapbox://styles/dylanc/ckl1fryhy0f3l17qk51mua1yt", // style URL
+          center: [-110.709, 32.008],
+          zoom: 8.4,
+          pitch: 20,
+          bearing: 9,
+        });
 
+        let randomCoordinates = [-112.92,32.22]
+        let takeRandomFlight = () => {
+        zoomCalc = Math.random() * 1 + 11; //random * (max - min) + min  || 8 to 11
+        bearingCalc = Math.random() * (10 - -10) - 10;
+        pitchCalc = Math.random() * (50);
+        newCity = true;
+
+        let randomIndex = Math.floor(Math.random() * 999);
+        randomCoordinates = [
+          cities[randomIndex].longitude,
+          cities[randomIndex].latitude,
+        ];
+
+        map.flyTo({
+          center: randomCoordinates,
+          // essential: true, // this animation is considered essential with respect to prefers-reduced-motion
+          speed: 0.7, //0.012, // make the flying slow
+          curve: 1.1, // default 1.42 change the speed at which it zooms out
+          // This can be any easing function: it takes a number between
+          //       // 0 and 1 and returns another number between 0 and 1.
+          zoom: zoomCalc,
+          bearing: bearingCalc,
+          pitch: pitchCalc,
+          // duration: 7000,
+          // maxDuration: 4000,
+        });
+      };
+     let lookAround = () => {
+        let panPitch = Math.random() * (50); //random * (max - min) + min  || 8 to 11
+        let panBearing = Math.random() * 180 - 90; 
+        let panZoom = Math.random() * (12-11) + 11;
+        // let panCenter = [randomCoordinates[0] + Math.random() * 1 - .5, randomCoordinates[1] * 1 -0.5]
+
+          // if (panPitch < 10 || panPitch > 90) {
+          //   panPitch = 60;
+          // }
+          // if (panBearing < 0 || panBearing > 359) {
+          //   panBearing = 30;
+          // }
+          // if (panZoom < 5 || panBearing > 14) {
+          //   panZoom = 10;
+          // }
+
+          map.flyTo({
+            pitch: panPitch,
+            bearing: panBearing,
+            zoom: panZoom,
+            // center: panCenter,
+            duration: 4000,
+          });
+      }
+
+//Initailize the map
+// initializeMap();
+
+//Take first Flight
+map.on("load", takeRandomFlight());
+
+//Take another Flight Every 20 Seconds
+setInterval(() => {takeRandomFlight()}, 20000);
+
+map.on("moveend", ()=>{lookAround()});
+
+      //Yea yea... giant array loaded into to index file directly. I know this is ugly but its 2:25am and I'm feeling lazy...
    </script>
 
     <!--Contact Info Card-->
@@ -4204,7 +4176,7 @@
       <div class="row">
         <div
           id="contactinfo"
-          class="infobox wow fadeInDown text-vertical-center col-sm-offset-3 col-sm-6 col-xs-12"
+          class="infobox wow fadeInDown text-vertical-center"
         >
           <div class="wow fadeInLeft" data-wow-delay="0.5s">
             <h1>DYLAN SCOTT</h1>

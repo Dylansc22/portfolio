@@ -142,9 +142,9 @@
 }
 
 #contactinfo {
-    margin-top:200px;
-    margin-bottom:50px;
-    padding: 30px 10px; */
+    margin:200px auto 20px;
+    padding: 30px 10px;
+    max-width: 50vw;
 }
 
 #mainnavcontent {
@@ -511,8 +511,8 @@ li.active {
     }
 
     #contactinfo {
-        margin-top:20px;
-        margin-bottom:20px;
+        margin: 120px 60px 50px; /*top horizonal bottom */
+        max-width: none;
       }
 
     #mainnavcontent {
