@@ -86,7 +86,7 @@
 
     <div id="map" class="wow fadeIn" data-wow-delay="4s"></div>
     <script>
-        var zoomCalc = 0;
+      var zoomCalc = 0;
       var bearingCalc = 0;
       var pitchCalc = 0;
       var newCity = false;
@@ -4093,23 +4093,23 @@
           longitude: -85.6602058,
         },
       ];
-        
-        mapboxgl.accessToken =
-          "pk.eyJ1IjoiZHlsYW5jIiwiYSI6Im53UGgtaVEifQ.RJiPqXwEtCLTLl-Vmd1GWQ";
-        var map = new mapboxgl.Map({
-          container: "map", // container id
-          style: "mapbox://styles/dylanc/ckl1fryhy0f3l17qk51mua1yt", // style URL
-          center: [-110.709, 32.008],
-          zoom: 8.4,
-          pitch: 20,
-          bearing: 9,
-        });
 
-        let randomCoordinates = [-112.92,32.22]
-        let takeRandomFlight = () => {
+      mapboxgl.accessToken =
+        "pk.eyJ1IjoiZHlsYW5jIiwiYSI6Im53UGgtaVEifQ.RJiPqXwEtCLTLl-Vmd1GWQ";
+      var map = new mapboxgl.Map({
+        container: "map", // container id
+        style: "mapbox://styles/dylanc/ckl1fryhy0f3l17qk51mua1yt", // style URL
+        center: [-110.709, 32.008],
+        zoom: 8.4,
+        pitch: 20,
+        bearing: 9,
+      });
+
+      let randomCoordinates = [-112.92, 32.22];
+      let takeRandomFlight = () => {
         zoomCalc = Math.random() * 1 + 11; //random * (max - min) + min  || 8 to 11
         bearingCalc = Math.random() * (10 - -10) - 10;
-        pitchCalc = Math.random() * (50);
+        pitchCalc = Math.random() * 50;
         newCity = true;
 
         let randomIndex = Math.floor(Math.random() * 999);
@@ -4132,52 +4132,53 @@
           // maxDuration: 4000,
         });
       };
-     let lookAround = () => {
-        let panPitch = Math.random() * (50); //random * (max - min) + min  || 8 to 11
-        let panBearing = Math.random() * 180 - 90; 
-        let panZoom = Math.random() * (12-11) + 11;
+      let lookAround = () => {
+        let panPitch = Math.random() * 50; //random * (max - min) + min  || 8 to 11
+        let panBearing = Math.random() * 180 - 90;
+        let panZoom = Math.random() * (12 - 11) + 11;
         // let panCenter = [randomCoordinates[0] + Math.random() * 1 - .5, randomCoordinates[1] * 1 -0.5]
 
-          // if (panPitch < 10 || panPitch > 90) {
-          //   panPitch = 60;
-          // }
-          // if (panBearing < 0 || panBearing > 359) {
-          //   panBearing = 30;
-          // }
-          // if (panZoom < 5 || panBearing > 14) {
-          //   panZoom = 10;
-          // }
+        // if (panPitch < 10 || panPitch > 90) {
+        //   panPitch = 60;
+        // }
+        // if (panBearing < 0 || panBearing > 359) {
+        //   panBearing = 30;
+        // }
+        // if (panZoom < 5 || panBearing > 14) {
+        //   panZoom = 10;
+        // }
 
-          map.flyTo({
-            pitch: panPitch,
-            bearing: panBearing,
-            zoom: panZoom,
-            // center: panCenter,
-            duration: 4000,
-          });
-      }
+        map.flyTo({
+          pitch: panPitch,
+          bearing: panBearing,
+          zoom: panZoom,
+          // center: panCenter,
+          duration: 4000,
+        });
+      };
 
-//Initailize the map
-// initializeMap();
+      //Initailize the map
+      // initializeMap();
 
-//Take first Flight
-map.on("load", takeRandomFlight());
+      //Take first Flight
+      map.on("load", takeRandomFlight());
 
-//Take another Flight Every 20 Seconds
-setInterval(() => {takeRandomFlight()}, 20000);
+      //Take another Flight Every 20 Seconds
+      setInterval(() => {
+        takeRandomFlight();
+      }, 20000);
 
-map.on("moveend", ()=>{lookAround()});
+      map.on("moveend", () => {
+        lookAround();
+      });
 
       //Yea yea... giant array loaded into to index file directly. I know this is ugly but its 2:25am and I'm feeling lazy...
-   </script>
+    </script>
 
     <!--Contact Info Card-->
     <div class="container">
       <div class="row">
-        <div
-          id="contactinfo"
-          class="infobox wow fadeInDown text-vertical-center"
-        >
+        <div id="contactinfo2" class="infobox wow fadeInDown">
           <div class="wow fadeInLeft" data-wow-delay="0.5s">
             <h1>DYLAN SCOTT</h1>
           </div>
@@ -4259,53 +4260,48 @@ map.on("moveend", ()=>{lookAround()});
             ></a>
           </div>
         </div>
-
-        <div id="contactinfofooter" class="row">
-          <div class="col-xs-12 text-vertical-center center-block">
-            <div class="text-vertical-center wow fadeInUp" data-wow-delay="3s">
-              <a
-                href="#singlepage"
-                class="btn btn-lg btn-warning"
-                role="button"
-                style="padding-top: 0px; padding-bottom: 0px"
-                ><h5>and now click this</h5></a
-              >
-            </div>
-          </div>
-        </div>
+        <button
+          id="clickthis"
+          class="btn btn-lg btn-warning text-vertical-center wow fadeInUp" data-wow-delay="3s"
+          role="button"
+          style="padding-top: 0px; padding-bottom: 0px"
+        >
+          <a href="#singlepage"><h5>now click this</h5></a>
+        </button>
       </div>
     </div>
     <!--end container-->
-
-    <div id="singlepage">
-      <div id="aboutme" class="container">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-          <li class="nav-item active" role="presentation">
-            <a
-              class="nav-link active"
-              id="home-tab"
-              data-toggle="tab"
-              href="#home"
-              role="tab"
-              aria-controls="home"
-              aria-selected="true"
-              >about me</a
-            >
-          </li>
-          <li class="nav-item" role="presentation">
-            <a
-              class="nav-link"
-              id="profile-tab"
-              data-toggle="tab"
-              href="#profile"
-              role="tab"
-              aria-controls="profile"
-              aria-selected="false"
-              >worksamples</a
-            >
-          </li>
-        </ul>
+      <div id="singlepage">
+        <div id="aboutme" class="container">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item active" role="presentation">
+              <a
+                class="nav-link active"
+                id="home-tab"
+                data-toggle="tab"
+                href="#home"
+                role="tab"
+                aria-controls="home"
+                aria-selected="true"
+                >about me</a
+              >
+            </li>
+            <li class="nav-item" role="presentation">
+              <a
+                class="nav-link"
+                id="profile-tab"
+                data-toggle="tab"
+                href="#profile"
+                role="tab"
+                aria-controls="profile"
+                aria-selected="false"
+                >worksamples</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
+
       <div class="container tab-content active" id="myTabContent">
         <div
           class="tab-pane fade active in"
@@ -4313,40 +4309,39 @@ map.on("moveend", ()=>{lookAround()});
           role="tabpanel"
           aria-labelledby="home-tab"
         >
-          <div class="row">
-            <div class="col-sm-12">
+
               <!--<div id="text1" class="col-sm-10 col-sm-offset-1">-->
               <h4>
                 <span class="biggerfont">
                   I am a self-taught full-stack GIS Developer</span
                 >, focuses on urban design, climate change, and the growing
                 socio-economic divide. I use my knowledge of web-design,
-                geospatial-analysis, and data-viz to distil complex analysis
-                from these subjects into easy-to-digest map-narratives. These
-                narratives can teach wider audiences and (hopefully) empower
-                positive change. <br /><br />
+                geospatial-analysis, and data-viz to distil complex ideas into
+                easy-to-digest map-narratives. These narratives reach wider
+                audiences and (hopefully), can empower positive change.
+                <br /><br />
                 <span class="biggerfont">
                   I am the founder of TucsonPathways.org</span
                 >
                 - a bicycle advocacy organization, centered on data-analytics of
-                city infrastructure. Our Pathways web-app calculates and
+                city infrastructure. The Pathways web-app calculates and
                 visualizes alternative bike-commutes optimized for safer,
-                quieter, more scenic rides. Our goal is to promote commuting for
+                quieter, more scenic rides. The goal is to promote commuting for
                 potential-riders who feel intimidated to ride on traditional
                 bike-lanes alongside high-stress vehicle traffic. <br /><br />
                 <span class="biggerfont"> I graduated with distinction</span>
                 in Applied Mathematics & Environmental Hydrology from the
                 University of Arizona in the Spring of 2013, working odd-jobs
-                and internships throughout to pay my own way through college.
+                and internships throughout to pay my way through college.
                 <br /><br />
                 <span class="biggerfont">I am a self-educated </span>in numerous
                 programming languages and technical softwares - ArcGIS, QGIS,
                 Spatial Analysis Toolsets, OpenStreetMap, iD, JOSM, HTML5, CSS,
                 Javascript, Node, git version control, VSCode, Vue.js,
-                Mapbox-GL, Mapbox-Studio, JSON formatting, Leaflet, Drone
-                Mapping, SQL, Graphhopper, D3.js, Turf.js, Python, Firebase,
-                Netlify, Microsoft Office Suite, along with several others
-                supplementary programs. <br /><br />
+                Mapbox-GL.js, Mapbox-Studio, Leaflet, Drone Mapping,
+                Graphhopper, Netlify, Turf.js, Microsoft Office Suite, some
+                Python, some Firebase, some D3.js, along with several others
+                smaller supplementary programs. <br /><br />
                 <span class="biggerfont"
                   >I am a published technical writer </span
                 >with the United States Geological Survey for my work in using
@@ -4374,11 +4369,10 @@ map.on("moveend", ()=>{lookAround()});
                 <!--<div><span class="biggerfont">For the past year </span>I have paid off more than $20,000 in student loans working as a warehouse laborer, bartender, and stock-market daytrader (in the tech/energy sector). The majority of my free time was spent teaching myself web-development to best prepare myself for cutting-edge application to a future career in GIS. 
                       <br><br>-->
               </h4>
-            </div>
+
 
             <!--<div class="aboutmefooter col-xs-10 col-sm-offset-1"><i>More than halfway through my degree program in Physics, I realized I was happier learning about the natural environment around me. I switched my major to Applied Mathematics & Environmental Hydrology and never looked back. I've had the great opportunity to work for both large environmental research institutions, along with small community-based environmental organizations. This diversity have given me a unique prespective on environmental sustainability and new urbanism. I've simultaniously created a strong foundation of skills in critical thinking, data visualization, and geospatial analysis. -->
             <br /><br />
-          </div>
         </div>
         <div
           class="tab-pane fade"
@@ -4571,7 +4565,6 @@ map.on("moveend", ()=>{lookAround()});
           </div>
         </div>
       </div>
-    </div>
 
     <!-- Resume Modal -->
     <div
