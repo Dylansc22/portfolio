@@ -84,7 +84,7 @@
       new WOW().init();
     </script>
 
-    <div id="map" class="wow fadeIn" data-wow-delay="4s"></div>
+    <div id="map" class="wow fadeIn" data-wow-delay="1s"></div>
     <script>
       var zoomCalc = 0;
       var bearingCalc = 0;
@@ -4121,15 +4121,15 @@
         map.flyTo({
           center: randomCoordinates,
           // essential: true, // this animation is considered essential with respect to prefers-reduced-motion
-          speed: 0.7, //0.012, // make the flying slow
-          curve: 1.1, // default 1.42 change the speed at which it zooms out
+          speed: 0.8, //0.012, // make the flying slow
+          curve: 1.2, // default 1.42 change the speed at which it zooms out
           // This can be any easing function: it takes a number between
           //       // 0 and 1 and returns another number between 0 and 1.
           zoom: zoomCalc,
           bearing: bearingCalc,
           pitch: pitchCalc,
           // duration: 7000,
-          // maxDuration: 4000,
+          // maxDuration: 7000,
         });
       };
       let lookAround = () => {
@@ -4161,7 +4161,9 @@
       // initializeMap();
 
       //Take first Flight
-      map.on("load", takeRandomFlight());
+      setTimeout(() => {
+        map.on("load", takeRandomFlight());
+      }, 2000);
 
       //Take another Flight Every 20 Seconds
       setInterval(() => {
