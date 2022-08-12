@@ -293,7 +293,7 @@ hr.medium {
   height: 100%;
 }
 
-#mapidheader {
+/* #mapidheader {
   position: relative;
   display: block;
   z-index: 1;
@@ -336,7 +336,7 @@ li.active {
 #navigationtabs > ul > li > a > h1 {
   color: #606060;
   font-size: 3vw;
-}
+} */
 
 #image1 {
   height: 320px;
@@ -373,21 +373,21 @@ li.active {
 
 /* About */
 
-.about {
+/* .about {
   padding: 50px 0;
   background-color: white;
-}
+} */
 
 /* Services */
 
-.services {
+/* .services {
   padding: 50px 0;
   background-color: gray;
 }
 
 .service-item {
   margin-bottom: 30px;
-}
+} */
 
 /* Callout */
 
