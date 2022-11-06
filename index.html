@@ -1,681 +1,505 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
 
-    <title>Dylan Scott</title>
-    <!-- Custom CSS -->
-    <link href="css/style.css" rel="stylesheet" />
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
 
-    <!--Animation CSS and WOW.JS-->
-    <!-- see http://mynameismatthieu.com/WOW/docs.html for additional details -->
-    <link rel="stylesheet" href="css/animate.css" />
-    <script src="js/wow.min.js"></script>
+  <title>Dylan Scott</title>
+  <!-- Custom CSS -->
+  <link href="css/style.css" rel="stylesheet" />
 
-    <!-- Google Fonts (from https://www.google.com/fonts )-->
-    <link
-      href="http://fonts.googleapis.com/css?family=Fjalla+One"
-      rel="stylesheet"
-      type="text/css"
-    />
+  <!--Animation CSS and WOW.JS-->
+  <!-- see http://mynameismatthieu.com/WOW/docs.html for additional details -->
+  <link rel="stylesheet" href="css/animate.css" />
+  <script src="js/wow.min.js"></script>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <!-- Google Fonts (from https://www.google.com/fonts )-->
+  <link href="http://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet" type="text/css" />
 
-    <!-- Latest compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-      integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
-      crossorigin="anonymous"
-    />
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
-    <!-- Optional theme -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
-      integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
-      crossorigin="anonymous"
-    />
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous" />
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-      integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-      crossorigin="anonymous"
-    ></script>
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+    integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous" />
 
-    <meta
-      name="viewport"
-      content="initial-scale=1,maximum-scale=1,user-scalable=no"
-    />
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
-    <link
-      href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
-      rel="stylesheet"
-    />
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+    integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+    crossorigin="anonymous"></script>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css" rel="stylesheet" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato"
-      rel="stylesheet"
-      type="text/css"
-    />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
 
-    <script
-      src="https://kit.fontawesome.com/424cd50bdd.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
+  <script src="https://kit.fontawesome.com/424cd50bdd.js" crossorigin="anonymous"></script>
+</head>
 
-  <body id="bootstrapoverrides">
-    <script>
-      /*enables all animation behavior*/
-      new WOW().init();
-    </script>
+<body id="bootstrapoverrides">
+  <script>
+    /*enables all animation behavior*/
+    new WOW().init();
+  </script>
 
-    <div id="map" class="wow fadeIn" data-wow-delay="1s"></div>
-    <script>
-      var zoomCalc = 0;
-      var bearingCalc = 0;
-      var pitchCalc = 0;
-      var newCity = false;
+  <div id="map" class="wow fadeIn" data-wow-delay="1s"></div>
+  <script>
+    var zoomCalc = 0;
+    var bearingCalc = 0;
+    var pitchCalc = 0;
+    var newCity = false;
 
-      var cities = [
-{latitude: 40.71,longitude: -74.00,},{latitude: 34.05,longitude: -118.24,},{latitude: 41.87,longitude: -87.62,},{latitude: 29.76,longitude: -95.36,},{latitude: 39.95,longitude: -75.16,},{latitude: 33.44,longitude: -112.07,},{latitude: 29.42,longitude: -98.49,},{latitude: 32.71,longitude: -117.16,},{latitude: 32.77,longitude: -96.79,},{latitude: 37.33,longitude: -121.88,},{latitude: 30.26,longitude: -97.74,},{latitude: 39.76,longitude: -86.15,},{latitude: 30.33,longitude: -81.65,},{latitude: 37.77,longitude: -122.41,},{latitude: 39.96,longitude: -82.99,},{latitude: 35.22,longitude: -80.84,},{latitude: 32.75,longitude: -97.33,},{latitude: 42.33,longitude: -83.04,},{latitude: 31.77,longitude: -106.44,},{latitude: 35.14,longitude: -90.04,},{latitude: 47.60,longitude: -122.33,},{latitude: 39.73,longitude: -104.99,},{latitude: 38.90,longitude: -77.03,},{latitude: 42.36,longitude: -71.05,},{latitude: 36.16,longitude: -86.78,},{latitude: 39.29,longitude: -76.61,},{latitude: 35.46,longitude: -97.51,},{latitude: 38.25,longitude: -85.75,},{latitude: 45.52,longitude: -122.67,},{latitude: 36.16,longitude: -115.13,},{latitude: 43.03,longitude: -87.90,},{latitude: 35.08,longitude: -106.60,},{latitude: 32.22,longitude: -110.92,},{latitude: 36.74,longitude: -119.77,},{latitude: 38.58,longitude: -121.49,},{latitude: 33.77,longitude: -118.19,},{latitude: 39.09,longitude: -94.57,},{latitude: 33.41,longitude: -111.83,},{latitude: 36.85,longitude: -75.97,},{latitude: 33.74,longitude: -84.38,},{latitude: 38.83,longitude: -104.82,},{latitude: 41.25,longitude: -95.99,},{latitude: 35.77,longitude: -78.63,},{latitude: 25.76,longitude: -80.19,},{latitude: 37.80,longitude: -122.27,},{latitude: 44.97,longitude: -93.26,},{latitude: 36.15,longitude: -95.99,},{latitude: 41.49,longitude: -81.69,},{latitude: 37.68,longitude: -97.33,},{latitude: 32.73,longitude: -97.10,},{latitude: 29.95,longitude: -90.07,},{latitude: 35.37,longitude: -119.01,},{latitude: 27.95,longitude: -82.45,},{latitude: 21.30,longitude: -157.85,},{latitude: 39.72,longitude: -104.83,},{latitude: 33.83,longitude: -117.91,},{latitude: 33.74,longitude: -117.86,},{latitude: 38.62,longitude: -90.19,},{latitude: 33.95,longitude: -117.39,},{latitude: 27.80,longitude: -97.39,},{latitude: 38.04,longitude: -84.50,},{latitude: 40.44,longitude: -79.99,},{latitude: 61.21,longitude: -149.90,},{latitude: 37.95,longitude: -121.29,},{latitude: 39.10,longitude: -84.51,},{latitude: 44.95,longitude: -93.08,},{latitude: 41.66,longitude: -83.55,},{latitude: 36.07,longitude: -79.79,},{latitude: 40.73,longitude: -74.17,},{latitude: 33.01,longitude: -96.69,},{latitude: 36.03,longitude: -114.98,},{latitude: 40.82,longitude: -96.68,},{latitude: 42.88,longitude: -78.87,},{latitude: 40.72,longitude: -74.07,},{latitude: 32.64,longitude: -117.08,},{latitude: 41.07,longitude: -85.13,},{latitude: 28.53,longitude: -81.37,},{latitude: 27.77,longitude: -82.64},{latitude: 33.30,longitude: -111.84,},{latitude: 27.53,longitude: -99.48,},{latitude: 36.85,longitude: -76.28,},{latitude: 35.99,longitude: -78.89,},{latitude: 43.07,longitude: -89.40,},{latitude: 33.57,longitude: -101.85,},{latitude: 33.68,longitude: -117.79,},{latitude: 36.09,longitude: -80.24,},{latitude: 33.53,longitude: -112.18,},{latitude: 32.91,longitude: -96.63,},{latitude: 25.85,longitude: -80.27,},{latitude: 39.52,longitude: -119.81,},{latitude: 36.76,longitude: -76.28,},{latitude: 33.35,longitude: -111.78,},{latitude: 30.45,longitude: -91.14,},{latitude: 32.81,longitude: -96.94,},{latitude: 33.49,longitude: -111.92,},{latitude: 36.19,longitude: -115.11,},{latitude: 37.54,longitude: -121.98,},{latitude: 43.61,longitude: -116.21,},{latitude: 37.54,longitude: -77.43,},{latitude: 34.10,longitude: -117.28,},{latitude: 33.52,longitude: -86.80,},{latitude: 47.65,longitude: -117.42,},{latitude: 43.16,longitude: -77.61,},{latitude: 41.60,longitude: -93.60,},{latitude: 37.63,longitude: -120.99,},{latitude: 35.05,longitude: -78.87,},{latitude: 47.25,longitude: -122.44,},{latitude: 34.19,longitude: -119.17,},{latitude: 34.09,longitude: -117.43,},{latitude: 32.46,longitude: -84.98,},{latitude: 32.36,longitude: -86.29,},{latitude: 33.94,longitude: -117.22,},{latitude: 32.52,longitude: -93.75,},{latitude: 41.76,longitude: -88.32,},{latitude: 40.93,longitude: -73.89,},{latitude: 41.08,longitude: -81.51,},{latitude: 33.66,longitude: -117.99,},{latitude: 34.74,longitude: -92.28,},{latitude: 33.47,longitude: -82.01,},{latitude: 35.22,longitude: -101.83,},{latitude: 34.14,longitude: -118.25,},{latitude: 30.69,longitude: -88.03,},{latitude: 42.96,longitude: -85.66,},{latitude: 40.76,longitude: -111.89,},{latitude: 30.43,longitude: -84.28,},{latitude: 34.73,longitude: -86.58,},{latitude: 32.74,longitude: -96.99,},{latitude: 35.96,longitude: -83.92,},{latitude: 42.26,longitude: -71.80,},{latitude: 37.08,longitude: -76.47,},{latitude: 25.90,longitude: -97.49,},{latitude: 38.98,longitude: -94.67,},{latitude: 34.39,longitude: -118.54,},{latitude: 41.82,longitude: -71.41,},{latitude: 33.77,longitude: -117.94,},{latitude: 35.04,longitude: -85.30,},{latitude: 33.19,longitude: -117.37,},{latitude: 32.29,longitude: -90.18,},{latitude: 26.12,longitude: -80.13,},{latitude: 38.44,longitude: -122.71,},{latitude: 34.10,longitude: -117.59,},{latitude: 27.27,longitude: -80.35,},{latitude: 33.42,longitude: -111.94,},{latitude: 34.06,longitude: -117.65,},{latitude: 45.63,longitude: -122.66,},{latitude: 26.56,longitude: -81.94,},{latitude: 43.54,longitude: -96.73,},{latitude: 37.20,longitude: -93.29,},{latitude: 33.58,longitude: -112.23,},{latitude: 26.00,longitude: -80.29,},{latitude: 38.40,longitude: -121.37,},{latitude: 44.94,longitude: -123.03,},{latitude: 34.68,longitude: -118.15,},{latitude: 33.87,longitude: -117.56,},{latitude: 44.05,longitude: -123.08,},{latitude: 34.57,longitude: -118.11,},{latitude: 36.67,longitude: -121.65,},{latitude: 42.10,longitude: -72.58,},{latitude: 29.69,longitude: -95.20,},{latitude: 40.58,longitude: -105.08,},{latitude: 37.66,longitude: -122.08,},{latitude: 34.05,longitude: -117.74,},{latitude: 35.79,longitude: -78.78,},{latitude: 42.27,longitude: -89.09,},{latitude: 38.80,longitude: -77.04,},{latitude: 33.11,longitude: -117.08,},{latitude: 33.19,longitude: -96.63,},{latitude: 39.11,longitude: -94.62,},{latitude: 41.52,longitude: -88.08,},{latitude: 37.36,longitude: -122.03,},{latitude: 33.83,longitude: -118.34,},{latitude: 41.18,longitude: -73.19,},{latitude: 39.70,longitude: -105.08,},{latitude: 26.01,longitude: -80.14,},{latitude: 40.91,longitude: -74.17,},{latitude: 41.75,longitude: -88.15,},{latitude: 43.04,longitude: -76.14,},{latitude: 32.76,longitude: -96.59,},{latitude: 39.75,longitude: -84.19,},{latitude: 32.08,longitude: -81.09,},{latitude: 36.52,longitude: -87.35,},{latitude: 33.78,longitude: -117.85,},{latitude: 34.14,longitude: -118.14,},{latitude: 33.87,longitude: -117.92,},{latitude: 31.11,longitude: -97.72,},{latitude: 33.15,longitude: -96.82,},{latitude: 37.02,longitude: -76.34,},{latitude: 26.20,longitude: -98.23,},{latitude: 42.51,longitude: -83.01,},{latitude: 47.61,longitude: -122.20,},{latitude: 40.69,longitude: -112.00,},{latitude: 34.00,longitude: -81.03,},{latitude: 38.88,longitude: -94.81,},{latitude: 42.58,longitude: -83.03,},{latitude: 41.30,longitude: -72.92,},{latitude: 25.98,longitude: -80.30,},{latitude: 31.54,longitude: -97.14,},{latitude: 34.17,longitude: -118.83,},{latitude: 41.97,longitude: -91.66,},{latitude: 32.77,longitude: -79.93,},{latitude: 36.33,longitude: -119.29,},{latitude: 39.05,longitude: -95.68,},{latitude: 40.66,longitude: -74.21,},{latitude: 29.65,longitude: -82.32,},{latitude: 39.86,longitude: -104.97,},{latitude: 38.75,longitude: -121.28,},{latitude: 32.97,longitude: -96.88,},{latitude: 26.27,longitude: -80.27,},{latitude: 41.05,longitude: -73.53,},{latitude: 34.26,longitude: -118.78,},{latitude: 37.97,longitude: -122.03,},{latitude: 41.76,longitude: -72.68,},{latitude: 47.38,longitude: -122.23,},{latitude: 30.22,longitude: -92.01,},{latitude: 31.99,longitude: -102.07,},{latitude: 33.62,longitude: -112.36,},{latitude: 33.21,longitude: -97.13,},{latitude: 34.53,longitude: -117.29,},{latitude: 37.97,longitude: -87.57,},{latitude: 37.35,longitude: -121.95,},{latitude: 32.44,longitude: -99.73,},{latitude: 33.95,longitude: -83.35,},{latitude: 38.10,longitude: -122.25,},{latitude: 40.60,longitude: -75.49,},{latitude: 35.22,longitude: -97.43,},{latitude: 30.08,longitude: -94.12,},{latitude: 39.09,longitude: -94.41,},{latitude: 35.84,longitude: -86.39,},{latitude: 42.28,longitude: -83.74,},{latitude: 39.78,longitude: -89.65,},{latitude: 37.87,longitude: -122.27,},{latitude: 40.69,longitude: -89.58,},{latitude: 40.23,longitude: -111.65,},{latitude: 34.06,longitude: -118.02,},{latitude: 38.95,longitude: -92.33,},{latitude: 42.73,longitude: -84.55,},{latitude: 46.87,longitude: -96.78,},{latitude: 33.94,longitude: -118.13,},{latitude: 33.64,longitude: -117.91,},{latitude: 34.22,longitude: -77.94,},{latitude: 39.80,longitude: -105.08,},{latitude: 33.96,longitude: -118.35,},{latitude: 25.94,longitude: -80.24,},{latitude: 33.15,longitude: -117.35,},{latitude: 39.83,longitude: -105.03,},{latitude: 44.01,longitude: -92.48,},{latitude: 31.84,longitude: -102.36,},{latitude: 42.99,longitude: -71.45,},{latitude: 42.03,longitude: -88.28,},{latitude: 40.60,longitude: -111.93,},{latitude: 30.50,longitude: -97.67,},{latitude: 27.96,longitude: -82.80,},{latitude: 41.55,longitude: -73.05,},{latitude: 45.50,longitude: -122.43,},{latitude: 38.24,longitude: -122.03,},{latitude: 45.78,longitude: -108.50,},{latitude: 42.63,longitude: -71.31,},{latitude: 34.27,longitude: -119.22,},{latitude: 38.25,longitude: -104.60,},{latitude: 35.95,longitude: -80.00,},{latitude: 34.06,longitude: -117.93,},{latitude: 37.93,longitude: -122.34,},{latitude: 33.55,longitude: -117.21,},{latitude: 42.37,longitude: -71.10,},{latitude: 38.00,longitude: -121.80,},{latitude: 33.49,longitude: -117.14,},{latitude: 33.90,longitude: -118.08,},{latitude: 39.58,longitude: -104.87,},{latitude: 47.97,longitude: -122.20,},{latitude: 28.03,longitude: -80.58,},{latitude: 33.91,longitude: -98.49,},{latitude: 44.51,longitude: -88.01,},{latitude: 37.68,longitude: -122.47,},{latitude: 34.18,longitude: -118.30,},{latitude: 32.94,longitude: -96.72,},{latitude: 26.23,longitude: -80.12,},{latitude: 32.85,longitude: -79.97,},{latitude: 36.06,longitude: -95.79,},{latitude: 40.01,longitude: -105.27,},{latitude: 26.71,longitude: -80.05,},{latitude: 34.95,longitude: -120.43,},{latitude: 32.79,longitude: -116.96,},{latitude: 41.52,longitude: -90.57,},{latitude: 34.10,longitude: -117.37,},{latitude: 32.31,longitude: -106.76,},{latitude: 37.56,longitude: -122.32,},{latitude: 33.04,longitude: -96.99,},{latitude: 41.67,longitude: -86.25,},{latitude: 28.03,longitude: -81.94,},{latitude: 42.12,longitude: -80.08,},{latitude: 32.35,longitude: -95.30,},{latitude: 29.56,longitude: -95.28,},{latitude: 30.62,longitude: -96.33,},{latitude: 42.58,longitude: -87.82,},{latitude: 33.93,longitude: -84.37,},{latitude: 36.82,longitude: -119.70,},{latitude: 43.01,longitude: -83.68,},{latitude: 37.27,longitude: -79.94,},{latitude: 42.65,longitude: -73.75,},{latitude: 33.99,longitude: -117.48,},{latitude: 33.89,longitude: -118.22,},{latitude: 31.46,longitude: -100.43,},{latitude: 45.52,longitude: -122.98,},{latitude: 34.60,longitude: -98.39,},{latitude: 47.48,longitude: -122.21,},{latitude: 33.20,longitude: -117.24,},{latitude: 26.07,longitude: -80.25,},{latitude: 40.42,longitude: -104.70,},{latitude: 33.60,longitude: -117.67,},{latitude: 36.83,longitude: -76.29,},{latitude: 42.32,longitude: -83.17,},{latitude: 33.95,longitude: -118.21,},{latitude: 33.20,longitude: -87.56,},{latitude: 42.36,longitude: -83.35,},{latitude: 41.63,longitude: -70.93,},{latitude: 38.35,longitude: -121.98,},{latitude: 42.08,longitude: -71.01,},{latitude: 34.02,longitude: -84.36,},{latitude: 45.48,longitude: -122.80,},{latitude: 42.25,longitude: -71.00,},{latitude: 39.53,longitude: -119.75,},{latitude: 46.60,longitude: -120.50,},{latitude: 38.91,longitude: -94.38,},{latitude: 47.32,longitude: -122.31,},{latitude: 33.83,longitude: -118.28,},{latitude: 34.01,longitude: -118.49,},{latitude: 34.42,longitude: -117.30,},{latitude: 33.10,longitude: -96.67,},{latitude: 35.23,longitude: -106.66,},{latitude: 32.69,longitude: -114.62,},{latitude: 33.75,longitude: -117.99,},{latitude: 40.29,longitude: -111.69,},{latitude: 42.46,longitude: -70.94,},{latitude: 40.58,longitude: -122.39,},{latitude: 47.67,longitude: -117.23,},{latitude: 25.79,longitude: -80.13,},{latitude: 29.50,longitude: -95.09,},{latitude: 38.97,longitude: -95.23,},{latitude: 34.42,longitude: -119.69,},{latitude: 26.12,longitude: -80.23,},{latitude: 40.56,longitude: -111.83,},{latitude: 26.16,longitude: -80.25,},{latitude: 32.84,longitude: -83.63,},{latitude: 40.16,longitude: -105.10,},{latitude: 26.36,longitude: -80.12,},{latitude: 33.14,longitude: -117.16,},{latitude: 35.61,longitude: -77.36,},{latitude: 42.36,longitude: -87.84,},{latitude: 41.70,longitude: -71.15,},{latitude: 39.72,longitude: -121.83,},{latitude: 42.33,longitude: -71.20,},{latitude: 37.72,longitude: -122.15,},{latitude: 40.33,longitude: -75.92,},{latitude: 41.11,longitude: -73.40,},{latitude: 35.38,longitude: -94.39,},{latitude: 33.61,longitude: -117.92,},{latitude: 35.59,longitude: -82.55,},{latitude: 42.76,longitude: -71.46,},{latitude: 35.65,longitude: -97.47,},{latitude: 33.97,longitude: -118.03,},{latitude: 43.54,longitude: -116.56,},{latitude: 44.84,longitude: -93.29,},{latitude: 28.90,longitude: -81.26,},{latitude: 33.91,longitude: -118.35,},{latitude: 46.78,longitude: -92.10,},{latitude: 39.97,longitude: -86.11,},{latitude: 36.72,longitude: -76.58,},{latitude: 40.85,longitude: -74.16,},{latitude: 38.70,longitude: -121.28,},{latitude: 37.68,longitude: -121.76,},{latitude: 37.73,longitude: -121.42,},{latitude: 34.09,longitude: -118.12,},{latitude: 47.68,longitude: -122.20,},{latitude: 40.21,longitude: -74.74,},{latitude: 41.22,longitude: -111.97,},{latitude: 33.40,longitude: -86.81,},{latitude: 41.84,longitude: -87.75,},{latitude: 39.95,longitude: -86.01,},{latitude: 29.61,longitude: -95.63,},{latitude: 41.39,longitude: -73.45,},{latitude: 43.61,longitude: -116.39,},{latitude: 33.72,longitude: -116.21,},{latitude: 35.40,longitude: -80.57,},{latitude: 33.69,longitude: -117.18,},{latitude: 40.11,longitude: -88.24,},{latitude: 33.86,longitude: -117.99,},{latitude: 42.60,longitude: -83.14,},{latitude: 38.81,longitude: -90.69,},{latitude: 34.02,longitude: -84.19,},{latitude: 48.74,longitude: -122.47,},{latitude: 42.32,longitude: -83.40,},{latitude: 39.16,longitude: -86.52,},{latitude: 42.49,longitude: -96.40,},{latitude: 41.70,longitude: -71.41,},{latitude: 33.74,longitude: -116.97,},{latitude: 32.50,longitude: -94.74,},{latitude: 42.49,longitude: -83.36,},{latitude: 44.05,longitude: -121.31,},{latitude: 33.85,longitude: -118.13,},{latitude: 37.30,longitude: -120.48,},{latitude: 26.21,longitude: -98.32,},{latitude: 34.01,longitude: -117.68,},{latitude: 37.48,longitude: -122.23,},{latitude: 26.30,longitude: -98.16,},{latitude: 41.77,longitude: -71.43,},{latitude: 41.40,longitude: -81.72,},{latitude: 40.91,longitude: -73.78,},{latitude: 33.64,longitude: -117.68,},{latitude: 38.29,longitude: -122.28,},{latitude: 41.58,longitude: -87.50,},{latitude: 36.06,longitude: -94.15,},{latitude: 40.48,longitude: -88.99,},{latitude: 33.43,longitude: -112.34,},{latitude: 42.38,longitude: -71.09,},{latitude: 29.58,longitude: -81.20,},{latitude: 30.67,longitude: -96.36,},{latitude: 41.59,longitude: -87.34,},{latitude: 27.90,longitude: -82.78,},{latitude: 45.09,longitude: -93.35,},{latitude: 33.74,longitude: -117.82,},{latitude: 42.72,longitude: -87.78,},{latitude: 26.31,longitude: -80.09,},{latitude: 37.41,longitude: -79.14,},{latitude: 37.38,longitude: -122.08,},{latitude: 42.32,longitude: -122.87,},{latitude: 42.70,longitude: -71.16,},{latitude: 33.88,longitude: -118.11,},{latitude: 28.08,longitude: -80.60,},{latitude: 39.76,longitude: -94.84,},{latitude: 39.92,longitude: -75.11,},{latitude: 37.09,longitude: -113.56,},{latitude: 46.21,longitude: -119.13,},{latitude: 34.08,longitude: -117.96,},{latitude: 33.98,longitude: -117.73,},{latitude: 37.76,longitude: -122.24,},{latitude: 31.57,longitude: -84.15,},{latitude: 42.08,longitude: -87.98,},{latitude: 41.40,longitude: -75.66,},{latitude: 42.04,longitude: -87.68,},{latitude: 42.29,longitude: -85.58,},{latitude: 29.73,longitude: -94.97,},{latitude: 34.09,longitude: -117.64,},{latitude: 36.18,longitude: -94.12,},{latitude: 40.62,longitude: -75.37,},{latitude: 42.03,longitude: -88.08,},{latitude: 32.83,longitude: -79.82,},{latitude: 47.30,longitude: -122.22,},{latitude: 39.84,longitude: -88.95,},{latitude: 37.77,longitude: -121.97,},{latitude: 37.66,longitude: -121.87,},{latitude: 42.91,longitude: -85.70,},{latitude: 30.22,longitude: -93.21,},{latitude: 45.01,longitude: -93.45,},{latitude: 41.69,longitude: -88.06,},{latitude: 26.19,longitude: -98.18,},{latitude: 44.26,longitude: -88.41,},{latitude: 35.26,longitude: -81.18,},{latitude: 38.67,longitude: -121.17,},{latitude: 42.47,longitude: -83.22,},{latitude: 42.65,longitude: -83.14,},{latitude: 41.66,longitude: -72.77,},{latitude: 33.43,longitude: -112.35,},{latitude: 40.79,longitude: -81.37,},{latitude: 32.61,longitude: -83.62,},{latitude: 37.59,longitude: -122.04,},{latitude: 33.78,longitude: -117.22,},{latitude: 37.79,longitude: -121.21,},{latitude: 41.66,longitude: -91.53,},{latitude: 35.84,longitude: -90.70,},  
-{latitude: 39.73,longitude: -75.53,},{latitude: 33.93,longitude: -118.21,},{latitude: 40.39,longitude: -105.07,},{latitude: 41.87,longitude: -71.38,},{latitude: 26.53,longitude: -80.09,},{latitude: 43.01,longitude: -88.23,},{latitude: 30.36,longitude: -89.09,},{latitude: 34.50,longitude: -117.18,},{latitude: 40.85,longitude: -74.12,},{latitude: 44.08,longitude: -103.23,},{latitude: 41.06,longitude: -111.97,},{latitude: 40.41,longitude: -86.87,},{latitude: 37.49,longitude: -120.84,},{latitude: 40.19,longitude: -85.38,},{latitude: 31.09,longitude: -97.34,},{latitude: 29.61,longitude: -95.53,},{latitude: 34.05,longitude: -117.18,},{latitude: 35.68,longitude: -105.93,},{latitude: 26.14,longitude: -80.21,},{latitude: 37.43,longitude: -121.89,},{latitude: 42.11,longitude: -88.03,},{latitude: 46.87,longitude: -113.99,},{latitude: 34.92,longitude: -81.02,},{latitude: 34.75,longitude: -77.43,},{latitude: 35.92,longitude: -86.86,},{latitude: 35.19,longitude: -111.65,},{latitude: 33.01,longitude: -97.09,},{latitude: 26.10,longitude: -80.39,},{latitude: 42.49,longitude: -92.34,},{latitude: 40.69,longitude: -74.26,},{latitude: 40.91,longitude: -73.83,},{latitude: 26.64,longitude: -81.87,},{latitude: 31.22,longitude: -85.39,},{latitude: 38.58,longitude: -121.30,},{latitude: 33.84,longitude: -118.38,},{latitude: 35.61,longitude: -88.81,},{latitude: 46.23,longitude: -119.10,},{latitude: 38.78,longitude: -90.49,},{latitude: 44.81,longitude: -91.49,},{latitude: 32.83,longitude: -97.22,},{latitude: 46.80,longitude: -100.78,},{latitude: 33.88,longitude: -117.81,},{latitude: 29.99,longitude: -90.24,},{latitude: 37.91,longitude: -122.06,},{latitude: 39.41,longitude: -77.41,},{latitude: 44.02,longitude: -88.54,},{latitude: 38.02,longitude: -121.88,},{latitude: 37.44,longitude: -122.14,},{latitude: 32.51,longitude: -93.73,},{latitude: 43.66,longitude: -70.25,},{latitude: 45.55,longitude: -94.16,},{latitude: 38.54,longitude: -121.74,},{latitude: 37.65,longitude: -122.40,},{latitude: 34.21,longitude: -119.03,},{latitude: 34.76,longitude: -92.26,},{latitude: 42.81,longitude: -73.93,},{latitude: 39.14,longitude: -77.20,},{latitude: 26.19,longitude: -97.69,},{latitude: 44.92,longitude: -92.95,},{latitude: 44.80,longitude: -93.16,},{latitude: 39.14,longitude: -121.61,},{latitude: 45.07,longitude: -93.45,},{latitude: 41.09,longitude: -80.64,},{latitude: 42.03,longitude: -87.74,},{latitude: 28.29,longitude: -81.40,},{latitude: 36.31,longitude: -82.35,},{latitude: 28.80,longitude: -97.00,},{latitude: 33.42,longitude: -117.61,},{latitude: 40.66,longitude: -74.11,},{latitude: 33.52,longitude: -117.70,},{latitude: 40.76,longitude: -74.20,},{latitude: 39.02,longitude: -94.71,},{latitude: 25.46,longitude: -80.47,},{latitude: 39.08,longitude: -77.15,},{latitude: 26.46,longitude: -80.07,},{latitude: 42.68,longitude: -89.01,},{latitude: 35.08,longitude: -92.44,},{latitude: 33.98,longitude: -118.09,},{latitude: 41.45,longitude: -82.18,},{latitude: 34.01,longitude: -118.11,},{latitude: 38.13,longitude: -121.27,},{latitude: 29.70,longitude: -98.12,},{latitude: 48.05,longitude: -122.17,},{latitude: 26.21,longitude: -80.24,},{latitude: 36.96,longitude: -120.06,},{latitude: 30.31,longitude: -95.45,},{latitude: 36.97,longitude: -122.03,},{latitude: 44.85,longitude: -93.47,},{latitude: 41.13,longitude: -104.82,},{latitude: 29.21,longitude: -81.02,},{latitude: 34.07,longitude: -84.29,},{latitude: 39.39,longitude: -84.56,},{latitude: 42.37,longitude: -71.23,},{latitude: 45.17,longitude: -93.30,},{latitude: 42.77,longitude: -71.07,},{latitude: 41.26,longitude: -95.86,},{latitude: 42.24,longitude: -83.26,},{latitude: 43.10,longitude: -75.23,},{latitude: 42.03,longitude: -93.61,},{latitude: 33.93,longitude: -117.94,},{latitude: 33.03,longitude: -117.29,},{latitude: 36.96,longitude: -86.48,},{latitude: 44.76,longitude: -93.27,},{latitude: 34.85,longitude: -82.39,},{latitude: 41.57,longitude: -93.71,},{latitude: 30.50,longitude: -97.82,},{latitude: 36.20,longitude: -119.34,},{latitude: 34.06,longitude: -118.12,},{latitude: 39.48,longitude: -75.02,},{latitude: 39.46,longitude: -87.41,},{latitude: 25.89,longitude: -80.18,},{latitude: 32.56,longitude: -97.14,},{latitude: 43.01,longitude: -88.00,},{latitude: 41.67,longitude: -72.94,},{latitude: 40.66,longitude: -111.93,},{latitude: 42.42,longitude: -71.06,},{latitude: 41.53,longitude: -72.80,},{latitude: 45.16,longitude: -93.23,},{latitude: 26.66,longitude: -80.26,},{latitude: 37.32,longitude: -122.03,},{latitude: 44.04,longitude: -123.02,},{latitude: 36.33,longitude: -94.11,},{latitude: 42.49,longitude: -82.89,},{latitude: 33.88,longitude: -118.30,},{latitude: 42.63,longitude: -83.29,},{latitude: 32.67,longitude: -117.09,},{latitude: 39.06,longitude: -108.55,},{latitude: 38.79,longitude: -121.23,},{latitude: 35.91,longitude: -79.05,},{latitude: 42.86,longitude: -106.31,},{latitude: 39.92,longitude: -105.08,},{latitude: 38.23,longitude: -122.63,},{latitude: 40.56,longitude: -111.92,},{latitude: 39.92,longitude: -83.80,},{latitude: 47.49,longitude: -111.28,},{latitude: 40.03,longitude: -76.30,},{latitude: 27.04,longitude: -82.23,},{latitude: 47.17,longitude: -122.51,},{latitude: 33.95,longitude: -84.54,},{latitude: 37.97,longitude: -122.53,},{latitude: 42.48,longitude: -83.14,},{latitude: 42.03,longitude: -87.88,},{latitude: 33.98,longitude: -118.22,},{latitude: 32.76,longitude: -117.02,},{latitude: 41.63,longitude: -87.85,},{latitude: 32.60,longitude: -85.48,},{latitude: 44.64,longitude: -93.24,},{latitude: 37.77,longitude: -87.11,},{latitude: 35.33,longitude: -97.48,},{latitude: 26.93,longitude: -80.09,},{latitude: 43.49,longitude: -112.03,},{latitude: 42.50,longitude: -90.66,},{latitude: 35.20,longitude: -89.87,},{latitude: 32.90,longitude: -96.56,},{latitude: 42.48,longitude: -83.47,},{latitude: 41.03,longitude: -73.76,},{latitude: 34.13,longitude: -118.03,},{latitude: 47.67,longitude: -122.12,},{latitude: 33.66,longitude: -117.32,},{latitude: 29.18,longitude: -82.14,},{latitude: 41.57,longitude: -87.79,},{latitude: 29.13,longitude: -80.99,},{latitude: 42.41,longitude: -71.10,},{latitude: 41.71,longitude: -87.74,},{latitude: 35.93,longitude: -77.79,},{latitude: 40.48,longitude: -86.13,},{latitude: 26.25,longitude: -80.17,},{latitude: 39.00,longitude: -76.77,},{latitude: 41.85,longitude: -87.79,},{latitude: 35.44,longitude: -97.39,},{latitude: 33.70,longitude: -117.95,},{latitude: 33.37,longitude: -112.58,},{latitude: 42.33,longitude: -83.27,},{latitude: 38.67,longitude: -121.77,},{latitude: 40.04,longitude: -86.00,},{latitude: 30.83,longitude: -83.27,},{latitude: 34.02,longitude: -117.81,},{latitude: 39.18,longitude: -96.57,},{latitude: 32.83,longitude: -116.97,},{latitude: 41.90,longitude: -71.08,},{latitude: 28.80,longitude: -81.26,},{latitude: 39.68,longitude: -84.16,},{latitude: 40.48,longitude: -74.45,},{latitude: 34.60,longitude: -86.98,},{latitude: 42.14,longitude: -72.60,},{latitude: 40.10,longitude: -85.68,},{latitude: 26.24,longitude: -80.20,},{latitude: 42.21,longitude: -70.94,},{latitude: 40.70,longitude: -73.61,},{latitude: 44.56,longitude: -123.26,},{latitude: 33.95,longitude: -117.58,},{latitude: 36.06,longitude: -119.01,},{latitude: 41.27,longitude: -72.94,},{latitude: 37.93,longitude: -121.69,},{latitude: 33.88,longitude: -118.15,},{latitude: 47.92,longitude: -97.03,},{latitude: 30.63,longitude: -97.67,},{latitude: 38.78,longitude: -90.62,},{latitude: 47.75,longitude: -122.34,},{latitude: 42.06,longitude: -87.93,},{latitude: 36.32,longitude: -119.64,},{latitude: 40.51,longitude: -88.99,},{latitude: 34.08,longitude: -118.07,},{latitude: 40.39,longitude: -111.85,},{latitude: 42.87,longitude: -112.44,},{latitude: 34.12,longitude: -117.20,},{latitude: 38.10,longitude: -122.56,},{latitude: 29.88,longitude: -93.93,},{latitude: 39.16,longitude: -119.76,},{latitude: 29.88,longitude: -97.94,},{latitude: 36.30,longitude: -86.61,},{latitude: 41.36,longitude: -82.10,},{latitude: 42.40,longitude: -71.01,},{latitude: 30.43,longitude: -97.62,},{latitude: 39.61,longitude: -86.10,},{latitude: 41.15,longitude: -95.91,},{latitude: 41.86,longitude: -88.10,},{latitude: 33.88,longitude: -84.51,},{latitude: 27.33,longitude: -82.53,},{latitude: 39.01,longitude: -94.28,},{latitude: 34.07,longitude: -117.31,},{latitude: 32.83,longitude: -97.08,},{latitude: 39.37,longitude: -104.85,},{latitude: 33.78,longitude: -116.46,},{latitude: 36.54,longitude: -82.56,},{latitude: 34.48,longitude: -114.32,},{latitude: 30.42,longitude: -87.21,},{latitude: 40.74,longitude: -74.03,},{latitude: 34.03,longitude: -117.04,},{latitude: 36.91,longitude: -121.75,},{latitude: 46.28,longitude: -119.28,},{latitude: 35.76,longitude: -119.24,},{latitude: 42.06,longitude: -88.12,},{latitude: 38.78,longitude: -90.32,},{latitude: 33.87,longitude: -117.87,},{latitude: 40.78,longitude: -74.01,},{latitude: 37.70,longitude: -121.93,},{latitude: 41.88,longitude: -87.78,},{latitude: 42.52,longitude: -70.92,},{latitude: 40.50,longitude: -74.26,},{latitude: 42.32,longitude: -85.17,},{latitude: 27.49,longitude: -82.57,},{latitude: 37.00,longitude: -121.56,},{latitude: 41.23,longitude: -73.06,},{latitude: 44.63,longitude: -123.10,},{latitude: 41.73,longitude: -93.60,},{latitude: 43.80,longitude: -91.23,},{latitude: 36.09,longitude: -79.43,},{latitude: 32.58,longitude: -96.85,},{latitude: 38.44,longitude: -78.86,},{latitude: 44.92,longitude: -93.46,},{latitude: 41.68,longitude: -85.97,},{latitude: 41.48,longitude: -81.79,},{latitude: 34.13,longitude: -117.86,},{latitude: 34.98,longitude: -90.01,},{latitude: 38.34,longitude: -81.63,},{latitude: 37.08,longitude: -94.51,},{latitude: 36.39,longitude: -97.87,},{latitude: 26.82,longitude: -80.13,},{latitude: 33.86,longitude: -84.33,},{latitude: 40.63,longitude: -74.40,},{latitude: 40.92,longitude: -98.34,},{latitude: 33.72,longitude: -116.37,},{latitude: 35.41,longitude: -80.84,},{latitude: 45.43,longitude: -122.77,},{latitude: 38.95,longitude: -94.73,},{latitude: 43.41,longitude: -83.95,},{latitude: 42.86,longitude: -85.64,},{latitude: 25.81,longitude: -80.35,},{latitude: 44.73,longitude: -93.21,},{latitude: 32.93,longitude: -97.07,},{latitude: 33.56,longitude: -117.72,},{latitude: 47.61,longitude: -122.03,},{latitude: 32.87,longitude: -111.75,},{latitude: 27.84,longitude: -82.69,},{latitude: 42.72,longitude: -73.69,},{latitude: 38.58,longitude: -121.53,},{latitude: 47.47,longitude: -122.34,},{latitude: 39.80,longitude: -104.93,},{latitude: 32.50,longitude: -92.11,},{latitude: 33.85,longitude: -118.06,},{latitude: 41.80,longitude: -88.01,},{latitude: 25.72,longitude: -80.26,},{latitude: 35.72,longitude: -77.91,},{latitude: 43.09,longitude: -79.03,},{latitude: 32.96,longitude: -117.03,},{latitude: 44.88,longitude: -93.34,},{latitude: 41.13,longitude: -81.48,},{latitude: 33.64,longitude: -117.60,},{latitude: 40.27,longitude: -76.88,},{latitude: 38.41,longitude: -82.44,},{latitude: 33.91,longitude: -118.01,},{latitude: 33.81,longitude: -118.03,},{latitude: 43.66,longitude: -116.68,},{latitude: 41.73,longitude: -111.83,},{latitude: 29.30,longitude: -94.79,},{latitude: 43.75,longitude: -87.71,},{latitude: 39.51,longitude: -84.39,},{latitude: 40.66,longitude: -111.88,},{latitude: 33.39,longitude: -104.52,},{latitude: 39.51,longitude: -104.76,},{latitude: 32.84,longitude: -97.14,},{latitude: 42.73,longitude: -84.48,},{latitude: 42.72,longitude: -71.19,},{latitude: 34.09,longitude: -117.89,},{latitude: 31.31,longitude: -92.44,},{latitude: 47.03,longitude: -122.90,},{latitude: 41.59,longitude: -81.52,},{latitude: 41.66,longitude: -86.15,},{latitude: 38.84,longitude: -97.61,},{latitude: 34.13,longitude: -117.90,},{latitude: 40.05,longitude: -82.40,},{latitude: 38.66,longitude: -90.57,},{latitude: 39.11,longitude: -77.56,},{latitude: 33.94,longitude: -84.33,},{latitude: 31.32,longitude: -89.29,},{latitude: 42.49,longitude: -82.93,},{latitude: 26.33,longitude: -81.77,},{latitude: 42.20,longitude: -85.58,},{latitude: 44.95,longitude: -93.37,},{latitude: 35.04,longitude: -89.66,},{latitude: 41.56,longitude: -72.65,},{latitude: 36.11,longitude: -97.05,},{latitude: 41.81,longitude: -71.37,},{latitude: 39.83,longitude: -86.02,},{latitude: 43.04,longitude: -88.00,},{latitude: 41.66,longitude: -81.33,},{latitude: 37.59,longitude: -120.95,},{latitude: 32.58,longitude: -96.95,},{latitude: 40.75,longitude: -82.51,},{latitude: 42.09,longitude: -75.91,},{latitude: 47.67,longitude: -116.78,},{latitude: 35.28,longitude: -120.65,},{latitude: 48.23,longitude: -101.29,},{latitude: 33.83,longitude: -116.54,},{latitude: 34.22,longitude: -92.00,},{latitude: 29.38,longitude: -94.90,},{latitude: 33.01,longitude: -80.17,},{latitude: 42.56,longitude: -114.46,},{latitude: 38.27,longitude: -85.73,},{latitude: 33.78,longitude: -116.95,},{latitude: 34.69,longitude: -86.74,},{latitude: 40.51,longitude: -78.39,},{latitude: 39.20,longitude: -85.92,},{latitude: 39.70,longitude: -84.06,},{latitude: 28.69,longitude: -81.53,},{latitude: 41.89,longitude: -87.94,},{latitude: 33.05,longitude: -112.04,},{latitude: 36.72,longitude: -108.21,},{latitude: 42.06,longitude: -87.78,},{latitude: 41.52,longitude: -81.55,},{latitude: 40.52,longitude: -111.86,},{latitude: 38.89,longitude: -121.29,},{latitude: 31.54,longitude: -110.27,},{latitude: 47.03,longitude: -122.82,},{latitude: 30.39,longitude: -88.88,},{latitude: 41.31,longitude: -81.83,},{latitude: 41.70,longitude: -70.30,},{latitude: 33.01,longitude: -96.53,},{latitude: 40.45,longitude: -74.36,},{latitude: 35.48,longitude: -80.62,},{latitude: 38.02,longitude: -78.47,},{latitude: 39.61,longitude: -105.01,},{latitude: 28.61,longitude: -80.80,},{latitude: 40.88,longitude: -74.04,},{latitude: 37.52,longitude: -122.04,},{latitude: 42.45,longitude: -73.24,},{latitude: 39.96,longitude: -76.72,},{latitude: 41.88,longitude: -88.00,},{latitude: 41.94,longitude: -71.28,},{latitude: 41.92,longitude: -88.75,},{latitude: 37.22,longitude: -80.41,},{latitude: 40.09,longitude: -83.11,},{latitude: 32.79,longitude: -97.26,},{latitude: 34.63,longitude: -120.45,},{latitude: 32.79,longitude: -115.56,},{latitude: 37.82,longitude: -121.99,},{latitude: 38.57,longitude: -92.17,},{latitude: 25.58,longitude: -80.34,},{latitude: 26.17,longitude: -80.13,},{latitude: 25.93,longitude: -80.16,},{latitude: 40.65,longitude: -73.58,},{latitude: 41.50,longitude: -90.51,},{latitude: 33.68,longitude: -116.17,},{latitude: 27.44,longitude: -80.32,},{latitude: 35.98,longitude: -86.51,},{latitude: 40.88,longitude: -111.88,},{latitude: 43.77,longitude: -88.44,},{latitude: 42.40,longitude: -71.05,},{latitude: 36.58,longitude: -79.39,},{latitude: 32.93,longitude: -97.22,},{latitude: 38.52,longitude: -89.98,},{latitude: 33.96,longitude: -118.15,},{latitude: 35.15,longitude: -84.87,},{latitude: 26.21,longitude: -80.22,},{latitude: 39.34,longitude: -84.56,},{latitude: 42.51,longitude: -70.89,},{latitude: 33.74,longitude: -118.38,},{latitude: 37.63,longitude: -122.41,},{latitude: 43.20,longitude: -71.53,},{latitude: 44.47,longitude: -73.21,},{latitude: 35.73,longitude: -78.85,},{latitude: 43.61,longitude: -84.24,},{latitude: 28.66,longitude: -81.36,},{latitude: 38.06,longitude: -97.92,},{latitude: 42.16,longitude: -87.96,},{latitude: 41.62,longitude: -93.71,},{latitude: 40.79,longitude: -77.86,},{latitude: 40.11,longitude: -88.20,},{latitude: 41.63,longitude: -88.21,},{latitude: 38.75,longitude: -77.47,},{latitude: 41.99,longitude: -88.18,},{latitude: 40.76,longitude: -74.14,},{latitude: 32.39,longitude: -110.96,},{latitude: 41.04,longitude: -83.64,},{latitude: 38.33,longitude: -122.70,},{latitude: 42.12,longitude: -72.74,},{latitude: 40.62,longitude: -74.24,},{latitude: 33.92,longitude: -80.34,},{latitude: 41.24,longitude: -75.88,},{latitude: 42.00,longitude: -71.51,},{latitude: 42.52,longitude: -71.75,},{latitude: 41.31,longitude: -73.09,},{latitude: 33.91,longitude: -117.90,},{latitude: 39.08,longitude: -84.50,},{latitude: 32.93,longitude: -96.45,},{latitude: 32.36,longitude: -88.70,},{latitude: 40.52,longitude: -111.93,},{latitude: 28.24,longitude: -81.28,},{latitude: 39.93,longitude: -91.40,},{latitude: 37.13,longitude: -121.65,},{latitude: 41.23,longitude: -80.81,},{latitude: 47.81,longitude: -122.37,},{latitude: 32.54,longitude: -97.32,},{latitude: 42.55,longitude: -70.88,},{latitude: 44.16,longitude: -93.99,},{latitude: 39.64,longitude: -77.71,},{latitude: 34.54,longitude: -112.46,},{latitude: 37.28,longitude: -121.94,},{latitude: 42.53,longitude: -92.44,},{latitude: 33.92,longitude: -116.97,},{latitude: 34.02,longitude: -117.94,},{latitude: 42.24,longitude: -88.31,},{latitude: 42.58,longitude: -71.80,},{latitude: 41.91,longitude: -88.13,},{latitude: 35.73,longitude: -81.34,},{latitude: 42.02,longitude: -88.17,},{latitude: 41.52,longitude: -72.07,},{latitude: 32.95,longitude: -97.01,},{latitude: 34.09,longitude: -118.10,},{latitude: 42.20,longitude: -72.61,},{latitude: 36.37,longitude: -94.20,},{latitude: 34.79,longitude: -87.67,},{latitude: 33.96,longitude: -84.22,},{latitude: 36.03,longitude: -86.78,},{latitude: 45.67,longitude: -111.04,},{latitude: 42.97,longitude: -88.10,},{latitude: 32.98,longitude: -80.03,},{latitude: 30.72,longitude: -95.55,},{latitude: 34.61,longitude: -112.31,},{latitude: 44.95,longitude: -92.99,},{latitude: 41.64,longitude: -88.08,},{latitude: 32.65,longitude: -96.90,},{latitude: 39.36,longitude: -74.42,},{latitude: 34.40,longitude: -103.20,},{latitude: 33.08,longitude: -96.89,},{latitude: 34.02,longitude: -118.39,},{latitude: 42.34,longitude: -71.55,},{latitude: 32.21,longitude: -80.75,},{latitude: 46.87,longitude: -96.76,},{latitude: 32.67,longitude: -115.49,},{latitude: 35.13,longitude: -114.52,},{latitude: 35.08,longitude: -89.81,},{latitude: 33.66,longitude: -116.31,},{latitude: 39.71,longitude: -82.59,},{latitude: 44.95,longitude: -89.63,},{latitude: 33.63,longitude: -96.60,},{latitude: 28.56,longitude: -81.54,},{latitude: 44.79,longitude: -93.52,},{latitude: 42.47,longitude: -71.15,},{latitude: 47.56,longitude: -122.63,},{latitude: 41.50,longitude: -90.57,},{latitude: 35.74,longitude: -95.36,},{latitude: 37.30,longitude: -89.51,},{latitude: 38.97,longitude: -76.49,},{latitude: 26.62,longitude: -80.13,},{latitude: 29.28,longitude: -81.05,},{latitude: 25.98,longitude: -80.14,},{latitude: 33.80,longitude: -117.99,},{latitude: 47.18,longitude: -122.29,},{latitude: 37.61,longitude: -122.48,},{latitude: 41.99,longitude: -88.14,},{latitude: 32.82,longitude: -97.17,},{latitude: 40.74,longitude: -84.10,},{latitude: 32.43,longitude: -111.22,},{latitude: 42.12,longitude: -88.25,},{latitude: 37.99,longitude: -121.71,},{latitude: 39.84,longitude: -84.12,},{latitude: 32.59,longitude: -96.75,},{latitude: 34.07,longitude: -117.68,},{latitude: 42.13,longitude: -87.92,},{latitude: 43.06,longitude: -88.10,},{latitude: 42.01,longitude: -87.84,},{latitude: 34.19,longitude: -79.76,},{latitude: 41.16,longitude: -112.02,},{latitude: 28.56,longitude: -81.58,},{latitude: 42.39,longitude: -71.03,},{latitude: 40.66,longitude: -73.70,},{latitude: 34.94,longitude: -81.93,},{latitude: 45.42,longitude: -122.67,},{latitude: 29.52,longitude: -95.20,},{latitude: 40.12,longitude: -82.92,},{latitude: 39.89,longitude: -104.98,},{latitude: 32.47,longitude: -85.00,},{latitude: 39.88,longitude: -83.09,},{latitude: 33.42,longitude: -94.04,},{latitude: 41.93,longitude: -87.98,},{latitude: 39.15,longitude: -75.52,},{latitude: 42.25,longitude: -83.17,},{latitude: 41.61,longitude: -87.52,},{latitude: 43.23,longitude: -86.24,},{latitude: 25.95,longitude: -80.13,},{latitude: 38.01,longitude: -122.13,},{latitude: 42.96,longitude: -88.01,},{latitude: 33.41,longitude: -111.54,},{latitude: 34.14,longitude: -118.00,},{latitude: 26.15,longitude: -97.99,},{latitude: 44.99,longitude: -123.02,},{latitude: 40.11,longitude: -111.65,},{latitude: 42.50,longitude: -89.03,},{latitude: 30.15,longitude: -85.66,},
-];
+    var cities = [
+      { latitude: 40.71, longitude: -74.00, }, { latitude: 34.05, longitude: -118.24, }, { latitude: 41.87, longitude: -87.62, }, { latitude: 29.76, longitude: -95.36, }, { latitude: 39.95, longitude: -75.16, }, { latitude: 33.44, longitude: -112.07, }, { latitude: 29.42, longitude: -98.49, }, { latitude: 32.71, longitude: -117.16, }, { latitude: 32.77, longitude: -96.79, }, { latitude: 37.33, longitude: -121.88, }, { latitude: 30.26, longitude: -97.74, }, { latitude: 39.76, longitude: -86.15, }, { latitude: 30.33, longitude: -81.65, }, { latitude: 37.77, longitude: -122.41, }, { latitude: 39.96, longitude: -82.99, }, { latitude: 35.22, longitude: -80.84, }, { latitude: 32.75, longitude: -97.33, }, { latitude: 42.33, longitude: -83.04, }, { latitude: 31.77, longitude: -106.44, }, { latitude: 35.14, longitude: -90.04, }, { latitude: 47.60, longitude: -122.33, }, { latitude: 39.73, longitude: -104.99, }, { latitude: 38.90, longitude: -77.03, }, { latitude: 42.36, longitude: -71.05, }, { latitude: 36.16, longitude: -86.78, }, { latitude: 39.29, longitude: -76.61, }, { latitude: 35.46, longitude: -97.51, }, { latitude: 38.25, longitude: -85.75, }, { latitude: 45.52, longitude: -122.67, }, { latitude: 36.16, longitude: -115.13, }, { latitude: 43.03, longitude: -87.90, }, { latitude: 35.08, longitude: -106.60, }, { latitude: 32.22, longitude: -110.92, }, { latitude: 36.74, longitude: -119.77, }, { latitude: 38.58, longitude: -121.49, }, { latitude: 33.77, longitude: -118.19, }, { latitude: 39.09, longitude: -94.57, }, { latitude: 33.41, longitude: -111.83, }, { latitude: 36.85, longitude: -75.97, }, { latitude: 33.74, longitude: -84.38, }, { latitude: 38.83, longitude: -104.82, }, { latitude: 41.25, longitude: -95.99, }, { latitude: 35.77, longitude: -78.63, }, { latitude: 25.76, longitude: -80.19, }, { latitude: 37.80, longitude: -122.27, }, { latitude: 44.97, longitude: -93.26, }, { latitude: 36.15, longitude: -95.99, }, { latitude: 41.49, longitude: -81.69, }, { latitude: 37.68, longitude: -97.33, }, { latitude: 32.73, longitude: -97.10, }, { latitude: 29.95, longitude: -90.07, }, { latitude: 35.37, longitude: -119.01, }, { latitude: 27.95, longitude: -82.45, }, { latitude: 21.30, longitude: -157.85, }, { latitude: 39.72, longitude: -104.83, }, { latitude: 33.83, longitude: -117.91, }, { latitude: 33.74, longitude: -117.86, }, { latitude: 38.62, longitude: -90.19, }, { latitude: 33.95, longitude: -117.39, }, { latitude: 27.80, longitude: -97.39, }, { latitude: 38.04, longitude: -84.50, }, { latitude: 40.44, longitude: -79.99, }, { latitude: 61.21, longitude: -149.90, }, { latitude: 37.95, longitude: -121.29, }, { latitude: 39.10, longitude: -84.51, }, { latitude: 44.95, longitude: -93.08, }, { latitude: 41.66, longitude: -83.55, }, { latitude: 36.07, longitude: -79.79, }, { latitude: 40.73, longitude: -74.17, }, { latitude: 33.01, longitude: -96.69, }, { latitude: 36.03, longitude: -114.98, }, { latitude: 40.82, longitude: -96.68, }, { latitude: 42.88, longitude: -78.87, }, { latitude: 40.72, longitude: -74.07, }, { latitude: 32.64, longitude: -117.08, }, { latitude: 41.07, longitude: -85.13, }, { latitude: 28.53, longitude: -81.37, }, { latitude: 27.77, longitude: -82.64 }, { latitude: 33.30, longitude: -111.84, }, { latitude: 27.53, longitude: -99.48, }, { latitude: 36.85, longitude: -76.28, }, { latitude: 35.99, longitude: -78.89, }, { latitude: 43.07, longitude: -89.40, }, { latitude: 33.57, longitude: -101.85, }, { latitude: 33.68, longitude: -117.79, }, { latitude: 36.09, longitude: -80.24, }, { latitude: 33.53, longitude: -112.18, }, { latitude: 32.91, longitude: -96.63, }, { latitude: 25.85, longitude: -80.27, }, { latitude: 39.52, longitude: -119.81, }, { latitude: 36.76, longitude: -76.28, }, { latitude: 33.35, longitude: -111.78, }, { latitude: 30.45, longitude: -91.14, }, { latitude: 32.81, longitude: -96.94, }, { latitude: 33.49, longitude: -111.92, }, { latitude: 36.19, longitude: -115.11, }, { latitude: 37.54, longitude: -121.98, }, { latitude: 43.61, longitude: -116.21, }, { latitude: 37.54, longitude: -77.43, }, { latitude: 34.10, longitude: -117.28, }, { latitude: 33.52, longitude: -86.80, }, { latitude: 47.65, longitude: -117.42, }, { latitude: 43.16, longitude: -77.61, }, { latitude: 41.60, longitude: -93.60, }, { latitude: 37.63, longitude: -120.99, }, { latitude: 35.05, longitude: -78.87, }, { latitude: 47.25, longitude: -122.44, }, { latitude: 34.19, longitude: -119.17, }, { latitude: 34.09, longitude: -117.43, }, { latitude: 32.46, longitude: -84.98, }, { latitude: 32.36, longitude: -86.29, }, { latitude: 33.94, longitude: -117.22, }, { latitude: 32.52, longitude: -93.75, }, { latitude: 41.76, longitude: -88.32, }, { latitude: 40.93, longitude: -73.89, }, { latitude: 41.08, longitude: -81.51, }, { latitude: 33.66, longitude: -117.99, }, { latitude: 34.74, longitude: -92.28, }, { latitude: 33.47, longitude: -82.01, }, { latitude: 35.22, longitude: -101.83, }, { latitude: 34.14, longitude: -118.25, }, { latitude: 30.69, longitude: -88.03, }, { latitude: 42.96, longitude: -85.66, }, { latitude: 40.76, longitude: -111.89, }, { latitude: 30.43, longitude: -84.28, }, { latitude: 34.73, longitude: -86.58, }, { latitude: 32.74, longitude: -96.99, }, { latitude: 35.96, longitude: -83.92, }, { latitude: 42.26, longitude: -71.80, }, { latitude: 37.08, longitude: -76.47, }, { latitude: 25.90, longitude: -97.49, }, { latitude: 38.98, longitude: -94.67, }, { latitude: 34.39, longitude: -118.54, }, { latitude: 41.82, longitude: -71.41, }, { latitude: 33.77, longitude: -117.94, }, { latitude: 35.04, longitude: -85.30, }, { latitude: 33.19, longitude: -117.37, }, { latitude: 32.29, longitude: -90.18, }, { latitude: 26.12, longitude: -80.13, }, { latitude: 38.44, longitude: -122.71, }, { latitude: 34.10, longitude: -117.59, }, { latitude: 27.27, longitude: -80.35, }, { latitude: 33.42, longitude: -111.94, }, { latitude: 34.06, longitude: -117.65, }, { latitude: 45.63, longitude: -122.66, }, { latitude: 26.56, longitude: -81.94, }, { latitude: 43.54, longitude: -96.73, }, { latitude: 37.20, longitude: -93.29, }, { latitude: 33.58, longitude: -112.23, }, { latitude: 26.00, longitude: -80.29, }, { latitude: 38.40, longitude: -121.37, }, { latitude: 44.94, longitude: -123.03, }, { latitude: 34.68, longitude: -118.15, }, { latitude: 33.87, longitude: -117.56, }, { latitude: 44.05, longitude: -123.08, }, { latitude: 34.57, longitude: -118.11, }, { latitude: 36.67, longitude: -121.65, }, { latitude: 42.10, longitude: -72.58, }, { latitude: 29.69, longitude: -95.20, }, { latitude: 40.58, longitude: -105.08, }, { latitude: 37.66, longitude: -122.08, }, { latitude: 34.05, longitude: -117.74, }, { latitude: 35.79, longitude: -78.78, }, { latitude: 42.27, longitude: -89.09, }, { latitude: 38.80, longitude: -77.04, }, { latitude: 33.11, longitude: -117.08, }, { latitude: 33.19, longitude: -96.63, }, { latitude: 39.11, longitude: -94.62, }, { latitude: 41.52, longitude: -88.08, }, { latitude: 37.36, longitude: -122.03, }, { latitude: 33.83, longitude: -118.34, }, { latitude: 41.18, longitude: -73.19, }, { latitude: 39.70, longitude: -105.08, }, { latitude: 26.01, longitude: -80.14, }, { latitude: 40.91, longitude: -74.17, }, { latitude: 41.75, longitude: -88.15, }, { latitude: 43.04, longitude: -76.14, }, { latitude: 32.76, longitude: -96.59, }, { latitude: 39.75, longitude: -84.19, }, { latitude: 32.08, longitude: -81.09, }, { latitude: 36.52, longitude: -87.35, }, { latitude: 33.78, longitude: -117.85, }, { latitude: 34.14, longitude: -118.14, }, { latitude: 33.87, longitude: -117.92, }, { latitude: 31.11, longitude: -97.72, }, { latitude: 33.15, longitude: -96.82, }, { latitude: 37.02, longitude: -76.34, }, { latitude: 26.20, longitude: -98.23, }, { latitude: 42.51, longitude: -83.01, }, { latitude: 47.61, longitude: -122.20, }, { latitude: 40.69, longitude: -112.00, }, { latitude: 34.00, longitude: -81.03, }, { latitude: 38.88, longitude: -94.81, }, { latitude: 42.58, longitude: -83.03, }, { latitude: 41.30, longitude: -72.92, }, { latitude: 25.98, longitude: -80.30, }, { latitude: 31.54, longitude: -97.14, }, { latitude: 34.17, longitude: -118.83, }, { latitude: 41.97, longitude: -91.66, }, { latitude: 32.77, longitude: -79.93, }, { latitude: 36.33, longitude: -119.29, }, { latitude: 39.05, longitude: -95.68, }, { latitude: 40.66, longitude: -74.21, }, { latitude: 29.65, longitude: -82.32, }, { latitude: 39.86, longitude: -104.97, }, { latitude: 38.75, longitude: -121.28, }, { latitude: 32.97, longitude: -96.88, }, { latitude: 26.27, longitude: -80.27, }, { latitude: 41.05, longitude: -73.53, }, { latitude: 34.26, longitude: -118.78, }, { latitude: 37.97, longitude: -122.03, }, { latitude: 41.76, longitude: -72.68, }, { latitude: 47.38, longitude: -122.23, }, { latitude: 30.22, longitude: -92.01, }, { latitude: 31.99, longitude: -102.07, }, { latitude: 33.62, longitude: -112.36, }, { latitude: 33.21, longitude: -97.13, }, { latitude: 34.53, longitude: -117.29, }, { latitude: 37.97, longitude: -87.57, }, { latitude: 37.35, longitude: -121.95, }, { latitude: 32.44, longitude: -99.73, }, { latitude: 33.95, longitude: -83.35, }, { latitude: 38.10, longitude: -122.25, }, { latitude: 40.60, longitude: -75.49, }, { latitude: 35.22, longitude: -97.43, }, { latitude: 30.08, longitude: -94.12, }, { latitude: 39.09, longitude: -94.41, }, { latitude: 35.84, longitude: -86.39, }, { latitude: 42.28, longitude: -83.74, }, { latitude: 39.78, longitude: -89.65, }, { latitude: 37.87, longitude: -122.27, }, { latitude: 40.69, longitude: -89.58, }, { latitude: 40.23, longitude: -111.65, }, { latitude: 34.06, longitude: -118.02, }, { latitude: 38.95, longitude: -92.33, }, { latitude: 42.73, longitude: -84.55, }, { latitude: 46.87, longitude: -96.78, }, { latitude: 33.94, longitude: -118.13, }, { latitude: 33.64, longitude: -117.91, }, { latitude: 34.22, longitude: -77.94, }, { latitude: 39.80, longitude: -105.08, }, { latitude: 33.96, longitude: -118.35, }, { latitude: 25.94, longitude: -80.24, }, { latitude: 33.15, longitude: -117.35, }, { latitude: 39.83, longitude: -105.03, }, { latitude: 44.01, longitude: -92.48, }, { latitude: 31.84, longitude: -102.36, }, { latitude: 42.99, longitude: -71.45, }, { latitude: 42.03, longitude: -88.28, }, { latitude: 40.60, longitude: -111.93, }, { latitude: 30.50, longitude: -97.67, }, { latitude: 27.96, longitude: -82.80, }, { latitude: 41.55, longitude: -73.05, }, { latitude: 45.50, longitude: -122.43, }, { latitude: 38.24, longitude: -122.03, }, { latitude: 45.78, longitude: -108.50, }, { latitude: 42.63, longitude: -71.31, }, { latitude: 34.27, longitude: -119.22, }, { latitude: 38.25, longitude: -104.60, }, { latitude: 35.95, longitude: -80.00, }, { latitude: 34.06, longitude: -117.93, }, { latitude: 37.93, longitude: -122.34, }, { latitude: 33.55, longitude: -117.21, }, { latitude: 42.37, longitude: -71.10, }, { latitude: 38.00, longitude: -121.80, }, { latitude: 33.49, longitude: -117.14, }, { latitude: 33.90, longitude: -118.08, }, { latitude: 39.58, longitude: -104.87, }, { latitude: 47.97, longitude: -122.20, }, { latitude: 28.03, longitude: -80.58, }, { latitude: 33.91, longitude: -98.49, }, { latitude: 44.51, longitude: -88.01, }, { latitude: 37.68, longitude: -122.47, }, { latitude: 34.18, longitude: -118.30, }, { latitude: 32.94, longitude: -96.72, }, { latitude: 26.23, longitude: -80.12, }, { latitude: 32.85, longitude: -79.97, }, { latitude: 36.06, longitude: -95.79, }, { latitude: 40.01, longitude: -105.27, }, { latitude: 26.71, longitude: -80.05, }, { latitude: 34.95, longitude: -120.43, }, { latitude: 32.79, longitude: -116.96, }, { latitude: 41.52, longitude: -90.57, }, { latitude: 34.10, longitude: -117.37, }, { latitude: 32.31, longitude: -106.76, }, { latitude: 37.56, longitude: -122.32, }, { latitude: 33.04, longitude: -96.99, }, { latitude: 41.67, longitude: -86.25, }, { latitude: 28.03, longitude: -81.94, }, { latitude: 42.12, longitude: -80.08, }, { latitude: 32.35, longitude: -95.30, }, { latitude: 29.56, longitude: -95.28, }, { latitude: 30.62, longitude: -96.33, }, { latitude: 42.58, longitude: -87.82, }, { latitude: 33.93, longitude: -84.37, }, { latitude: 36.82, longitude: -119.70, }, { latitude: 43.01, longitude: -83.68, }, { latitude: 37.27, longitude: -79.94, }, { latitude: 42.65, longitude: -73.75, }, { latitude: 33.99, longitude: -117.48, }, { latitude: 33.89, longitude: -118.22, }, { latitude: 31.46, longitude: -100.43, }, { latitude: 45.52, longitude: -122.98, }, { latitude: 34.60, longitude: -98.39, }, { latitude: 47.48, longitude: -122.21, }, { latitude: 33.20, longitude: -117.24, }, { latitude: 26.07, longitude: -80.25, }, { latitude: 40.42, longitude: -104.70, }, { latitude: 33.60, longitude: -117.67, }, { latitude: 36.83, longitude: -76.29, }, { latitude: 42.32, longitude: -83.17, }, { latitude: 33.95, longitude: -118.21, }, { latitude: 33.20, longitude: -87.56, }, { latitude: 42.36, longitude: -83.35, }, { latitude: 41.63, longitude: -70.93, }, { latitude: 38.35, longitude: -121.98, }, { latitude: 42.08, longitude: -71.01, }, { latitude: 34.02, longitude: -84.36, }, { latitude: 45.48, longitude: -122.80, }, { latitude: 42.25, longitude: -71.00, }, { latitude: 39.53, longitude: -119.75, }, { latitude: 46.60, longitude: -120.50, }, { latitude: 38.91, longitude: -94.38, }, { latitude: 47.32, longitude: -122.31, }, { latitude: 33.83, longitude: -118.28, }, { latitude: 34.01, longitude: -118.49, }, { latitude: 34.42, longitude: -117.30, }, { latitude: 33.10, longitude: -96.67, }, { latitude: 35.23, longitude: -106.66, }, { latitude: 32.69, longitude: -114.62, }, { latitude: 33.75, longitude: -117.99, }, { latitude: 40.29, longitude: -111.69, }, { latitude: 42.46, longitude: -70.94, }, { latitude: 40.58, longitude: -122.39, }, { latitude: 47.67, longitude: -117.23, }, { latitude: 25.79, longitude: -80.13, }, { latitude: 29.50, longitude: -95.09, }, { latitude: 38.97, longitude: -95.23, }, { latitude: 34.42, longitude: -119.69, }, { latitude: 26.12, longitude: -80.23, }, { latitude: 40.56, longitude: -111.83, }, { latitude: 26.16, longitude: -80.25, }, { latitude: 32.84, longitude: -83.63, }, { latitude: 40.16, longitude: -105.10, }, { latitude: 26.36, longitude: -80.12, }, { latitude: 33.14, longitude: -117.16, }, { latitude: 35.61, longitude: -77.36, }, { latitude: 42.36, longitude: -87.84, }, { latitude: 41.70, longitude: -71.15, }, { latitude: 39.72, longitude: -121.83, }, { latitude: 42.33, longitude: -71.20, }, { latitude: 37.72, longitude: -122.15, }, { latitude: 40.33, longitude: -75.92, }, { latitude: 41.11, longitude: -73.40, }, { latitude: 35.38, longitude: -94.39, }, { latitude: 33.61, longitude: -117.92, }, { latitude: 35.59, longitude: -82.55, }, { latitude: 42.76, longitude: -71.46, }, { latitude: 35.65, longitude: -97.47, }, { latitude: 33.97, longitude: -118.03, }, { latitude: 43.54, longitude: -116.56, }, { latitude: 44.84, longitude: -93.29, }, { latitude: 28.90, longitude: -81.26, }, { latitude: 33.91, longitude: -118.35, }, { latitude: 46.78, longitude: -92.10, }, { latitude: 39.97, longitude: -86.11, }, { latitude: 36.72, longitude: -76.58, }, { latitude: 40.85, longitude: -74.16, }, { latitude: 38.70, longitude: -121.28, }, { latitude: 37.68, longitude: -121.76, }, { latitude: 37.73, longitude: -121.42, }, { latitude: 34.09, longitude: -118.12, }, { latitude: 47.68, longitude: -122.20, }, { latitude: 40.21, longitude: -74.74, }, { latitude: 41.22, longitude: -111.97, }, { latitude: 33.40, longitude: -86.81, }, { latitude: 41.84, longitude: -87.75, }, { latitude: 39.95, longitude: -86.01, }, { latitude: 29.61, longitude: -95.63, }, { latitude: 41.39, longitude: -73.45, }, { latitude: 43.61, longitude: -116.39, }, { latitude: 33.72, longitude: -116.21, }, { latitude: 35.40, longitude: -80.57, }, { latitude: 33.69, longitude: -117.18, }, { latitude: 40.11, longitude: -88.24, }, { latitude: 33.86, longitude: -117.99, }, { latitude: 42.60, longitude: -83.14, }, { latitude: 38.81, longitude: -90.69, }, { latitude: 34.02, longitude: -84.19, }, { latitude: 48.74, longitude: -122.47, }, { latitude: 42.32, longitude: -83.40, }, { latitude: 39.16, longitude: -86.52, }, { latitude: 42.49, longitude: -96.40, }, { latitude: 41.70, longitude: -71.41, }, { latitude: 33.74, longitude: -116.97, }, { latitude: 32.50, longitude: -94.74, }, { latitude: 42.49, longitude: -83.36, }, { latitude: 44.05, longitude: -121.31, }, { latitude: 33.85, longitude: -118.13, }, { latitude: 37.30, longitude: -120.48, }, { latitude: 26.21, longitude: -98.32, }, { latitude: 34.01, longitude: -117.68, }, { latitude: 37.48, longitude: -122.23, }, { latitude: 26.30, longitude: -98.16, }, { latitude: 41.77, longitude: -71.43, }, { latitude: 41.40, longitude: -81.72, }, { latitude: 40.91, longitude: -73.78, }, { latitude: 33.64, longitude: -117.68, }, { latitude: 38.29, longitude: -122.28, }, { latitude: 41.58, longitude: -87.50, }, { latitude: 36.06, longitude: -94.15, }, { latitude: 40.48, longitude: -88.99, }, { latitude: 33.43, longitude: -112.34, }, { latitude: 42.38, longitude: -71.09, }, { latitude: 29.58, longitude: -81.20, }, { latitude: 30.67, longitude: -96.36, }, { latitude: 41.59, longitude: -87.34, }, { latitude: 27.90, longitude: -82.78, }, { latitude: 45.09, longitude: -93.35, }, { latitude: 33.74, longitude: -117.82, }, { latitude: 42.72, longitude: -87.78, }, { latitude: 26.31, longitude: -80.09, }, { latitude: 37.41, longitude: -79.14, }, { latitude: 37.38, longitude: -122.08, }, { latitude: 42.32, longitude: -122.87, }, { latitude: 42.70, longitude: -71.16, }, { latitude: 33.88, longitude: -118.11, }, { latitude: 28.08, longitude: -80.60, }, { latitude: 39.76, longitude: -94.84, }, { latitude: 39.92, longitude: -75.11, }, { latitude: 37.09, longitude: -113.56, }, { latitude: 46.21, longitude: -119.13, }, { latitude: 34.08, longitude: -117.96, }, { latitude: 33.98, longitude: -117.73, }, { latitude: 37.76, longitude: -122.24, }, { latitude: 31.57, longitude: -84.15, }, { latitude: 42.08, longitude: -87.98, }, { latitude: 41.40, longitude: -75.66, }, { latitude: 42.04, longitude: -87.68, }, { latitude: 42.29, longitude: -85.58, }, { latitude: 29.73, longitude: -94.97, }, { latitude: 34.09, longitude: -117.64, }, { latitude: 36.18, longitude: -94.12, }, { latitude: 40.62, longitude: -75.37, }, { latitude: 42.03, longitude: -88.08, }, { latitude: 32.83, longitude: -79.82, }, { latitude: 47.30, longitude: -122.22, }, { latitude: 39.84, longitude: -88.95, }, { latitude: 37.77, longitude: -121.97, }, { latitude: 37.66, longitude: -121.87, }, { latitude: 42.91, longitude: -85.70, }, { latitude: 30.22, longitude: -93.21, }, { latitude: 45.01, longitude: -93.45, }, { latitude: 41.69, longitude: -88.06, }, { latitude: 26.19, longitude: -98.18, }, { latitude: 44.26, longitude: -88.41, }, { latitude: 35.26, longitude: -81.18, }, { latitude: 38.67, longitude: -121.17, }, { latitude: 42.47, longitude: -83.22, }, { latitude: 42.65, longitude: -83.14, }, { latitude: 41.66, longitude: -72.77, }, { latitude: 33.43, longitude: -112.35, }, { latitude: 40.79, longitude: -81.37, }, { latitude: 32.61, longitude: -83.62, }, { latitude: 37.59, longitude: -122.04, }, { latitude: 33.78, longitude: -117.22, }, { latitude: 37.79, longitude: -121.21, }, { latitude: 41.66, longitude: -91.53, }, { latitude: 35.84, longitude: -90.70, },
+      { latitude: 39.73, longitude: -75.53, }, { latitude: 33.93, longitude: -118.21, }, { latitude: 40.39, longitude: -105.07, }, { latitude: 41.87, longitude: -71.38, }, { latitude: 26.53, longitude: -80.09, }, { latitude: 43.01, longitude: -88.23, }, { latitude: 30.36, longitude: -89.09, }, { latitude: 34.50, longitude: -117.18, }, { latitude: 40.85, longitude: -74.12, }, { latitude: 44.08, longitude: -103.23, }, { latitude: 41.06, longitude: -111.97, }, { latitude: 40.41, longitude: -86.87, }, { latitude: 37.49, longitude: -120.84, }, { latitude: 40.19, longitude: -85.38, }, { latitude: 31.09, longitude: -97.34, }, { latitude: 29.61, longitude: -95.53, }, { latitude: 34.05, longitude: -117.18, }, { latitude: 35.68, longitude: -105.93, }, { latitude: 26.14, longitude: -80.21, }, { latitude: 37.43, longitude: -121.89, }, { latitude: 42.11, longitude: -88.03, }, { latitude: 46.87, longitude: -113.99, }, { latitude: 34.92, longitude: -81.02, }, { latitude: 34.75, longitude: -77.43, }, { latitude: 35.92, longitude: -86.86, }, { latitude: 35.19, longitude: -111.65, }, { latitude: 33.01, longitude: -97.09, }, { latitude: 26.10, longitude: -80.39, }, { latitude: 42.49, longitude: -92.34, }, { latitude: 40.69, longitude: -74.26, }, { latitude: 40.91, longitude: -73.83, }, { latitude: 26.64, longitude: -81.87, }, { latitude: 31.22, longitude: -85.39, }, { latitude: 38.58, longitude: -121.30, }, { latitude: 33.84, longitude: -118.38, }, { latitude: 35.61, longitude: -88.81, }, { latitude: 46.23, longitude: -119.10, }, { latitude: 38.78, longitude: -90.49, }, { latitude: 44.81, longitude: -91.49, }, { latitude: 32.83, longitude: -97.22, }, { latitude: 46.80, longitude: -100.78, }, { latitude: 33.88, longitude: -117.81, }, { latitude: 29.99, longitude: -90.24, }, { latitude: 37.91, longitude: -122.06, }, { latitude: 39.41, longitude: -77.41, }, { latitude: 44.02, longitude: -88.54, }, { latitude: 38.02, longitude: -121.88, }, { latitude: 37.44, longitude: -122.14, }, { latitude: 32.51, longitude: -93.73, }, { latitude: 43.66, longitude: -70.25, }, { latitude: 45.55, longitude: -94.16, }, { latitude: 38.54, longitude: -121.74, }, { latitude: 37.65, longitude: -122.40, }, { latitude: 34.21, longitude: -119.03, }, { latitude: 34.76, longitude: -92.26, }, { latitude: 42.81, longitude: -73.93, }, { latitude: 39.14, longitude: -77.20, }, { latitude: 26.19, longitude: -97.69, }, { latitude: 44.92, longitude: -92.95, }, { latitude: 44.80, longitude: -93.16, }, { latitude: 39.14, longitude: -121.61, }, { latitude: 45.07, longitude: -93.45, }, { latitude: 41.09, longitude: -80.64, }, { latitude: 42.03, longitude: -87.74, }, { latitude: 28.29, longitude: -81.40, }, { latitude: 36.31, longitude: -82.35, }, { latitude: 28.80, longitude: -97.00, }, { latitude: 33.42, longitude: -117.61, }, { latitude: 40.66, longitude: -74.11, }, { latitude: 33.52, longitude: -117.70, }, { latitude: 40.76, longitude: -74.20, }, { latitude: 39.02, longitude: -94.71, }, { latitude: 25.46, longitude: -80.47, }, { latitude: 39.08, longitude: -77.15, }, { latitude: 26.46, longitude: -80.07, }, { latitude: 42.68, longitude: -89.01, }, { latitude: 35.08, longitude: -92.44, }, { latitude: 33.98, longitude: -118.09, }, { latitude: 41.45, longitude: -82.18, }, { latitude: 34.01, longitude: -118.11, }, { latitude: 38.13, longitude: -121.27, }, { latitude: 29.70, longitude: -98.12, }, { latitude: 48.05, longitude: -122.17, }, { latitude: 26.21, longitude: -80.24, }, { latitude: 36.96, longitude: -120.06, }, { latitude: 30.31, longitude: -95.45, }, { latitude: 36.97, longitude: -122.03, }, { latitude: 44.85, longitude: -93.47, }, { latitude: 41.13, longitude: -104.82, }, { latitude: 29.21, longitude: -81.02, }, { latitude: 34.07, longitude: -84.29, }, { latitude: 39.39, longitude: -84.56, }, { latitude: 42.37, longitude: -71.23, }, { latitude: 45.17, longitude: -93.30, }, { latitude: 42.77, longitude: -71.07, }, { latitude: 41.26, longitude: -95.86, }, { latitude: 42.24, longitude: -83.26, }, { latitude: 43.10, longitude: -75.23, }, { latitude: 42.03, longitude: -93.61, }, { latitude: 33.93, longitude: -117.94, }, { latitude: 33.03, longitude: -117.29, }, { latitude: 36.96, longitude: -86.48, }, { latitude: 44.76, longitude: -93.27, }, { latitude: 34.85, longitude: -82.39, }, { latitude: 41.57, longitude: -93.71, }, { latitude: 30.50, longitude: -97.82, }, { latitude: 36.20, longitude: -119.34, }, { latitude: 34.06, longitude: -118.12, }, { latitude: 39.48, longitude: -75.02, }, { latitude: 39.46, longitude: -87.41, }, { latitude: 25.89, longitude: -80.18, }, { latitude: 32.56, longitude: -97.14, }, { latitude: 43.01, longitude: -88.00, }, { latitude: 41.67, longitude: -72.94, }, { latitude: 40.66, longitude: -111.93, }, { latitude: 42.42, longitude: -71.06, }, { latitude: 41.53, longitude: -72.80, }, { latitude: 45.16, longitude: -93.23, }, { latitude: 26.66, longitude: -80.26, }, { latitude: 37.32, longitude: -122.03, }, { latitude: 44.04, longitude: -123.02, }, { latitude: 36.33, longitude: -94.11, }, { latitude: 42.49, longitude: -82.89, }, { latitude: 33.88, longitude: -118.30, }, { latitude: 42.63, longitude: -83.29, }, { latitude: 32.67, longitude: -117.09, }, { latitude: 39.06, longitude: -108.55, }, { latitude: 38.79, longitude: -121.23, }, { latitude: 35.91, longitude: -79.05, }, { latitude: 42.86, longitude: -106.31, }, { latitude: 39.92, longitude: -105.08, }, { latitude: 38.23, longitude: -122.63, }, { latitude: 40.56, longitude: -111.92, }, { latitude: 39.92, longitude: -83.80, }, { latitude: 47.49, longitude: -111.28, }, { latitude: 40.03, longitude: -76.30, }, { latitude: 27.04, longitude: -82.23, }, { latitude: 47.17, longitude: -122.51, }, { latitude: 33.95, longitude: -84.54, }, { latitude: 37.97, longitude: -122.53, }, { latitude: 42.48, longitude: -83.14, }, { latitude: 42.03, longitude: -87.88, }, { latitude: 33.98, longitude: -118.22, }, { latitude: 32.76, longitude: -117.02, }, { latitude: 41.63, longitude: -87.85, }, { latitude: 32.60, longitude: -85.48, }, { latitude: 44.64, longitude: -93.24, }, { latitude: 37.77, longitude: -87.11, }, { latitude: 35.33, longitude: -97.48, }, { latitude: 26.93, longitude: -80.09, }, { latitude: 43.49, longitude: -112.03, }, { latitude: 42.50, longitude: -90.66, }, { latitude: 35.20, longitude: -89.87, }, { latitude: 32.90, longitude: -96.56, }, { latitude: 42.48, longitude: -83.47, }, { latitude: 41.03, longitude: -73.76, }, { latitude: 34.13, longitude: -118.03, }, { latitude: 47.67, longitude: -122.12, }, { latitude: 33.66, longitude: -117.32, }, { latitude: 29.18, longitude: -82.14, }, { latitude: 41.57, longitude: -87.79, }, { latitude: 29.13, longitude: -80.99, }, { latitude: 42.41, longitude: -71.10, }, { latitude: 41.71, longitude: -87.74, }, { latitude: 35.93, longitude: -77.79, }, { latitude: 40.48, longitude: -86.13, }, { latitude: 26.25, longitude: -80.17, }, { latitude: 39.00, longitude: -76.77, }, { latitude: 41.85, longitude: -87.79, }, { latitude: 35.44, longitude: -97.39, }, { latitude: 33.70, longitude: -117.95, }, { latitude: 33.37, longitude: -112.58, }, { latitude: 42.33, longitude: -83.27, }, { latitude: 38.67, longitude: -121.77, }, { latitude: 40.04, longitude: -86.00, }, { latitude: 30.83, longitude: -83.27, }, { latitude: 34.02, longitude: -117.81, }, { latitude: 39.18, longitude: -96.57, }, { latitude: 32.83, longitude: -116.97, }, { latitude: 41.90, longitude: -71.08, }, { latitude: 28.80, longitude: -81.26, }, { latitude: 39.68, longitude: -84.16, }, { latitude: 40.48, longitude: -74.45, }, { latitude: 34.60, longitude: -86.98, }, { latitude: 42.14, longitude: -72.60, }, { latitude: 40.10, longitude: -85.68, }, { latitude: 26.24, longitude: -80.20, }, { latitude: 42.21, longitude: -70.94, }, { latitude: 40.70, longitude: -73.61, }, { latitude: 44.56, longitude: -123.26, }, { latitude: 33.95, longitude: -117.58, }, { latitude: 36.06, longitude: -119.01, }, { latitude: 41.27, longitude: -72.94, }, { latitude: 37.93, longitude: -121.69, }, { latitude: 33.88, longitude: -118.15, }, { latitude: 47.92, longitude: -97.03, }, { latitude: 30.63, longitude: -97.67, }, { latitude: 38.78, longitude: -90.62, }, { latitude: 47.75, longitude: -122.34, }, { latitude: 42.06, longitude: -87.93, }, { latitude: 36.32, longitude: -119.64, }, { latitude: 40.51, longitude: -88.99, }, { latitude: 34.08, longitude: -118.07, }, { latitude: 40.39, longitude: -111.85, }, { latitude: 42.87, longitude: -112.44, }, { latitude: 34.12, longitude: -117.20, }, { latitude: 38.10, longitude: -122.56, }, { latitude: 29.88, longitude: -93.93, }, { latitude: 39.16, longitude: -119.76, }, { latitude: 29.88, longitude: -97.94, }, { latitude: 36.30, longitude: -86.61, }, { latitude: 41.36, longitude: -82.10, }, { latitude: 42.40, longitude: -71.01, }, { latitude: 30.43, longitude: -97.62, }, { latitude: 39.61, longitude: -86.10, }, { latitude: 41.15, longitude: -95.91, }, { latitude: 41.86, longitude: -88.10, }, { latitude: 33.88, longitude: -84.51, }, { latitude: 27.33, longitude: -82.53, }, { latitude: 39.01, longitude: -94.28, }, { latitude: 34.07, longitude: -117.31, }, { latitude: 32.83, longitude: -97.08, }, { latitude: 39.37, longitude: -104.85, }, { latitude: 33.78, longitude: -116.46, }, { latitude: 36.54, longitude: -82.56, }, { latitude: 34.48, longitude: -114.32, }, { latitude: 30.42, longitude: -87.21, }, { latitude: 40.74, longitude: -74.03, }, { latitude: 34.03, longitude: -117.04, }, { latitude: 36.91, longitude: -121.75, }, { latitude: 46.28, longitude: -119.28, }, { latitude: 35.76, longitude: -119.24, }, { latitude: 42.06, longitude: -88.12, }, { latitude: 38.78, longitude: -90.32, }, { latitude: 33.87, longitude: -117.87, }, { latitude: 40.78, longitude: -74.01, }, { latitude: 37.70, longitude: -121.93, }, { latitude: 41.88, longitude: -87.78, }, { latitude: 42.52, longitude: -70.92, }, { latitude: 40.50, longitude: -74.26, }, { latitude: 42.32, longitude: -85.17, }, { latitude: 27.49, longitude: -82.57, }, { latitude: 37.00, longitude: -121.56, }, { latitude: 41.23, longitude: -73.06, }, { latitude: 44.63, longitude: -123.10, }, { latitude: 41.73, longitude: -93.60, }, { latitude: 43.80, longitude: -91.23, }, { latitude: 36.09, longitude: -79.43, }, { latitude: 32.58, longitude: -96.85, }, { latitude: 38.44, longitude: -78.86, }, { latitude: 44.92, longitude: -93.46, }, { latitude: 41.68, longitude: -85.97, }, { latitude: 41.48, longitude: -81.79, }, { latitude: 34.13, longitude: -117.86, }, { latitude: 34.98, longitude: -90.01, }, { latitude: 38.34, longitude: -81.63, }, { latitude: 37.08, longitude: -94.51, }, { latitude: 36.39, longitude: -97.87, }, { latitude: 26.82, longitude: -80.13, }, { latitude: 33.86, longitude: -84.33, }, { latitude: 40.63, longitude: -74.40, }, { latitude: 40.92, longitude: -98.34, }, { latitude: 33.72, longitude: -116.37, }, { latitude: 35.41, longitude: -80.84, }, { latitude: 45.43, longitude: -122.77, }, { latitude: 38.95, longitude: -94.73, }, { latitude: 43.41, longitude: -83.95, }, { latitude: 42.86, longitude: -85.64, }, { latitude: 25.81, longitude: -80.35, }, { latitude: 44.73, longitude: -93.21, }, { latitude: 32.93, longitude: -97.07, }, { latitude: 33.56, longitude: -117.72, }, { latitude: 47.61, longitude: -122.03, }, { latitude: 32.87, longitude: -111.75, }, { latitude: 27.84, longitude: -82.69, }, { latitude: 42.72, longitude: -73.69, }, { latitude: 38.58, longitude: -121.53, }, { latitude: 47.47, longitude: -122.34, }, { latitude: 39.80, longitude: -104.93, }, { latitude: 32.50, longitude: -92.11, }, { latitude: 33.85, longitude: -118.06, }, { latitude: 41.80, longitude: -88.01, }, { latitude: 25.72, longitude: -80.26, }, { latitude: 35.72, longitude: -77.91, }, { latitude: 43.09, longitude: -79.03, }, { latitude: 32.96, longitude: -117.03, }, { latitude: 44.88, longitude: -93.34, }, { latitude: 41.13, longitude: -81.48, }, { latitude: 33.64, longitude: -117.60, }, { latitude: 40.27, longitude: -76.88, }, { latitude: 38.41, longitude: -82.44, }, { latitude: 33.91, longitude: -118.01, }, { latitude: 33.81, longitude: -118.03, }, { latitude: 43.66, longitude: -116.68, }, { latitude: 41.73, longitude: -111.83, }, { latitude: 29.30, longitude: -94.79, }, { latitude: 43.75, longitude: -87.71, }, { latitude: 39.51, longitude: -84.39, }, { latitude: 40.66, longitude: -111.88, }, { latitude: 33.39, longitude: -104.52, }, { latitude: 39.51, longitude: -104.76, }, { latitude: 32.84, longitude: -97.14, }, { latitude: 42.73, longitude: -84.48, }, { latitude: 42.72, longitude: -71.19, }, { latitude: 34.09, longitude: -117.89, }, { latitude: 31.31, longitude: -92.44, }, { latitude: 47.03, longitude: -122.90, }, { latitude: 41.59, longitude: -81.52, }, { latitude: 41.66, longitude: -86.15, }, { latitude: 38.84, longitude: -97.61, }, { latitude: 34.13, longitude: -117.90, }, { latitude: 40.05, longitude: -82.40, }, { latitude: 38.66, longitude: -90.57, }, { latitude: 39.11, longitude: -77.56, }, { latitude: 33.94, longitude: -84.33, }, { latitude: 31.32, longitude: -89.29, }, { latitude: 42.49, longitude: -82.93, }, { latitude: 26.33, longitude: -81.77, }, { latitude: 42.20, longitude: -85.58, }, { latitude: 44.95, longitude: -93.37, }, { latitude: 35.04, longitude: -89.66, }, { latitude: 41.56, longitude: -72.65, }, { latitude: 36.11, longitude: -97.05, }, { latitude: 41.81, longitude: -71.37, }, { latitude: 39.83, longitude: -86.02, }, { latitude: 43.04, longitude: -88.00, }, { latitude: 41.66, longitude: -81.33, }, { latitude: 37.59, longitude: -120.95, }, { latitude: 32.58, longitude: -96.95, }, { latitude: 40.75, longitude: -82.51, }, { latitude: 42.09, longitude: -75.91, }, { latitude: 47.67, longitude: -116.78, }, { latitude: 35.28, longitude: -120.65, }, { latitude: 48.23, longitude: -101.29, }, { latitude: 33.83, longitude: -116.54, }, { latitude: 34.22, longitude: -92.00, }, { latitude: 29.38, longitude: -94.90, }, { latitude: 33.01, longitude: -80.17, }, { latitude: 42.56, longitude: -114.46, }, { latitude: 38.27, longitude: -85.73, }, { latitude: 33.78, longitude: -116.95, }, { latitude: 34.69, longitude: -86.74, }, { latitude: 40.51, longitude: -78.39, }, { latitude: 39.20, longitude: -85.92, }, { latitude: 39.70, longitude: -84.06, }, { latitude: 28.69, longitude: -81.53, }, { latitude: 41.89, longitude: -87.94, }, { latitude: 33.05, longitude: -112.04, }, { latitude: 36.72, longitude: -108.21, }, { latitude: 42.06, longitude: -87.78, }, { latitude: 41.52, longitude: -81.55, }, { latitude: 40.52, longitude: -111.86, }, { latitude: 38.89, longitude: -121.29, }, { latitude: 31.54, longitude: -110.27, }, { latitude: 47.03, longitude: -122.82, }, { latitude: 30.39, longitude: -88.88, }, { latitude: 41.31, longitude: -81.83, }, { latitude: 41.70, longitude: -70.30, }, { latitude: 33.01, longitude: -96.53, }, { latitude: 40.45, longitude: -74.36, }, { latitude: 35.48, longitude: -80.62, }, { latitude: 38.02, longitude: -78.47, }, { latitude: 39.61, longitude: -105.01, }, { latitude: 28.61, longitude: -80.80, }, { latitude: 40.88, longitude: -74.04, }, { latitude: 37.52, longitude: -122.04, }, { latitude: 42.45, longitude: -73.24, }, { latitude: 39.96, longitude: -76.72, }, { latitude: 41.88, longitude: -88.00, }, { latitude: 41.94, longitude: -71.28, }, { latitude: 41.92, longitude: -88.75, }, { latitude: 37.22, longitude: -80.41, }, { latitude: 40.09, longitude: -83.11, }, { latitude: 32.79, longitude: -97.26, }, { latitude: 34.63, longitude: -120.45, }, { latitude: 32.79, longitude: -115.56, }, { latitude: 37.82, longitude: -121.99, }, { latitude: 38.57, longitude: -92.17, }, { latitude: 25.58, longitude: -80.34, }, { latitude: 26.17, longitude: -80.13, }, { latitude: 25.93, longitude: -80.16, }, { latitude: 40.65, longitude: -73.58, }, { latitude: 41.50, longitude: -90.51, }, { latitude: 33.68, longitude: -116.17, }, { latitude: 27.44, longitude: -80.32, }, { latitude: 35.98, longitude: -86.51, }, { latitude: 40.88, longitude: -111.88, }, { latitude: 43.77, longitude: -88.44, }, { latitude: 42.40, longitude: -71.05, }, { latitude: 36.58, longitude: -79.39, }, { latitude: 32.93, longitude: -97.22, }, { latitude: 38.52, longitude: -89.98, }, { latitude: 33.96, longitude: -118.15, }, { latitude: 35.15, longitude: -84.87, }, { latitude: 26.21, longitude: -80.22, }, { latitude: 39.34, longitude: -84.56, }, { latitude: 42.51, longitude: -70.89, }, { latitude: 33.74, longitude: -118.38, }, { latitude: 37.63, longitude: -122.41, }, { latitude: 43.20, longitude: -71.53, }, { latitude: 44.47, longitude: -73.21, }, { latitude: 35.73, longitude: -78.85, }, { latitude: 43.61, longitude: -84.24, }, { latitude: 28.66, longitude: -81.36, }, { latitude: 38.06, longitude: -97.92, }, { latitude: 42.16, longitude: -87.96, }, { latitude: 41.62, longitude: -93.71, }, { latitude: 40.79, longitude: -77.86, }, { latitude: 40.11, longitude: -88.20, }, { latitude: 41.63, longitude: -88.21, }, { latitude: 38.75, longitude: -77.47, }, { latitude: 41.99, longitude: -88.18, }, { latitude: 40.76, longitude: -74.14, }, { latitude: 32.39, longitude: -110.96, }, { latitude: 41.04, longitude: -83.64, }, { latitude: 38.33, longitude: -122.70, }, { latitude: 42.12, longitude: -72.74, }, { latitude: 40.62, longitude: -74.24, }, { latitude: 33.92, longitude: -80.34, }, { latitude: 41.24, longitude: -75.88, }, { latitude: 42.00, longitude: -71.51, }, { latitude: 42.52, longitude: -71.75, }, { latitude: 41.31, longitude: -73.09, }, { latitude: 33.91, longitude: -117.90, }, { latitude: 39.08, longitude: -84.50, }, { latitude: 32.93, longitude: -96.45, }, { latitude: 32.36, longitude: -88.70, }, { latitude: 40.52, longitude: -111.93, }, { latitude: 28.24, longitude: -81.28, }, { latitude: 39.93, longitude: -91.40, }, { latitude: 37.13, longitude: -121.65, }, { latitude: 41.23, longitude: -80.81, }, { latitude: 47.81, longitude: -122.37, }, { latitude: 32.54, longitude: -97.32, }, { latitude: 42.55, longitude: -70.88, }, { latitude: 44.16, longitude: -93.99, }, { latitude: 39.64, longitude: -77.71, }, { latitude: 34.54, longitude: -112.46, }, { latitude: 37.28, longitude: -121.94, }, { latitude: 42.53, longitude: -92.44, }, { latitude: 33.92, longitude: -116.97, }, { latitude: 34.02, longitude: -117.94, }, { latitude: 42.24, longitude: -88.31, }, { latitude: 42.58, longitude: -71.80, }, { latitude: 41.91, longitude: -88.13, }, { latitude: 35.73, longitude: -81.34, }, { latitude: 42.02, longitude: -88.17, }, { latitude: 41.52, longitude: -72.07, }, { latitude: 32.95, longitude: -97.01, }, { latitude: 34.09, longitude: -118.10, }, { latitude: 42.20, longitude: -72.61, }, { latitude: 36.37, longitude: -94.20, }, { latitude: 34.79, longitude: -87.67, }, { latitude: 33.96, longitude: -84.22, }, { latitude: 36.03, longitude: -86.78, }, { latitude: 45.67, longitude: -111.04, }, { latitude: 42.97, longitude: -88.10, }, { latitude: 32.98, longitude: -80.03, }, { latitude: 30.72, longitude: -95.55, }, { latitude: 34.61, longitude: -112.31, }, { latitude: 44.95, longitude: -92.99, }, { latitude: 41.64, longitude: -88.08, }, { latitude: 32.65, longitude: -96.90, }, { latitude: 39.36, longitude: -74.42, }, { latitude: 34.40, longitude: -103.20, }, { latitude: 33.08, longitude: -96.89, }, { latitude: 34.02, longitude: -118.39, }, { latitude: 42.34, longitude: -71.55, }, { latitude: 32.21, longitude: -80.75, }, { latitude: 46.87, longitude: -96.76, }, { latitude: 32.67, longitude: -115.49, }, { latitude: 35.13, longitude: -114.52, }, { latitude: 35.08, longitude: -89.81, }, { latitude: 33.66, longitude: -116.31, }, { latitude: 39.71, longitude: -82.59, }, { latitude: 44.95, longitude: -89.63, }, { latitude: 33.63, longitude: -96.60, }, { latitude: 28.56, longitude: -81.54, }, { latitude: 44.79, longitude: -93.52, }, { latitude: 42.47, longitude: -71.15, }, { latitude: 47.56, longitude: -122.63, }, { latitude: 41.50, longitude: -90.57, }, { latitude: 35.74, longitude: -95.36, }, { latitude: 37.30, longitude: -89.51, }, { latitude: 38.97, longitude: -76.49, }, { latitude: 26.62, longitude: -80.13, }, { latitude: 29.28, longitude: -81.05, }, { latitude: 25.98, longitude: -80.14, }, { latitude: 33.80, longitude: -117.99, }, { latitude: 47.18, longitude: -122.29, }, { latitude: 37.61, longitude: -122.48, }, { latitude: 41.99, longitude: -88.14, }, { latitude: 32.82, longitude: -97.17, }, { latitude: 40.74, longitude: -84.10, }, { latitude: 32.43, longitude: -111.22, }, { latitude: 42.12, longitude: -88.25, }, { latitude: 37.99, longitude: -121.71, }, { latitude: 39.84, longitude: -84.12, }, { latitude: 32.59, longitude: -96.75, }, { latitude: 34.07, longitude: -117.68, }, { latitude: 42.13, longitude: -87.92, }, { latitude: 43.06, longitude: -88.10, }, { latitude: 42.01, longitude: -87.84, }, { latitude: 34.19, longitude: -79.76, }, { latitude: 41.16, longitude: -112.02, }, { latitude: 28.56, longitude: -81.58, }, { latitude: 42.39, longitude: -71.03, }, { latitude: 40.66, longitude: -73.70, }, { latitude: 34.94, longitude: -81.93, }, { latitude: 45.42, longitude: -122.67, }, { latitude: 29.52, longitude: -95.20, }, { latitude: 40.12, longitude: -82.92, }, { latitude: 39.89, longitude: -104.98, }, { latitude: 32.47, longitude: -85.00, }, { latitude: 39.88, longitude: -83.09, }, { latitude: 33.42, longitude: -94.04, }, { latitude: 41.93, longitude: -87.98, }, { latitude: 39.15, longitude: -75.52, }, { latitude: 42.25, longitude: -83.17, }, { latitude: 41.61, longitude: -87.52, }, { latitude: 43.23, longitude: -86.24, }, { latitude: 25.95, longitude: -80.13, }, { latitude: 38.01, longitude: -122.13, }, { latitude: 42.96, longitude: -88.01, }, { latitude: 33.41, longitude: -111.54, }, { latitude: 34.14, longitude: -118.00, }, { latitude: 26.15, longitude: -97.99, }, { latitude: 44.99, longitude: -123.02, }, { latitude: 40.11, longitude: -111.65, }, { latitude: 42.50, longitude: -89.03, }, { latitude: 30.15, longitude: -85.66, },
+    ];
 
-      mapboxgl.accessToken =
-        "pk.eyJ1IjoiZHlsYW5jIiwiYSI6Im53UGgtaVEifQ.RJiPqXwEtCLTLl-Vmd1GWQ";
-      var map = new mapboxgl.Map({
-        container: "map", // container id
-        style: "mapbox://styles/dylanc/ckl1fryhy0f3l17qk51mua1yt?optimize=true", // style URL
-        center: [-110.709, 32.008],
-        zoom: 8.4,
-        pitch: 20,
-        bearing: 9,
+    mapboxgl.accessToken =
+      "pk.eyJ1IjoiZHlsYW5jIiwiYSI6Im53UGgtaVEifQ.RJiPqXwEtCLTLl-Vmd1GWQ";
+    var map = new mapboxgl.Map({
+      container: "map", // container id
+      style: "mapbox://styles/dylanc/ckl1fryhy0f3l17qk51mua1yt?optimize=true", // style URL
+      center: [-110.709, 32.008],
+      zoom: 8.4,
+      pitch: 20,
+      bearing: 9,
+    });
+
+    let randomCoordinates = [-112.92, 32.22];
+    let takeRandomFlight = () => {
+      zoomCalc = Math.random() * 1 + 11; //random * (max - min) + min  || 8 to 11
+      bearingCalc = Math.random() * (10 - -10) - 10;
+      pitchCalc = Math.random() * 50;
+      newCity = true;
+
+      let randomIndex = Math.floor(Math.random() * 999);
+      randomCoordinates = [
+        cities[randomIndex].longitude,
+        cities[randomIndex].latitude,
+      ];
+
+      map.flyTo({
+        center: randomCoordinates,
+        // essential: true, // this animation is considered essential with respect to prefers-reduced-motion
+        speed: 0.8, //0.012, // make the flying slow
+        curve: 1.2, // default 1.42 change the speed at which it zooms out
+        // This can be any easing function: it takes a number between
+        //       // 0 and 1 and returns another number between 0 and 1.
+        zoom: zoomCalc,
+        bearing: bearingCalc,
+        pitch: pitchCalc,
+        // duration: 7000,
+        // maxDuration: 7000,
       });
+    };
+    let lookAround = () => {
+      let panPitch = Math.random() * 50; //random * (max - min) + min  || 8 to 11
+      let panBearing = Math.random() * 180 - 90;
+      let panZoom = Math.random() * (12 - 11) + 11;
+      // let panCenter = [randomCoordinates[0] + Math.random() * 1 - .5, randomCoordinates[1] * 1 -0.5]
 
-      let randomCoordinates = [-112.92, 32.22];
-      let takeRandomFlight = () => {
-        zoomCalc = Math.random() * 1 + 11; //random * (max - min) + min  || 8 to 11
-        bearingCalc = Math.random() * (10 - -10) - 10;
-        pitchCalc = Math.random() * 50;
-        newCity = true;
+      // if (panPitch < 10 || panPitch > 90) {
+      //   panPitch = 60;
+      // }
+      // if (panBearing < 0 || panBearing > 359) {
+      //   panBearing = 30;
+      // }
+      // if (panZoom < 5 || panBearing > 14) {
+      //   panZoom = 10;
+      // }
 
-        let randomIndex = Math.floor(Math.random() * 999);
-        randomCoordinates = [
-          cities[randomIndex].longitude,
-          cities[randomIndex].latitude,
-        ];
-
-        map.flyTo({
-          center: randomCoordinates,
-          // essential: true, // this animation is considered essential with respect to prefers-reduced-motion
-          speed: 0.8, //0.012, // make the flying slow
-          curve: 1.2, // default 1.42 change the speed at which it zooms out
-          // This can be any easing function: it takes a number between
-          //       // 0 and 1 and returns another number between 0 and 1.
-          zoom: zoomCalc,
-          bearing: bearingCalc,
-          pitch: pitchCalc,
-          // duration: 7000,
-          // maxDuration: 7000,
-        });
-      };
-      let lookAround = () => {
-        let panPitch = Math.random() * 50; //random * (max - min) + min  || 8 to 11
-        let panBearing = Math.random() * 180 - 90;
-        let panZoom = Math.random() * (12 - 11) + 11;
-        // let panCenter = [randomCoordinates[0] + Math.random() * 1 - .5, randomCoordinates[1] * 1 -0.5]
-
-        // if (panPitch < 10 || panPitch > 90) {
-        //   panPitch = 60;
-        // }
-        // if (panBearing < 0 || panBearing > 359) {
-        //   panBearing = 30;
-        // }
-        // if (panZoom < 5 || panBearing > 14) {
-        //   panZoom = 10;
-        // }
-
-        map.flyTo({
-          pitch: panPitch,
-          bearing: panBearing,
-          zoom: panZoom,
-          // center: panCenter,
-          duration: 4000,
-        });
-      };
-
-      //Initailize the map
-      // initializeMap();
-
-      //Take first Flight
-      setTimeout(() => {
-        map.on("load", takeRandomFlight());
-      }, 2000);
-
-      //Take another Flight Every 20 Seconds
-      setInterval(() => {
-        takeRandomFlight();
-      }, 20000);
-
-      map.on("moveend", () => {
-        lookAround();
+      map.flyTo({
+        pitch: panPitch,
+        bearing: panBearing,
+        zoom: panZoom,
+        // center: panCenter,
+        duration: 4000,
       });
+    };
+
+    //Initailize the map
+    // initializeMap();
+
+    //Take first Flight
+    setTimeout(() => {
+      map.on("load", takeRandomFlight());
+    }, 2000);
+
+    //Take another Flight Every 20 Seconds
+    setInterval(() => {
+      takeRandomFlight();
+    }, 20000);
+
+    map.on("moveend", () => {
+      lookAround();
+    });
 
       //Yea yea... giant array loaded into to index file directly. I know this is ugly but its 2:25am and I'm feeling lazy...
-    </script>
+  </script>
 
-    <!--Contact Info Card-->
-    <div class="container">
-      <div class="row">
-        <div id="contactinfo2" class="infobox wow fadeInDown">
-          <div class="wow fadeInLeft" data-wow-delay="0.5s">
-            <h1>DYLAN SCOTT</h1>
-          </div>
-          <div class="wow fadeInRight" data-wow-delay="1s">
-            <h4>Activist / Urbanist / Environmentalist / Analyst </h4>
-          </div>
-          <div class="wow fadeInUp" data-wow-delay="1.2s">
-            <hr class="medium" />
-          </div>
-          <div class="text-center center-block site-header">
-            <!--Resume-->
-            <a
-              href="#"
-              title="Resume"
-              data-toggle="tooltip"
-              data-placement="bottom"
-              ><div
-                class="fa fa-file-text-o fa-3x social-rm grow wow fadeInLeft"
-                data-wow-delay="1.2s"
-                data-toggle="modal"
-                data-target="#ResumeModal"
-                style="outline: 0px; text-decoration: initial"
-              ></div
-            ></a>
-            <!--Linkedin-->
-            <a
-              href="https://www.linkedin.com/in/dylanscott22"
-              title="Linkedin"
-              data-toggle="tooltip"
-              data-placement="bottom"
-              ><i
-                class="fa fa-linkedin fa-3x social-fb grow wow fadeInDown"
-                data-wow-delay="1.4s"
-              ></i
-            ></a>
-            <!--Github-->
-            <a
-              href="https://github.com/dylansc22"
-              title="Github"
-              data-toggle="tooltip"
-              data-placement="bottom"
-              ><i
-                class="fa fa-github fa-3x social-gp grow wow fadeInRight"
-                data-wow-delay="1.6s"
-              ></i
-            ></a>
-            <!--Gmail-->
-            <a
-              href="mailto:hellodylanscott@gmail.com"
-              title="Email"
-              data-toggle="tooltip"
-              data-placement="bottom"
-              ><i
-                class="fa fa-envelope fa-3x social-em grow wow fadeInUp"
-                data-wow-delay="1.8s"
-              ></i
-            ></a>
-            <!--Instagram-->
-            <a
-              href="https://instagram.com/fairlyirresponsible"
-              title="Instagram"
-              data-toggle="tooltip"
-              data-placement="bottom"
-              ><i
-                class="fa fa-instagram fa-3x social-tw grow wow fadeInDown"
-                data-wow-delay="2s"
-              ></i
-            ></a>
-            <!--Strava-->
-            <a
-              href="https://www.strava.com/athletes/9512777"
-              title="Strava"
-              data-toggle="tooltip"
-              data-placement="bottom"
-              ><i
-                class="fab fa-strava fa-3x social-st grow wow fadeInRight"
-                data-wow-delay="2.4s"
-              ></i
-            ></a>
-          </div>
+  <!--Contact Info Card-->
+  <div class="container">
+    <div class="row">
+      <div id="contactinfo2" class="infobox wow fadeInDown">
+        <div class="wow fadeInLeft" data-wow-delay="0.5s">
+          <h1>DYLAN SCOTT</h1>
         </div>
-        <button
-          id="clickthis"
-          class="btn btn-lg btn-warning text-vertical-center wow fadeInUp"
-          data-wow-delay="3s"
-          role="button"
-          style="padding-top: 0px; padding-bottom: 0px"
-        >
-          <a href="#singlepage"><h5>My TLDR</h5></a>
-        </button>
+        <div class="wow fadeInRight" data-wow-delay="1s">
+          <h4>Activist / Urbanist / Environmentalist / Analyst </h4>
+        </div>
+        <div class="wow fadeInUp" data-wow-delay="1.2s">
+          <hr class="medium" />
+        </div>
+        <div class="text-center center-block site-header">
+          <!--Resume-->
+          <a href="#" title="Resume" data-toggle="tooltip" data-placement="bottom">
+            <div class="fa fa-file-text-o fa-3x social-rm grow wow fadeInLeft" data-wow-delay="1.2s" data-toggle="modal"
+              data-target="#ResumeModal" style="outline: 0px; text-decoration: initial"></div>
+          </a>
+          <!--Linkedin-->
+          <a href="https://www.linkedin.com/in/dylanscott22" title="Linkedin" data-toggle="tooltip"
+            data-placement="bottom"><i class="fa fa-linkedin fa-3x social-fb grow wow fadeInDown"
+              data-wow-delay="1.4s"></i></a>
+          <!--Github-->
+          <a href="https://github.com/dylansc22" title="Github" data-toggle="tooltip" data-placement="bottom"><i
+              class="fa fa-github fa-3x social-gp grow wow fadeInRight" data-wow-delay="1.6s"></i></a>
+          <!--Gmail-->
+          <a href="mailto:hellodylanscott@gmail.com" title="Email" data-toggle="tooltip" data-placement="bottom"><i
+              class="fa fa-envelope fa-3x social-em grow wow fadeInUp" data-wow-delay="1.8s"></i></a>
+          <!--Instagram-->
+          <a href="https://instagram.com/fairlyirresponsible" title="Instagram" data-toggle="tooltip"
+            data-placement="bottom"><i class="fa fa-instagram fa-3x social-tw grow wow fadeInDown"
+              data-wow-delay="2s"></i></a>
+          <!--Strava-->
+          <a href="https://www.strava.com/athletes/9512777" title="Strava" data-toggle="tooltip"
+            data-placement="bottom"><i class="fab fa-strava fa-3x social-st grow wow fadeInRight"
+              data-wow-delay="2.4s"></i></a>
+        </div>
       </div>
+      <button id="clickthis" class="btn btn-lg btn-warning text-vertical-center wow fadeInUp" data-wow-delay="3s"
+        role="button" style="padding-top: 0px; padding-bottom: 0px">
+        <a href="#singlepage">
+          <h5>My TLDR</h5>
+        </a>
+      </button>
     </div>
-    <!--end container-->
-    <div id="singlepage">
-      <div id="aboutme" class="container">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-          <li class="nav-item active" role="presentation">
-            <a
-              class="nav-link active"
-              id="home-tab"
-              data-toggle="tab"
-              href="#home"
-              role="tab"
-              aria-controls="home"
-              aria-selected="true"
-              >about me</a
-            >
-          </li>
-          <li class="nav-item" role="presentation">
-            <a
-              class="nav-link"
-              id="profile-tab"
-              data-toggle="tab"
-              href="#profile"
-              role="tab"
-              aria-controls="profile"
-              aria-selected="false"
-              >worksamples</a
-            >
-          </li>
-        </ul>
-      </div>
+  </div>
+  <!--end container-->
+  <div id="singlepage">
+    <div id="aboutme" class="container">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item active" role="presentation">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+            aria-selected="true">about me</a>
+        </li>
+        <li class="nav-item" role="presentation">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+            aria-selected="false">worksamples</a>
+        </li>
+      </ul>
     </div>
+  </div>
 
-    <div class="container tab-content active" id="myTabContent">
-      <div
-        class="tab-pane fade active in"
-        id="home"
-        role="tabpanel"
-        aria-labelledby="home-tab"
-      >
-        <!--<div id="text1" class="col-sm-10 col-sm-offset-1">-->
-        <h4>
-          <span class="biggerfont">
-            I am a self-taught full-stack GIS Developer</span
-          >
-          meaning I analyze and visualize spatial datasets - often with a focus
-          on city-design, climate change, and the growing socio-economic divide.
-          My goal is to help organizations translate complex research topics
-          into easy-to-digest visual narratives in order to reach wide
-          audiences.
-          <br /><br />
-          <span class="biggerfont">
-            I am the founder of TucsonPathways.org</span
-          >
-          - a bicycle advocacy organization, centered on data-analytics of city
-          infrastructure. The Pathways web-app calculates alternative
-          bike-commutes optimized for safer, quieter, more scenic rides. My goal
-          is two fold: promote less stressful bike-commuting for
-          potential-riders, raise our collective literacy of daily CO2 use.  
-          <br /><br />
-          <span class="biggerfont"> I graduated with distinction </span>
-          in Applied Mathematics & Environmental Hydrology from the University
-          of Arizona in the Spring of 2013, self-paying my way through college.
-          <br /><br />
-          <span class="biggerfont">I am self-taught </span>in numerous
-          languages, libraries, softwares, and dev-principles - Javascript/Node/ES6, HTML, CSS, Mapbox-gl, Mapkit (Apple Maps), Turf, Leaflet, Graphhopper, some D3, some Firebase, some Python, Mapbox-Studio, Tippecanoe, QGIS, ArcGIS, Spatial Analysis Toolsets, OpenStreetMap, Git Version Control, NPM, state-management, module-design patterns, custom-element design (ie js web-components), OOP, Backend-Dev (Express, MongoDB), Netlify/Heroku Deployment, Microsoft Office Suite, Linux environments (Ubuntu 22.04), along with several others smaller supplementary programs. <br /><br />
-          <span class="biggerfont">I am a published technical writer </span>with
-          the United States Geological Survey for my work in using GIS methods
-          to improve estimates of agricultural water-use. I have been formally
-          acknowledged in a publication by the World Resources Institute for my
-          GIS contributions to the Forest Conservation Natural Infrastructure
-          Program. <br /><br />
-          <span class="biggerfont">I currently work as a software
-          developer </span>for Kagi.com - a privacy focused search-engine startup.
-          Spearheading our map platform, I focuses on UX/UI, geospatial data
-          integration, and feature design. In my spare time, I am working to
-          scale TucsonPathways across national coverage.
-          <br /><br />
-          <span class="biggerfont">In past years, I've worked as a </span>bike mechanic, warehouse laborer, bartender, hydrological technican,
-          research analyst, community-farm worker, movie critic, youth rock-climbing coach, and volunteer
-          through the Covid-19 vaccine effort. In spare time, I love
-          bike-touring, playing competitive ultimate frisbee, and cooking veggie sautes. <br /><br />
-          <!-- <div><span class="biggerfont">My ongoing subject matter expertise </span>includes urban analytics, bicycle infrastructure, open-source web mapping, forest conservation, remote sensing, UX and UI design, statistics, and bicycle tech.
-  <br><br> -->
-          <!-- <div><span class="biggerfont">I've always been facinated by </span> stability theory applied to an urban analysis. Cities across the planet are subject to various laws and policies. All of which are harmonizing or destabilizing - whether economic stratification, environmental decline, racial inequity, political polarization, literacy. Most of the work I do has the backdrop of wanting to better understand those topics and how they all relate.</div>
-  <br><br> -->
-          <!-- <div><span class="biggerfont">Questions I like to ask </span>'How can we better understand the patterns in how cities grow and thrive? Why despite all our efforts, does gentrification always result in wealth stratification of communties? How does access to park-space correlate with human health? How do we better activate people who want to bicycle commute but are intimindated by safety? How do we better desegregate socio-economic classes in cities? How can cities better harmonize with natural processes in our surrounding ecosystem? -->
-
-          <!--<div><span class="biggerfont"> My current research focuses on </span> better understanding 'the city as an organism.' Cities scale themselves with time, human capital, and economic growth. What parameters govern this growth? What systematic relationships govern all city growth as universalities? The better we understand these questions, the better we can create places for citizens to thrive. 
-  <br><br>-->
-          <!--<div><span class="biggerfont">What I can provide your team </span>are years of expertise in data-driven analysis - GIS or otherwise. I've worked on a range of research projects, working with small non-profits and large environmental organizations. I am well equipped to assist at any phase of project timelines - from initial proposals, throughout development stages, to final presentation of results. 
-  <br><br>-->
-          <!--<div><span class="biggerfont">For the past year </span>I have paid off more than $20,000 in student loans working as a warehouse laborer, bartender, and stock-market daytrader (in the tech/energy sector). The majority of my free time was spent teaching myself web-development to best prepare myself for cutting-edge application to a future career in GIS. 
-  <br><br>-->
-        </h4>
-
-        <!--<div class="aboutmefooter col-xs-10 col-sm-offset-1"><i>More than halfway through my degree program in Physics, I realized I was happier learning about the natural environment around me. I switched my major to Applied Mathematics & Environmental Hydrology and never looked back. I've had the great opportunity to work for both large environmental research institutions, along with small community-based environmental organizations. This diversity have given me a unique prespective on environmental sustainability and new urbanism. I've simultaniously created a strong foundation of skills in critical thinking, data visualization, and geospatial analysis. -->
+  <div class="container tab-content active" id="myTabContent">
+    <div class="tab-pane fade active in" id="home" role="tabpanel" aria-labelledby="home-tab">
+      <!--<div id="text1" class="col-sm-10 col-sm-offset-1">-->
+      <h4>
+        <span class="biggerfont">
+          I am a self-taught full-stack GIS Developer</span>
+        meaning I analyze and visualize spatial datasets - often with a focus
+        on city-design, climate change, and the growing socio-economic divide.
+        My goal is to help organizations translate complex research topics
+        into easy-to-digest visual narratives in order to reach wide
+        audiences.
         <br /><br />
+        <span class="biggerfont">
+          I am the founder of TucsonPathways.org</span>
+        - a bicycle advocacy organization, centered on data-analytics of city
+        infrastructure. The Pathways web-app calculates alternative
+        bike-commutes optimized for safer, quieter, more scenic rides. My goal
+        is two fold: promote less stressful bike-commuting for
+        potential-riders, raise our collective literacy of daily CO2 use.
+        <br /><br />
+        <span class="biggerfont"> I graduated with distinction </span>
+        in Applied Mathematics & Environmental Hydrology from the University
+        of Arizona in the Spring of 2013, self-paying my way through college.
+        <br /><br />
+        <span class="biggerfont">I am self-taught </span>in numerous
+        languages, libraries, softwares, and dev-principles - Javascript/Node/ES6, HTML, CSS, Mapbox-gl, Mapkit (Apple
+        Maps), Turf, Leaflet, Graphhopper, some D3, some Firebase, some Python, Mapbox-Studio, Tippecanoe, QGIS, ArcGIS,
+        Spatial Analysis Toolsets, OpenStreetMap, Git Version Control, NPM, state-management, module-design patterns,
+        custom-element design (ie js web-components), OOP, Backend-Dev (Express, MongoDB), Netlify/Heroku Deployment,
+        Microsoft Office Suite, Linux environments (Ubuntu 22.04), along with several others smaller supplementary
+        programs. <br /><br />
+        <span class="biggerfont">I am a published technical writer </span>with
+        the United States Geological Survey for my work in using GIS methods
+        to improve estimates of agricultural water-use. I have been formally
+        acknowledged in a publication by the World Resources Institute for my
+        GIS contributions to the Forest Conservation Natural Infrastructure
+        Program. <br /><br />
+        <span class="biggerfont">I currently work as a software
+          developer </span>for Kagi.com - a privacy focused search-engine startup.
+        Spearheading our map platform, I focuses on UX/UI, geospatial data
+        integration, and feature design. In my spare time, I am working to
+        scale TucsonPathways across national coverage.
+        <br /><br />
+        <span class="biggerfont">In past years, I've worked as a </span>bike mechanic, warehouse laborer, bartender,
+        hydrological technican,
+        research analyst, community-farm worker, movie critic, youth rock-climbing coach, and volunteer
+        through the Covid-19 vaccine effort. In spare time, I love
+        bike-touring, playing competitive ultimate frisbee, and cooking veggie sautes. <br /><br />
+        <!-- <div><span class="biggerfont">My ongoing subject matter expertise </span>includes urban analytics, bicycle infrastructure, open-source web mapping, forest conservation, remote sensing, UX and UI design, statistics, and bicycle tech.
+  <br><br> -->
+        <!-- <div><span class="biggerfont">I've always been facinated by </span> stability theory applied to an urban analysis. Cities across the planet are subject to various laws and policies. All of which are harmonizing or destabilizing - whether economic stratification, environmental decline, racial inequity, political polarization, literacy. Most of the work I do has the backdrop of wanting to better understand those topics and how they all relate.</div>
+  <br><br> -->
+        <!-- <div><span class="biggerfont">Questions I like to ask </span>'How can we better understand the patterns in how cities grow and thrive? Why despite all our efforts, does gentrification always result in wealth stratification of communties? How does access to park-space correlate with human health? How do we better activate people who want to bicycle commute but are intimindated by safety? How do we better desegregate socio-economic classes in cities? How can cities better harmonize with natural processes in our surrounding ecosystem? -->
+
+        <!--<div><span class="biggerfont"> My current research focuses on </span> better understanding 'the city as an organism.' Cities scale themselves with time, human capital, and economic growth. What parameters govern this growth? What systematic relationships govern all city growth as universalities? The better we understand these questions, the better we can create places for citizens to thrive. 
+  <br><br>-->
+        <!--<div><span class="biggerfont">What I can provide your team </span>are years of expertise in data-driven analysis - GIS or otherwise. I've worked on a range of research projects, working with small non-profits and large environmental organizations. I am well equipped to assist at any phase of project timelines - from initial proposals, throughout development stages, to final presentation of results. 
+  <br><br>-->
+        <!--<div><span class="biggerfont">For the past year </span>I have paid off more than $20,000 in student loans working as a warehouse laborer, bartender, and stock-market daytrader (in the tech/energy sector). The majority of my free time was spent teaching myself web-development to best prepare myself for cutting-edge application to a future career in GIS. 
+  <br><br>-->
+      </h4>
+
+      <!--<div class="aboutmefooter col-xs-10 col-sm-offset-1"><i>More than halfway through my degree program in Physics, I realized I was happier learning about the natural environment around me. I switched my major to Applied Mathematics & Environmental Hydrology and never looked back. I've had the great opportunity to work for both large environmental research institutions, along with small community-based environmental organizations. This diversity have given me a unique prespective on environmental sustainability and new urbanism. I've simultaniously created a strong foundation of skills in critical thinking, data visualization, and geospatial analysis. -->
+      <br /><br />
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+      <div class="col-lg-4 col-xs-6">
+        <a href="https://dylansc22.github.io/worksample/" class="portfolio-box">
+          <img src="img/ffw2.png" class="img-responsive" alt="" />
+          <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+              <div class="project-category text-faded">
+                GIS WEB-MAP<br /><br />
+              </div>
+              <div class="project-name">
+                Mitigating Global Sedimentation Transport Via Forest
+                Conservation & Restoration<br /><br />(WRI Internship)
+              </div>
+            </div>
+          </div>
+        </a>
       </div>
-      <div
-        class="tab-pane fade"
-        id="profile"
-        role="tabpanel"
-        aria-labelledby="profile-tab"
-      >
-        <div class="col-lg-4 col-xs-6">
-          <a
-            href="https://dylansc22.github.io/worksample/"
-            class="portfolio-box"
-          >
-            <img src="img/ffw2.png" class="img-responsive" alt="" />
-            <div class="portfolio-box-caption">
-              <div class="portfolio-box-caption-content">
-                <div class="project-category text-faded">
-                  GIS WEB-MAP<br /><br />
-                </div>
-                <div class="project-name">
-                  Mitigating Global Sedimentation Transport Via Forest
-                  Conservation & Restoration<br /><br />(WRI Internship)
-                </div>
+      <div class="col-lg-4 col-xs-6">
+        <a href="http://pubs.usgs.gov/sir/2011/5166/" class="portfolio-box">
+          <img src="img/USGSReport.png" class="img-responsive" alt="" />
+          <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+              <div class="project-category text-faded">
+                TECHNICAL WRITING<br /><br />
+              </div>
+              <div class="project-name">
+                Inventory & Evaluation of USGS Agricultural Water-Use
+                Estimation Practices<br /><br />
+                (USGS Internship)
               </div>
             </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-xs-6">
-          <a href="http://pubs.usgs.gov/sir/2011/5166/" class="portfolio-box">
-            <img src="img/USGSReport.png" class="img-responsive" alt="" />
-            <div class="portfolio-box-caption">
-              <div class="portfolio-box-caption-content">
-                <div class="project-category text-faded">
-                  TECHNICAL WRITING<br /><br />
-                </div>
-                <div class="project-name">
-                  Inventory & Evaluation of USGS Agricultural Water-Use
-                  Estimation Practices<br /><br />
-                  (USGS Internship)
-                </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-xs-6">
+        <a href="https://tucsonauts.github.io/tnr/" class="portfolio-box">
+          <img src="img/Tucson3.png" class="img-responsive" alt="" />
+          <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+              <div class="project-category text-faded">
+                GIS WEB-MAP<br /><br />
+              </div>
+              <div class="project-name">
+                Mapping Tucson's Low-Stress Bicycle Network, Optimized for
+                Safety<br /><br />(Creator and Sole Founder)
               </div>
             </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-xs-6">
-          <a href="https://tucsonauts.github.io/tnr/" class="portfolio-box">
-            <img src="img/Tucson3.png" class="img-responsive" alt="" />
-            <div class="portfolio-box-caption">
-              <div class="portfolio-box-caption-content">
-                <div class="project-category text-faded">
-                  GIS WEB-MAP<br /><br />
-                </div>
-                <div class="project-name">
-                  Mapping Tucson's Low-Stress Bicycle Network, Optimized for
-                  Safety<br /><br />(Creator and Sole Founder)
-                </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-xs-6">
+        <a href="#" class="portfolio-box" data-toggle="modal" data-target="#PosterModal">
+          <img src="img/USGSposter.png" class="img-responsive" alt="" />
+          <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+              <div class="project-category text-faded">
+                TECHNICAL WRITING<br /><br />
+              </div>
+              <div class="project-name">
+                Comparison of Various GIS Methodologies in Estimating
+                Industrial Agricultural Water-Use<br /><br />(University of
+                Arizona Senior Capstone)
               </div>
             </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-xs-6">
-          <a
-            href="#"
-            class="portfolio-box"
-            data-toggle="modal"
-            data-target="#PosterModal"
-          >
-            <img src="img/USGSposter.png" class="img-responsive" alt="" />
-            <div class="portfolio-box-caption">
-              <div class="portfolio-box-caption-content">
-                <div class="project-category text-faded">
-                  TECHNICAL WRITING<br /><br />
-                </div>
-                <div class="project-name">
-                  Comparison of Various GIS Methodologies in Estimating
-                  Industrial Agricultural Water-Use<br /><br />(University of
-                  Arizona Senior Capstone)
-                </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-xs-6">
+        <a href="#" class="portfolio-box" data-toggle="modal" data-target="#GISMethodModal">
+          <img src="img/WRIMethodsSample4.png" class="img-responsive" alt="" />
+          <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+              <div class="project-category text-faded">
+                TECHNICAL WRITING<br /><br />
+              </div>
+              <div class="project-name">
+                Methodology of Suitability Index - Classify Regions at Risk Of
+                Soil-Erosion/Land Instability<br /><br />(WRI Internship)
               </div>
             </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-xs-6">
-          <a
-            href="#"
-            class="portfolio-box"
-            data-toggle="modal"
-            data-target="#GISMethodModal"
-          >
-            <img
-              src="img/WRIMethodsSample4.png"
-              class="img-responsive"
-              alt=""
-            />
-            <div class="portfolio-box-caption">
-              <div class="portfolio-box-caption-content">
-                <div class="project-category text-faded">
-                  TECHNICAL WRITING<br /><br />
-                </div>
-                <div class="project-name">
-                  Methodology of Suitability Index - Classify Regions at Risk Of
-                  Soil-Erosion/Land Instability<br /><br />(WRI Internship)
-                </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-xs-6">
+        <a href="https://dylansc22.github.io/parks-and-parking" class="portfolio-box">
+          <img src="img/ParksAndParking.png" class="img-responsive" alt="" />
+          <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+              <div class="project-category text-faded">
+                CARTOGRAPHIC DESIGN<br /><br />
+              </div>
+              <div class="project-name">
+                Data Visualization of City-Space Dedicated to People Versus
+                Cars<br /><br />(Personal Design Project)
               </div>
             </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-xs-6">
-          <a
-            href="https://dylansc22.github.io/parks-and-parking"
-            class="portfolio-box"
-          >
-            <img src="img/ParksAndParking.png" class="img-responsive" alt="" />
-            <div class="portfolio-box-caption">
-              <div class="portfolio-box-caption-content">
-                <div class="project-category text-faded">
-                  CARTOGRAPHIC DESIGN<br /><br />
-                </div>
-                <div class="project-name">
-                  Data Visualization of City-Space Dedicated to People Versus
-                  Cars<br /><br />(Personal Design Project)
-                </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-xs-6">
+        <a href="https://tucsonauts.github.io/tnr/compare" class="portfolio-box">
+          <img src="img/Compare.png" class="img-responsive" alt="" />
+          <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+              <div class="project-category text-faded">
+                CARTOGRAPHIC DESIGN<br /><br />
+              </div>
+              <div class="project-name">
+                Data Visualization Map-Slider Between City's High-Traffic
+                Roads & Low-Traffic Roads<br /><br />(Personal Design Project)
               </div>
             </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-xs-6">
-          <a
-            href="https://tucsonauts.github.io/tnr/compare"
-            class="portfolio-box"
-          >
-            <img src="img/Compare.png" class="img-responsive" alt="" />
-            <div class="portfolio-box-caption">
-              <div class="portfolio-box-caption-content">
-                <div class="project-category text-faded">
-                  CARTOGRAPHIC DESIGN<br /><br />
-                </div>
-                <div class="project-name">
-                  Data Visualization Map-Slider Between City's High-Traffic
-                  Roads & Low-Traffic Roads<br /><br />(Personal Design Project)
-                </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-xs-6">
+        <a href="https://dylansc22.github.io/nightglow" class="portfolio-box">
+          <img src="img/NightLights.png" class="img-responsive" alt="" />
+          <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+              <div class="project-category text-faded">
+                CARTOGRAPHIC DESIGN<br /><br />
+              </div>
+              <div class="project-name">
+                Data Visualization of Tucson at Night, Simulating the Glow of
+                Street-Lights & House-Lights<br /><br />(Personal Design
+                Project)
               </div>
             </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-xs-6">
-          <a href="https://dylansc22.github.io/nightglow" class="portfolio-box">
-            <img src="img/NightLights.png" class="img-responsive" alt="" />
-            <div class="portfolio-box-caption">
-              <div class="portfolio-box-caption-content">
-                <div class="project-category text-faded">
-                  CARTOGRAPHIC DESIGN<br /><br />
-                </div>
-                <div class="project-name">
-                  Data Visualization of Tucson at Night, Simulating the Glow of
-                  Street-Lights & House-Lights<br /><br />(Personal Design
-                  Project)
-                </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-4 col-xs-6">
+        <a href="https://dylansc22.github.io/four-corner-states" class="portfolio-box">
+          <img src="img/FourCornerStates.png" class="img-responsive" alt="" />
+          <div class="portfolio-box-caption">
+            <div class="portfolio-box-caption-content">
+              <div class="project-category text-faded">
+                CARTOGRAPHIC DESIGN<br /><br />
+              </div>
+              <div class="project-name">
+                Data Visualization of the Best Bicycle-Touring Routes of the
+                Four Corner States<br /><br />(Personal Design Project)
               </div>
             </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-xs-6">
-          <a
-            href="https://dylansc22.github.io/four-corner-states"
-            class="portfolio-box"
-          >
-            <img src="img/FourCornerStates.png" class="img-responsive" alt="" />
-            <div class="portfolio-box-caption">
-              <div class="portfolio-box-caption-content">
-                <div class="project-category text-faded">
-                  CARTOGRAPHIC DESIGN<br /><br />
-                </div>
-                <div class="project-name">
-                  Data Visualization of the Best Bicycle-Touring Routes of the
-                  Four Corner States<br /><br />(Personal Design Project)
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
+          </div>
+        </a>
       </div>
     </div>
+  </div>
 
-    <!-- Resume Modal -->
-    <div
-      class="modal fade"
-      id="ResumeModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="myModalLabel"
-    >
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="text-vertical-center">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="btn btn-default"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
-              <!-- Don't need the download button for now, because there is a save button in the pdf viewer-->
-              <a
-                type="button"
-                href="pdf/Resume - Dylan Scott.pdf"
-                class="btn btn-primary"
-                download="Dylan Scott is a great team member. I vote hire him.pdf"
-                >Download</a
-              >
-            </div>
-            <div class="modal-body">
-              <iframe
-                src="https://drive.google.com/file/d/1ekb51O_4JwwvxVbmKAZ0vjcjOVSgGJCI/preview"
-                width="100%"
-                height="800"
-              ></iframe>
-            </div>
+  <!-- Resume Modal -->
+  <div class="modal fade" id="ResumeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="text-vertical-center">
+          <div class="modal-header">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              Close
+            </button>
+            <!-- Don't need the download button for now, because there is a save button in the pdf viewer-->
+            <a type="button" href="pdf/Resume - Dylan Scott.pdf" class="btn btn-primary"
+              download="Dylan Scott is a great team member. I vote hire him.pdf">Download</a>
+          </div>
+          <div class="modal-body">
+            <iframe src="https://drive.google.com/file/d/1ekb51O_4JwwvxVbmKAZ0vjcjOVSgGJCI/preview" width="100%"
+              height="800"></iframe>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- USGS Poster Modal -->
-    <div
-      class="modal fade"
-      id="PosterModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="myModalLabel"
-    >
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="text-vertical-center">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="btn btn-default"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
-              <!-- Don't need the download button for now, because there is a save button in the pdf viewer-->
-              <a
-                type="button"
-                href="pdf/SeniorCapstonePoster.pdf"
-                class="btn btn-primary"
-                download="SeniorCapstone_DylanCobean.pdf"
-                >Download</a
-              >
-            </div>
-            <div class="modal-body">
-              <iframe
-                src="https://drive.google.com/file/d/0BxUFaFhM2TB8a2hWdk1MMVB2cnc/preview"
-                width="100%"
-                height="550"
-              ></iframe>
-            </div>
+  <!-- USGS Poster Modal -->
+  <div class="modal fade" id="PosterModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="text-vertical-center">
+          <div class="modal-header">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              Close
+            </button>
+            <!-- Don't need the download button for now, because there is a save button in the pdf viewer-->
+            <a type="button" href="pdf/SeniorCapstonePoster.pdf" class="btn btn-primary"
+              download="SeniorCapstone_DylanCobean.pdf">Download</a>
+          </div>
+          <div class="modal-body">
+            <iframe src="https://drive.google.com/file/d/0BxUFaFhM2TB8a2hWdk1MMVB2cnc/preview" width="100%"
+              height="550"></iframe>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- WRI Methodology Writing Sample Modal -->
-    <div
-      class="modal fade"
-      id="GISMethodModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="myModalLabel"
-    >
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="text-vertical-center">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="btn btn-default"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
-              <!-- Don't need the download button for now, because there is a save button in the pdf viewer-->
-              <a
-                type="button"
-                href="pdf/GISMethodSample.pdf"
-                class="btn btn-primary"
-                download="GISMethodSample_DylanCobean.pdf"
-                >Download</a
-              >
-            </div>
-            <div class="modal-body">
-              <iframe
-                src="https://drive.google.com/file/d/0BxUFaFhM2TB8bDNqZlRTMlZDR28/preview"
-                width="100%"
-                height="800"
-              ></iframe>
-            </div>
+  <!-- WRI Methodology Writing Sample Modal -->
+  <div class="modal fade" id="GISMethodModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="text-vertical-center">
+          <div class="modal-header">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              Close
+            </button>
+            <!-- Don't need the download button for now, because there is a save button in the pdf viewer-->
+            <a type="button" href="pdf/GISMethodSample.pdf" class="btn btn-primary"
+              download="GISMethodSample_DylanCobean.pdf">Download</a>
+          </div>
+          <div class="modal-body">
+            <iframe src="https://drive.google.com/file/d/0BxUFaFhM2TB8bDNqZlRTMlZDR28/preview" width="100%"
+              height="800"></iframe>
           </div>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+</body>
 
-  <!-- Custom Javascript -->
-  <script src="js/main.js"></script>
+<!-- Custom Javascript -->
+<script src="js/main.js"></script>
+
 </html>
